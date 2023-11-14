@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0">
-    <meta name="description" content="Assets Finder">
-    <meta name="keywords" content="AssetsFinder">
-    <meta name="author" content="AssetsFinder">
+    <meta name="description" content="House Linkup">
+    <meta name="keywords" content="Houselinkup">
+    <meta name="author" content="Snappy-fix Technologies">
     <link rel="icon" href="{{ asset('assets/img/house_link_up_logo.png') }}" type="image/x-icon" />
-    <title>Assets Finder</title>
+    <title>House Linkup</title>
     <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
         rel="stylesheet">
@@ -122,10 +122,10 @@
                                         </a>
 
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                            @if (Auth::user()->email == "admin@assetsfinder.com")
+                                            @if (Auth::user()->email == "admin@houselinkup.com")
                                             <a class="dropdown-item" href="{{ route('super.admin.home') }}"><strong
                                                     class="text-dark">Dashboard</strong></a>
-                                            @elseif (Auth::user()->email == "manager@assetsfinder.com")
+                                            @elseif (Auth::user()->email == "manager@houselinkup.com")
                                             <a class="dropdown-item" href="{{ route('manger.home') }}"><strong
                                                     class="text-dark">Dashboard</strong></a>
                                             @else

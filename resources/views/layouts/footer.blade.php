@@ -128,7 +128,7 @@
                                                </div>
                                            </a>
                                            <div class="media-body">
-                                               <h6><a href="blog-detail-left-sidebar.html">Assets Finder Real Estate
+                                               <h6><a href="blog-detail-left-sidebar.html">House Linkup Real Estate
                                                        Company</a></h6>
                                                <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
                                                        Electronic version of the real estate industry.</a></p>
