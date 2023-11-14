@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Seeder;
 
 // namespace Database\Seeders;
 // use Illuminate\Database\Seeder;
@@ -24,19 +23,19 @@ class CreateUsersSeeder extends Seeder
         $users = [
             [
                'name'=>'Admin User',
-               'email'=>'admin@assetsfinder.com',
+               'email'=>'admin@houselinkup.com',
                'type'=>1,
                'password'=> bcrypt('blockchain'),
             ],
             [
                'name'=>'Manager User',
-               'email'=>'manager@assetsfinder.com',
+               'email'=>'manager@houselinkup.com',
                'type'=> 2,
                'password'=> bcrypt('blockchain'),
             ],
             [
                'name'=>'User',
-               'email'=>'user@assetsfinder.com',
+               'email'=>'user@houselinkup.com',
                'type'=>0,
                'password'=> bcrypt('blockchain'),
             ],
@@ -58,21 +57,21 @@ class CreateUsersSeeder extends Seeder
 
     //     DB::table('users')->insert([
     //         'name'=>'Manager User',
-    //         'email'=>'manager@assetsfinder.com',
+    //         'email'=>'manager@houselinkup.com',
     //         'type'=> 2,
     //         'password'=> bcrypt('blockchain'),
     //     ]);
 
     //     DB::table('users')->insert([
     //         'name'=>'Manager User',
-    //         'email'=>'manager@assetsfinder.com',
+    //         'email'=>'manager@houselinkup.com',
     //         'type'=> 2,
     //         'password'=> bcrypt('blockchain'),
     //     ]);
 
     //     DB::table('users')->insert([
     //         'name'=>'User',
-    //         'email'=>'user@assetsfinder.com',
+    //         'email'=>'user@houselinkup.com',
     //         'type'=>0,
     //         'password'=> bcrypt('blockchain'),
     //     ]);

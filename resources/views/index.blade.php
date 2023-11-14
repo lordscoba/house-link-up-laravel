@@ -650,7 +650,7 @@
                                         <img src="../assets/images/others/icon-1.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h6>AssetsFinder</h6>
+                                        <h6>Houselinkup</h6>
                                         <h3>Looking for the new home?</h3>
                                         <p>10 new offers every day. 350 offers on site, trusted
                                             by a community of thousands of users.</p>
@@ -665,7 +665,7 @@
                                         <img src="../assets/images/others/icon-2.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h6>AssetsFinder</h6>
+                                        <h6>Houselinkup</h6>
                                         <h3>Are you looking for home?</h3>
                                         <p>350 offers on site, trusted by a community of thousands of users. 10 new offers
                                             every day. </p>
@@ -680,7 +680,7 @@
                                         <img src="../assets/images/others/icon-1.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h6>AssetsFinder</h6>
+                                        <h6>Houselinkup</h6>
                                         <h3>Looking for the new Office?</h3>
                                         <p>10 new offers every day. 350 offers on site, trusted
                                             by a community of thousands of users.</p>
@@ -796,7 +796,7 @@
                     <div class="light-bg banner-1">
                         <span class="big-gradient">*</span>
                         <span class="small-white">*</span>
-                        <h6>AssetsFinder real estate</h6>
+                        <h6>Houselinkup real estate</h6>
                         <h2>Looking to Buy a new property or Sell an existing one?
                             Real Homes provides an easy solution!</h2>
                         <div class="button-banner">
