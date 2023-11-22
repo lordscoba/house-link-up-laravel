@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PicturesController;
 use App\Http\Controllers\Admin\Properties\PropertiesController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\Users\UsersController;
+use App\Http\Controllers\Admin\Location\LocationController;
 use App\Http\Controllers\ContactFeedController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\Dashboard\IndexController;
@@ -96,6 +97,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('admin/pictures', PicturesController::class)->except(['create']);
     Route::resource('admin/reviews', ReviewController::class)->except(['create', 'show']);
     Route::resource('admin/faqs', FaqController::class)->except(['show']);
+    Route::resource('admin/location', LocationController::class);
     Route::resource('admin/suscribers', SuscribersController::class)->except([
         'edit',
         'show',
