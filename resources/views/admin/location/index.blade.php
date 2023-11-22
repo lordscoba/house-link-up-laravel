@@ -76,7 +76,8 @@
                                             <td><a href="location/{{ $location->id }}/edit" class="btn btn-primary"
                                                     type="submit">Update</a>
                                             </td>
-                                            <td><a class="btn btn-info" type="submit">View LGA</a>
+                                            <td><a href="/admin/location/{{ $location->id }}" class="btn btn-info"
+                                                    type="submit">View LGA</a>
                                             </td>
                                             <td>
                                                 <form action="/admin/location/{{ $location->id }}" class="pt-0"

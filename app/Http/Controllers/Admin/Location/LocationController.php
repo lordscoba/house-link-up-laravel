@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Location;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Location;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Response;
@@ -73,7 +74,7 @@ class LocationController extends Controller
      */
     public function show($id)
     {
-        return view('admin.location.show', [
+        return view('admin.lga.index', [
             'locations' => Location::findOrFail($id),
         ]);
     }
