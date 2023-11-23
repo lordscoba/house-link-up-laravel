@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\Agencies\AgenciesController;
+use App\Http\Controllers\Admin\Location\ManageLGA;
+use App\Http\Controllers\Admin\Location\ManageTownsShow;
 use App\Http\Controllers\Admin\PicturesController;
 use App\Http\Controllers\Admin\Properties\PropertiesController;
 use App\Http\Controllers\Admin\ReviewController;
@@ -20,8 +22,6 @@ use App\Http\Controllers\ReviewFeedController;
 use App\Http\Controllers\SuscribersController;
 use App\Http\Controllers\SuscribersFeedController;
 use Illuminate\Support\Facades\Route;
-
-// use App\Http\Livewire\SelectHouse;
 
 
 
@@ -106,6 +106,13 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         'edit',
         'show',
     ]);
+    // Route::resource('admin/towns', ManageLGA::class)->except([
+    //     'index',
+    //     'create',
+    //     'edit',
+    //     'destroy',
+    // ]);
+    Route::get('admin/towns/{state_id}/{lga_id}', [ManageTownsShow::class, 'show'])->name('town.show');
 });
 
 /*-------------------------------------------
