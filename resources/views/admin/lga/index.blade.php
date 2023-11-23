@@ -29,13 +29,17 @@
                 @include('layouts.admin-nav')
             </div>
             <div class="col-lg-9">
+                <a class="create-town-modal btn btn-dark my-3
+                                            " href="{{ url()->previous() }}">Previous page</a>
                 <div class="dashboard-content">
                     <div class="tab-listing" id="listing">
                         <div class="property-section">
                             <div class="d-flex justify-content-between">
                                 <div class="">
                                     <div>
-                                        <h2>LGA Listing</h2>
+                                        <h2>LGA Listing for
+                                            {{ DB::table('locations')->where('id', request()->route('location'))->first()->state }}
+                                        </h2>
                                     </div>
                                 </div>
                                 <div class="">

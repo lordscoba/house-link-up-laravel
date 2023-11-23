@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\Location;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Location;
+use App\Models\Lgas;
+use App\Models\Towns;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
@@ -119,11 +121,36 @@ class LocationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Location $location)
+    // public function destroy(Location $location)
+    // {
+    //         // $location->delete();
+    //         // return view('admin.location.destroy');
+    //     $location->delete();
+    //     return redirect()->route('location.index')
+    //     ->withSuccess(__('Location delete successfully.'));
+    // }
+
+    public function destroy($id)
     {
-            // $location->delete();
-            // return view('admin.location.destroy');
-        $location->delete();
+        // Find the record by ID
+        $locations = Location::findOrFail($id);
+        $lgas = Lgas::where('state_id', $id)->get();
+        $towns = Towns::where('state_id', $id)->get();
+
+        // // Delete the record
+        $locations->delete();
+
+        // Delete records for Lgas model
+        foreach ($lgas as $lga) {
+        $lga->delete();
+        }
+
+        // Delete records for Towns model
+        foreach ($towns as $town) {
+         $town->delete();
+        }
+
+        // Redirect or return a response, depending on your use case
         return redirect()->route('location.index')
         ->withSuccess(__('Location delete successfully.'));
     }

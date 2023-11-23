@@ -14,8 +14,8 @@ class Towns extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'towns',    
+        'town',    
         'lga_id',    
-        'state_id',    
+        'state_id',  
        ];
 }

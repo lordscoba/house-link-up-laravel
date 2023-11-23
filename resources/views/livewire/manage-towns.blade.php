@@ -4,9 +4,9 @@
     <div class="col-xl-12 col-md-12">
         <div class="common-card property-overview">
             <div class="common-header d-flex justify-content-between">
-                <h5>LGA overview</h5>
-                <div class="fw-bolder p-2">Total LGAs count :
-                    {{ DB::table("lgas")->where('state_id', $state_id)->count() }}
+                <h5>Towns overview</h5>
+                <div class="fw-bolder p-2">Total towns count :
+                    {{ DB::table("towns")->where('lga_id', $lga_id)->count() }}
                 </div>
             </div>
             <div class="table-responsive">
@@ -14,39 +14,30 @@
                     <thead>
                         <tr>
                             <th>S/N</th>
-                            <th>LGA</th>
+                            <th>Towns</th>
                             <th>Update</th>
-                            <th>View LGA</th>
                             <th class="pe-3">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($lgas as $lga)
-                        <tr wire:key="{{ $lga->id }}">
+                        @forelse ($towns as $town)
+                        <tr wire:key="{{ $town->id }}">
                             <td>
                                 <div class="d-flex">
-                                    <h6>{{ $lga->id }}</h6>
+                                    <h6>{{ $town->id }}</h6>
                                 </div>
                             </td>
                             <td>
-                                {{ $lga->lga }}
+                                {{ $town->town }}
                             </td>
                             <td class="lead text-black">
-                                <button data-bs-toggle="modal" wire:click="edit({{ $lga->id }})"
-                                    data-bs-target="#update-lga" class="update-lga-modal btn btn-primary btn-lg">
+                                <button data-bs-toggle="modal" wire:click="edit({{ $town->id }})"
+                                    data-bs-target="#update-town" class="update-town-modal btn btn-primary btn-lg">
                                     Update
-                                    LGA</button>
+                                    Towns</button>
                             </td>
-                            <td><a href="{{ route('town.show', ['state_id' => $lga->state_id, 'lga_id' => $lga->id]) }}"
-                                    class="btn btn-info">View
-                                    Towns</a>
-                            </td>
-                            {{--  <td><a href="/admin/towns/{{$lga->state_id}}/{{$lga->lga_id}}" class="btn
-                            btn-info">View
-                            Towns</a>
-                            </td> --}}
                             <td>
-                                <button type="button" wire:click="destroy({{ $lga->id }})" class="btn btn-dark">
+                                <button type="button" wire:click="destroy({{ $town->id }})" class="btn btn-dark">
                                     Delete
                                 </button>
                             </td>
@@ -54,7 +45,7 @@
                         @empty
                         <tr>
                             <td>
-                                empty lga
+                                empty town
                             </td>
                         </tr>
                         @endforelse
@@ -64,16 +55,16 @@
         </div>
     </div>
     <nav class="theme-pagination">
-        <div class="float-end d-flex">{{ $lgas->links() }}
+        <div class="float-end d-flex">{{ $towns->links() }}
         </div>
     </nav>
 
-    {{-- create LGA modal start --}}
-    <div class="modal fade create-lga-modal" id="create-lga" wire:ignore.self>
+    {{-- create Towns modal start --}}
+    <div class="modal fade create-town-modal" id="create-town" wire:ignore.self>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Create LGA</h5>
+                    <h5 class="modal-title">Create Towns</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -82,16 +73,23 @@
                     <form>
                         <div class="row gx-3">
                             <div class="form-group col-12 d-none">
-                                <label for="lga">state id </label>
+                                <label for="state_id">state id </label>
                                 <input wire:model.defer="state_id" type="text" class="form-control" id="state_id">
                                 @error('state_id')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+                            <div class="form-group col-12 d-none">
+                                <label for="state_id">lga id </label>
+                                <input wire:model.defer="lga_id" type="text" class="form-control" id="state_id">
+                                @error('lga_id')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
                             <div class="form-group col-12">
-                                <label for="lga">LGA</label>
-                                <input wire:model.defer="lga" type="text" class="form-control" id="lga">
-                                @error('lga')
+                                <label for="town">Towns</label>
+                                <input wire:model.defer="town" type="text" class="form-control" id="town">
+                                @error('town')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -112,14 +110,14 @@
             </div>
         </div>
     </div>
-    {{-- create LGA modal ends --}}
+    {{-- create Towns modal ends --}}
 
-    {{-- Update LGA modal start --}}
-    <div class="modal fade update-lga-modal" id="update-lga" wire:ignore.self>
+    {{-- Update Towns modal start --}}
+    <div class="modal fade update-town-modal" id="update-town" wire:ignore.self>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Update LGA</h5>
+                    <h5 class="modal-title">Update Towns</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -128,16 +126,16 @@
                     <form>
                         <div class="row gx-3">
                             <div class="form-group col-12 d-none">
-                                <label for="lga_id">lga id </label>
-                                <input wire:model.defer="lga_id" type="text" class="form-control" id="lga_id">
-                                @error('lga_id')
+                                <label for="town_id">town id </label>
+                                <input wire:model.defer="town_id" type="text" class="form-control" id="town_id">
+                                @error('town_id')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group col-12">
-                                <label for="lga">LGA</label>
-                                <input wire:model.defer="lga" type="text" class="form-control" id="lga">
-                                @error('lga')
+                                <label for="town">Towns</label>
+                                <input wire:model.defer="town" type="text" class="form-control" id="town">
+                                @error('town')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -150,7 +148,7 @@
                         <div class="modal-footer">
                             <button type="button" wire:click.prevent.defer="cancel()"
                                 class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">Cancel</button>
-                            <button wire:click.prevent="update({{$lga_id}})"
+                            <button wire:click.prevent="update({{$town_id}})"
                                 class="btn btn-gradient color-2 btn-pill">Save
                                 changes</button>
                         </div>
@@ -160,5 +158,5 @@
         </div>
     </div>
 
-    {{-- Update LGA modal ends --}}
+    {{-- Update Towns modal ends --}}
 </div>

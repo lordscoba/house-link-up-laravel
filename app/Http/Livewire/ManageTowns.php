@@ -2,47 +2,44 @@
 
 namespace App\Http\Livewire;
 
+use Livewire\Component;
+use Livewire\WithPagination;
 use App\Models\Lgas;
 use App\Models\Towns;
-use Livewire\WithPagination;
-use Livewire\Component;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Hash;
 
-class ManageLGA extends Component
+class ManageTowns extends Component
 {
-
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
-    public $state_id, $lga, $lga_id;
+    public $lga_id, $town, $town_id,$state_id;
     public $createMode = true;
     public $updateMode = true;
 
 
     protected $rules = [
-        'state_id' => 'required',
-        'lga' => 'required|unique:lgas',
+        'lga_id' => 'required',
+        'town' => 'required|unique:towns',
     ];
 
     // for render
     public function render()
     {
-        return view('livewire.manage-l-g-a', [
-            'lgas' => Lgas::where('state_id', $this->state_id)->paginate(5),
-            'state_id' => $this->state_id,
+        return view('livewire.manage-towns', [
+            'towns' => Towns::where('lga_id', $this->lga_id)->paginate(5),
+            'lga_id' => $this->lga_id,
         ]);
     }
 
-    /**
+        /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     private function resetInputFields()
     {
-        $this->state_id = '';
-        $this->lga = '';
+        $this->lga_id = '';
+        $this->town = '';
     }
 
     /**
@@ -57,8 +54,7 @@ class ManageLGA extends Component
         // $this->resetInputFields();
     }
 
-
-    // for create
+        // for create
 
     /**
      * The attributes that are mass assignable.
@@ -68,11 +64,12 @@ class ManageLGA extends Component
     public function create()
     {
         $this->state_id = "";
-        $this->lga = "";
+        $this->lga_id = "";
+        $this->town = "";
 
     }
 
-    /**
+        /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -81,14 +78,13 @@ class ManageLGA extends Component
     {
         $this->validate();
 
-        $lgas = Lgas::create([
+        $towns = Towns::create([
             'state_id' => $this->state_id,
-            'lga' => $this->lga,
+            'lga_id' => $this->lga_id,
+            'town' => $this->town,
         ]);
 
-        
-
-        session()->flash('message', 'Local government area Updated Successfully.');
+        session()->flash('message', 'towns Updated Successfully.');
 
         // $this->resetInputFields();
         return redirect()->back();
@@ -98,9 +94,9 @@ class ManageLGA extends Component
     // for update
     public function edit($id)
     {
-        $lgas = Lgas::findOrFail($id);
-        $this->lga_id = $lgas->id;
-        $this->lga = $lgas->lga;
+        $towns = Towns::findOrFail($id);
+        $this->town_id = $towns->id;
+        $this->town = $towns->town;
     }
 
     /**
@@ -110,31 +106,27 @@ class ManageLGA extends Component
      */
     public function update($id)
     {
-        $this->validate();
-
-        $lgas = Lgas::findOrFail($id);
-
-        $lgas->update([
-            'lga_id' => $this->lga_id,
-            'lga' => $this->lga,
+        $validatedData = $this->validate([
+        'town_id' => 'required',
+        'town' => 'required|unique:towns',
         ]);
-        session()->flash('message', 'LGA Updated Successfully.');
+
+        $towns = Towns::findOrFail($id);
+
+        $towns->update([
+            'town_id' => $this->town_id,
+            'town' => $this->town,
+        ]);
+        session()->flash('message', 'Town Updated Successfully.');
         return redirect()->back();
     }
 
-
-    // for delete
+        // for delete
     public function destroy($id)
     {
-        Lgas::find($id)->delete();
-
-        $towns = Towns::where('lga_id', $id)->get();
-        // Delete records for Towns model
-        foreach ($towns as $town) {
-         $town->delete();
-        }
+        Towns::find($id)->delete();
         session()->flash('success', 'Record deleted successfully.');
         return redirect()->back();
     }
-
+    
 }
