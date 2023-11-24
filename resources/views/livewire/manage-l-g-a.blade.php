@@ -1,6 +1,5 @@
 <div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-
     <div class="col-xl-12 col-md-12">
         <div class="common-card property-overview">
             <div class="common-header d-flex justify-content-between">

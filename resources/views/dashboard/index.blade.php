@@ -153,8 +153,7 @@
                                                 <tbody>
                                                     <tr>
 
-                                                        @forelse
-                                                        (DB::table('properties')->where('property_status','!=','Paid')->limit(3)->get()
+                                                        @forelse(DB::table('properties')->where('property_status','!=','Paid')->limit(3)->get()
                                                         as $properties)
                                                     <tr>
                                                         <td>
@@ -193,9 +192,10 @@
                                                         <th>Status</th>
                                                     </tr>
                                                 </thead>
+
+
                                                 <tbody>
-                                                    @forelse
-                                                    (DB::table('properties')->where('property_status','!=','Paid')->limit(5)->get()
+                                                    @forelse(DB::table('properties')->where('property_status','!=','Paid')->limit(5)->get()
                                                     as $properties)
                                                     <tr>
                                                         <td>
@@ -214,6 +214,7 @@
                                                     <p>NO properties</p>
                                                     @endforelse
                                                 </tbody>
+
                                             </table>
                                         </div>
                                     </div>

@@ -100,6 +100,8 @@ echo "<script>
                 'property' => $property,
     
     ]);
+
+        //  return view('dashboard.tin-pictures.show');
     }
 
     /**
@@ -111,6 +113,9 @@ echo "<script>
     public function edit($id)
     {
         //
+        // return view('dashboard.tin-pictures.edit', [
+        //     'properties' => Properties::findOrFail($id)
+        // ]);
         return view('dashboard.tin-pictures.edit', [
             'properties' => Properties::findOrFail($id)
         ]);
