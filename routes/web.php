@@ -106,12 +106,6 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         'edit',
         'show',
     ]);
-    // Route::resource('admin/towns', ManageLGA::class)->except([
-    //     'index',
-    //     'create',
-    //     'edit',
-    //     'destroy',
-    // ]);
     Route::get('admin/towns/{state_id}/{lga_id}', [ManageTownsShow::class, 'show'])->name('town.show');
 });
 

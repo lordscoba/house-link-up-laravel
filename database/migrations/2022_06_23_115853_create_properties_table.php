@@ -56,9 +56,13 @@ return new class extends Migration
 
   
 
+         Schema::table('properties', function (Blueprint $table) {
+            $table->text('state')->nullable();
+            $table->text('lga')->nullable();
+            $table->text('town')->nullable();
+        });
 
     }
-
 
     /**
      * Reverse the migrations.
