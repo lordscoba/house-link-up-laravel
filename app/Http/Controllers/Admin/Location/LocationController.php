@@ -27,7 +27,6 @@ class LocationController extends Controller
     
     public function index()
     {
-        //  $locations = Location::all();
          $locations = Location::paginate(5);
 
         // dd($locations);

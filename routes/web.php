@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Admin\Agencies\AgenciesController;
-use App\Http\Controllers\Admin\Location\ManageLGA;
 use App\Http\Controllers\Admin\Location\ManageTownsShow;
 use App\Http\Controllers\Admin\PicturesController;
 use App\Http\Controllers\Admin\Properties\PropertiesController;
@@ -21,6 +20,7 @@ use App\Http\Controllers\LandingPagesController;
 use App\Http\Controllers\ReviewFeedController;
 use App\Http\Controllers\SuscribersController;
 use App\Http\Controllers\SuscribersFeedController;
+use App\Http\Controllers\Dashboard\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -81,6 +81,15 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::resource('dashboard/user-properties', UserPropertiesController::class);
     Route::resource('dashboard/tin-pictures', UserPicturesController::class)->except(['create']);
     Route::resource('user_image', UploadImage::class)->only(['edit', 'update']);
+
+
+    Route::get('/pricing', [PaymentController::class, 'pricing'])->name('payments.pricing');
+    Route::get('/payments', [PaymentController::class, 'index'])->name('payments.index');
+    Route::get('/payments/create', [PaymentController::class, 'create'])->name('payments.create');
+    Route::get('/payments/success', [PaymentController::class, 'handleGatewayCallback'])->name('payments.success');
+    Route::post('/payments/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
+    // Route::get('/payment/callback', [PaymentController::class, 'handleGatewayCallback']);
+    Route::get('/payment/{ref}', [PaymentController::class, 'view'])->name('payments.view');
 });
 
 /*-----------------------------------------
