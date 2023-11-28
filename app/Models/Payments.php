@@ -29,6 +29,7 @@ class Payments extends Model
         'authorization_url',
         'access_code',
         'status',
+        'has_expired',
         'reference',
        ];
 }

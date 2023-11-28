@@ -25,6 +25,7 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('agencies.index') }}">Agency</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('pictures.index') }}">Property Pictures</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('reviews.index') }}">Property reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('admin.payments') }}">Payments</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('faqs.index') }}">Faqs</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('contact_us.index') }}">Contacts-Us Messages</a>
             </li>
