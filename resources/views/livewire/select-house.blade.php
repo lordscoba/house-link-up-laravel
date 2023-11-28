@@ -16,7 +16,7 @@
                                                         class="img-fluid m-0" alt="">
                                                     <h6>Want to buy or rent Home ?</h6>
                                                     <h1>Reality Properties solve your problems</h1>
-                                                    <a href="submit-property.html"
+                                                    <a href="{{ route('login') }}"
                                                         class="btn btn-gradient color-6">submit
                                                         property</a>
                                                 </div>
@@ -25,11 +25,11 @@
                                         <div>
                                             <div class="home-content">
                                                 <div>
-                                                    <img src="../assets/images/signature/2.png" class="img-fluid m-0"
-                                                        alt="">
+                                                    <img src="{{ asset('assets/img/house_link_up_side.png') }}"
+                                                        class="img-fluid m-0" alt="">
                                                     <h6>Want to buy or sell Land ?</h6>
-                                                    <h1>Elegant retreat in quiet Coral Gables</h1>
-                                                    <a href="submit-property.html"
+                                                    <h1>Elegant houses for rent and sale</h1>
+                                                    <a href="{{ route('login') }}"
                                                         class="btn btn-gradient color-6">submit
                                                         property</a>
                                                 </div>
@@ -155,7 +155,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Agencies</label>
-                                                <select wire:model="search_agencies" class="form-control font-rubik">
+                                                <select wire:model="search_agency" class="form-control font-rubik">
                                                     <option selected value=""><span>Choose</span><i
                                                             class="fas fa-angle-down"></i></option>
                                                     @forelse (DB::table('agencies')->get() as $agency)

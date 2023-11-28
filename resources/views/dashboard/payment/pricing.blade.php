@@ -22,6 +22,22 @@
 
 <!-- pricing plan section start -->
 <section class="pricing-section slick-between slick-shadow pricing-inner">
+    <div class="">
+        @if ($errors->any())
+        <div class="alert alert-danger w-50 mx-auto p-4">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li><br>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        <!-- @if (session('errors'))
+        <div class="alert alert-danger">
+            {{ session('errors')->first('message') }}
+        </div>
+        @endif -->
+    </div>
     <div class="container">
         <div class="row">
             <div class="col">

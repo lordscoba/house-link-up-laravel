@@ -36,7 +36,9 @@
                             <div class="create-property-form">
                                 <div class="form-inputs">
                                     <h6>Basic information</h6>
-
+                                    <a href="/dashboard/tin-pictures/{{ $properties->id }}"
+                                        class="btn btn-dashed btn-pill color-2 float-right">Edit
+                                        Pictures</a>
                                 </div>
 
                                 <form action="/dashboard/user-properties/{{ $properties->id }}" class="row gx-2 gx-sm-3"

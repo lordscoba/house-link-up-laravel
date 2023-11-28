@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Agencies\AgenciesController;
+use App\Http\Controllers\Admin\AdminPayments;
 use App\Http\Controllers\Admin\Location\ManageTownsShow;
 use App\Http\Controllers\Admin\PicturesController;
 use App\Http\Controllers\Admin\Properties\PropertiesController;
@@ -116,6 +117,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         'show',
     ]);
     Route::get('admin/towns/{state_id}/{lga_id}', [ManageTownsShow::class, 'show'])->name('town.show');
+    Route::get('admin/payments', [AdminPayments::class, 'index'])->name('admin.payments');
 });
 
 /*-------------------------------------------

@@ -28,6 +28,7 @@ class PaymentController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('has_sub')->only('redirectToGateway');
     }
 
 
