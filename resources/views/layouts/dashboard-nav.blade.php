@@ -28,18 +28,23 @@
             @endif
         </div>
         <div class="dashboard-list">
-            <ul class="nav nav-tabs right-line-tab">
-                <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('user-properties.index') }}">My Listing</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('user-properties.create') }}">create
+            <ul class="nav nav-tabs right-line-tab gap-1 gap-md-0 p-lg-3">
+                <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('home') }}">Dashboard</a></li>
+                <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('user-properties.index') }}">My
+                        Listing</a></li>
+                <li class="nav-item"><a class="btn btn-dashed m-1 w-100"
+                        href="{{ route('user-properties.create') }}">Upload
                         property</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('user_profile') }}">My profile</a>
+                <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('user_profile') }}">My
+                        profile</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('tin-pictures.index') }}">Edit Property
+                <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('tin-pictures.index') }}">Edit
+                        Property
                         Images</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('payments.pricing') }}">Upgrade</a></li>
+                <li class="nav-item"><a class="btn btn-dashed m-1 w-100"
+                        href="{{ route('payments.pricing') }}">Upgrade</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout"
-                        class="nav-link">Log out</a></li>
+                        class="btn btn-dashed m-1 w-100">Log out</a></li>
             </ul>
         </div>
     </div>

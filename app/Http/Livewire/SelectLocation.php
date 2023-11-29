@@ -15,12 +15,12 @@ class SelectLocation extends Component
     public function render()
     {
 
-        $location = Location::all();
+        $location = Location::orderBy('state', 'asc')->get();
 
         // for local government area
         $location2 = Location::where('state',$this->state_value)->first();
         if ($location2) {
-            $lgas = Lgas::where('state_id',$location2->id)->get();
+            $lgas = Lgas::where('state_id',$location2->id)->orderBy('lga', 'asc')->get();
         } else {
             $lgas = collect();
         }
@@ -28,7 +28,7 @@ class SelectLocation extends Component
         // for towns
         $lga2 = Lgas::where('lga',$this->lga_value)->first();
         if ($lga2) {
-            $towns = Towns::where('lga_id',$lga2->id)->get();
+            $towns = Towns::where('lga_id',$lga2->id)->orderBy('town', 'asc')->get();
         } else {
             $towns = collect();
         }

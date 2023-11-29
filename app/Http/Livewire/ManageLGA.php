@@ -22,14 +22,14 @@ class ManageLGA extends Component
 
     protected $rules = [
         'state_id' => 'required',
-        'lga' => 'required|unique:lgas',
+        'lga' => 'required',
     ];
 
     // for render
     public function render()
     {
         return view('livewire.manage-l-g-a', [
-            'lgas' => Lgas::where('state_id', $this->state_id)->paginate(5),
+            'lgas' => Lgas::where('state_id', $this->state_id)->orderBy('lga', 'asc')->paginate(5),
             'state_id' => $this->state_id,
         ]);
     }

@@ -3,133 +3,8 @@
 @section('content')
 
 @livewireStyles
-<!-- home section start -->
-<section class="home-section layout-1 layout-6">
-    <div class="home-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-10 col-lg-8 mx-auto text-center w-100">
-                    <div class="container">
-                        <div class="home-left">
-                            <div  class="py-5">
-                                <div class="home-slider-1 arrow-light slick-shadow">
-                                    <div>
-                                        <div class="home-content">
-                                            <div>
-                                                <img src="{{ asset('assets/img/house_link_up_side.png') }}"
-                                                    class="img-fluid m-0 mx-auto" alt="">
-                                                <h6>Want to upload properties ?</h6>
-                                                <h1>Reality Properties solve your problems</h1>
-                                                <a href="{{ route('user-properties.create') }}" class="btn btn-gradient color-6">Upload
-                                                    property</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="home-content">
-                                            <div>
-                                                <img src="{{ asset('assets/img/house_link_up_side.png') }}"
-                                                    class="img-fluid m-0" alt="">
-                                                <h6>Want to upload properties ?</h6>
-                                                <h1>Elegant houses for rent and sale</h1>
-                                                <a href="{{ route('user-properties.create') }}" class="btn btn-gradient color-6">Upload
-                                                    property</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-</section>
-<!-- home section end -->
-
-
-<!-- home section start -->
-
-    <section class="home-section layout-1 layout-5 my-5">
-    <div class="home-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-8 mx-auto text-center w-100">
-                    <div class="container">
-                        <div class="home-left">
-                            <div  class="py-5">
-                                <div class="home-slider-1 arrow-light slick-shadow">
-                                    <div>
-                                        <div class="home-content">
-                                            <div>
-                                                <img src="{{ asset('assets/img/house_link_up_side.png') }}"
-                                                class="img-fluid m-0 mx-auto" alt="">
-                                                <h6>Want to check property ?</h6>
-                                                <h1>Reality Properties solve your problems</h1>
-                                                <a href="{{ route('search') }}" class="btn btn-gradient color-6">Check
-                                                    property</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="home-content">
-                                            <div>
-                                                <img src="{{ asset('assets/img/house_link_up_side.png') }}"
-                                                    class="img-fluid m-0" alt="">
-                                                <h6>Want to check property ?</h6>
-                                                <h1>Elegant houses for rent and sale</h1>
-                                                <a href="{{ route('search') }}" class="btn btn-gradient color-6">Check
-                                                    property</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="looking-icons">
-                                    <h5>What are you looking for?</h5>
-                                    <ul>
-                                        <li>
-                                            <a href="{{ route('search') }}" class="looking-icon">
-                                                <svg class="property-svg">
-                                                    <use xlink:href="../assets/svg/icons.svg#home-lock"></use>
-                                                </svg>
-                                                <h6>House</h6>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('search') }}" class="looking-icon">
-                                                <svg class="property-svg">
-                                                    <use xlink:href="../assets/svg/icons.svg#home-heart"></use>
-                                                </svg>
-                                                <h6>Booking</h6>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('search') }}" class="looking-icon">
-                                                <svg class="property-svg">
-                                                    <use xlink:href="../assets/svg/icons.svg#key"></use>
-                                                </svg>
-                                                <h6>Garage</h6>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-</section> 
-<!-- home section end -->
-
-
-
+@livewire('select-house')
 <!-- feature section start -->
 <section class="feature-section banner-4">
     <div class="container">
@@ -197,6 +72,7 @@
                                         <span class="label label-white label-lg color-6">Featured</span>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -335,8 +211,8 @@
                     <div class="col-xl-4 col-md-6 wow fadeInUp">
                         <div class="property-box">
                             <div class="property-image">
-                                <div class="property-slider color-6">
-                                    @forelse(DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
+                                 <div class="property-slider color-6">
+                                    @forelse (DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
                                     <a href="javascript:void(0)">
                                         <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img"
                                             alt="">
@@ -355,7 +231,8 @@
 
                                     </a>
                                     @endforelse
-                                </div>
+                                </div> 
+                               
 
                                 <div class="labels-left">
                                     <div>
@@ -727,173 +604,12 @@
                         </div>
                     </div>
                     @endforelse
-
-
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- property section end -->
-
-<!--our new offer section start -->
-<section class="offer-section banner-section banner-4 slick-between ">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="title-1 text-white">
-                    <span class="label label-gradient color-6">New Offer</span>
-                    <h2>Our New Offer</h2>
-                    <hr>
-                </div>
-                <div class="offer-slider">
-                    <div>
-                        <div class="offer-wrapper">
-                            <div class="media">
-                                <div class="offer-icon">
-                                    <img src="../assets/images/others/icon-1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <h6>Houselinkup</h6>
-                                    <h3>Looking for the new home?</h3>
-                                    <p>10 new offers every day. 350 offers on site, trusted
-                                        by a community of thousands of users.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="offer-wrapper">
-                            <div class="media">
-                                <div class="offer-icon">
-                                    <img src="../assets/images/others/icon-2.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <h6>Houselinkup</h6>
-                                    <h3>Are you looking for home?</h3>
-                                    <p>350 offers on site, trusted by a community of thousands of users. 10 new offers
-                                        every day. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="offer-wrapper">
-                            <div class="media">
-                                <div class="offer-icon">
-                                    <img src="../assets/images/others/icon-1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <h6>Houselinkup</h6>
-                                    <h3>Looking for the new Office?</h3>
-                                    <p>10 new offers every day. 350 offers on site, trusted
-                                        by a community of thousands of users.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--our new offer section end -->
-
-<!-- banner section start -->
-<section class="banner-section banner-4 parallax-image">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="title-1 color-6">
-                    <span class="label label-gradient color-6">Buy or sell</span>
-                </div>
-                <div class="light-bg banner-1">
-                    <span class="big-gradient">*</span>
-                    <span class="small-white">*</span>
-                    <h6>Houselinkup real estate</h6>
-                    <h2>Looking to Buy a new property or Sell an existing one?
-                        Real Homes provides an easy solution!</h2>
-                    <div class="button-banner">
-                        <a href="{{ route('login') }}" class="btn btn-gradient color-6">Submit property</a>
-                        <a href="{{ route('login') }}" class="btn btn-white color-6"> <span>Browse
-                                property</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- banner section end -->
-
-<!-- testimonial section start -->
-<section class="testimonial-bg testimonial-layout6">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="title-1 text-white">
-                    <span class="label label-gradient color-6">Our</span>
-                    <h2>Happy clients</h2>
-                    <hr>
-                </div>
-                <div class="testimonial-2 arrow-light">
-                    <div>
-                        <div class="client-slider light-bg">
-                            <ul class="user-list">
-                                <li><img src="../assets/images/testimonial/2.png" alt=""></li>
-                                <li>
-                                    <img src="../assets/images/testimonial/1.png" alt="">
-                                    <div class="heart-bg">
-                                    </div>
-                                    <img src="../assets/images/testimonial/heart.png" alt="" class="heart-icon">
-                                </li>
-                                <li><img src="../assets/images/testimonial/3.png" alt=""></li>
-                            </ul>
-                            <p>Surveyors make precise measurements of property boundaries. Many industries, including
-                                construction, rely on these measurements</p>
-                            <h6>real estate</h6>
-                            <ul class="client-rating">
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                            </ul>
-                            <span class="label label-white label-lg"><span class="gradient-1 color-6">Mark
-                                    Andry</span></span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="client-slider light-bg">
-                            <ul class="user-list">
-                                <li><img src="../assets/images/testimonial/1.png" alt=""></li>
-                                <li>
-                                    <img src="../assets/images/testimonial/2.png" alt="">
-                                    <div class="heart-bg">
-                                    </div>
-                                    <img src="../assets/images/testimonial/heart.png" alt="" class="heart-icon">
-                                </li>
-                                <li><img src="../assets/images/testimonial/3.png" alt=""></li>
-                            </ul>
-                            <p>Residences can be classified by and connected to residences. Different types of housing
-                                can be use same physical type.</p>
-                            <h6>real estate</h6>
-                            <ul class="client-rating">
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                            </ul>
-                            <span class="label label-white label-lg"><span class="gradient-1 color-6">John
-                                    David</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- testimonial section end -->
 
 @livewireScripts
 @endsection

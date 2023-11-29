@@ -17,22 +17,32 @@
         </div>
     </div>
     <div class="dashboard-list">
-        <ul class="nav nav-tabs right-line-tab">
-            <li class="nav-item"><a class="nav-link" href="{{ route('super.admin.home') }}">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('properties.index') }}">Properties</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('location.index') }}">Location</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('agencies.index') }}">Agency</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('pictures.index') }}">Property Pictures</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('reviews.index') }}">Property reviews</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('admin.payments') }}">Payments</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('faqs.index') }}">Faqs</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('contact_us.index') }}">Contacts-Us Messages</a>
+        <ul class="nav nav-tabs right-line-tab gap-1 gap-md-0 p-lg-3">
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100"
+                    href="{{ route('super.admin.home') }}">Dashboard</a></li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('users.index') }}">Users</a></li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100"
+                    href="{{ route('properties.index') }}">Properties</a></li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('location.index') }}">Location</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('suscribers.index') }}">Suscribers</a></li>
-            {{-- <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li> --}}
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('agencies.index') }}">Agency</a>
+            </li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('pictures.index') }}">Property
+                    Pictures</a>
+            </li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('reviews.index') }}">Property
+                    reviews</a></li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('admin.payments') }}">Payments</a>
+            </li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('faqs.index') }}">Faqs</a></li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="{{ route('contact_us.index') }}">Contacts-Us
+                    Messages</a>
+            </li>
+            <li class="nav-item"><a class="btn btn-dashed m-1 w-100"
+                    href="{{ route('suscribers.index') }}">Suscribers</a></li>
+            {{-- <li class="nav-item"><a class="btn btn-dashed m-1 w-100" href="user-privacy.html">Privacy</a></li> --}}
             <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout"
-                    class="nav-link">Log out</a></li>
+                    class="btn btn-dashed m-1 w-100">Log out</a></li>
 
         </ul>
     </div>

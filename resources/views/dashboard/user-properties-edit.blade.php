@@ -63,17 +63,20 @@
                                     <div class="form-group col-sm-4">
                                         <label>Property Type</label>
                                         <select name="property_type" id="property_type" class="form-control">
-                                            <option selected value="{{ $properties->property_type }}">Choose...</option>
+                                            <option selected value="{{ $properties->property_type }}">Choose...
+                                            </option>
                                             <option value="Apartment">Apartment</option>
-                                            <option value="Family House">Family House</option>
-                                            <option value="Villa">Villa</option>
+                                            <option value="Self Contain">Self Contain</option>
+                                            <option value="Bedroom Flats">Bedroom Flats</option>
+                                            <option value="Bungalow">Bungalow</option>
                                             <option value="Company">Company</option>
                                             <option value="Cottage">Cottage</option>
                                             <option value="Duplex">Duplex</option>
-                                            <option value="Bungalow">Bungalow</option>
-                                            <option value="Block of Flats">Block of Flats</option>
-                                            <option value="Shops">Shops</option>
+                                            <option value="Family house">Family house</option>
+                                            <option value="Villa">Villa</option>
                                             <option value="Mall">Mall</option>
+                                            <option value="Office">Office</option>
+                                            <option value="Shops">Shops</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
@@ -96,6 +99,7 @@
                                         <label>Max Rooms</label>
                                         <select name="rooms" id="rooms" class="form-control">
                                             <option selected value="{{ $properties->rooms }}">Choose...</option>
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>

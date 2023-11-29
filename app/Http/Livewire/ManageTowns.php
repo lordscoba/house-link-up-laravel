@@ -19,14 +19,14 @@ class ManageTowns extends Component
 
     protected $rules = [
         'lga_id' => 'required',
-        'town' => 'required|unique:towns',
+        'town' => 'required',
     ];
 
     // for render
     public function render()
     {
         return view('livewire.manage-towns', [
-            'towns' => Towns::where('lga_id', $this->lga_id)->paginate(5),
+            'towns' => Towns::where('lga_id', $this->lga_id)->orderBy('town', 'asc')->paginate(5),
             'lga_id' => $this->lga_id,
         ]);
     }
@@ -108,7 +108,7 @@ class ManageTowns extends Component
     {
         $validatedData = $this->validate([
         'town_id' => 'required',
-        'town' => 'required|unique:towns',
+        'town' => 'required',
         ]);
 
         $towns = Towns::findOrFail($id);
