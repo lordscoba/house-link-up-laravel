@@ -36,7 +36,7 @@ class CheckSubscription
             // Log::info($currentTime);
 
             // update if expired
-            if ($payment->success === 1 && $payment->expired < $currentTime && $payment->has_expired != 1) {
+            if ($payment->success == 1 && $payment->expired < $currentTime && $payment->has_expired != 1) {
             $payments = Payments::where('reference', $payment->reference)
             ->update([
             'has_expired' => 1,
@@ -44,7 +44,7 @@ class CheckSubscription
             }
 
             // check for recent payment
-            if ($payment->success === 1 && $payment->expired >= $currentTime) {
+            if ($payment->success == 1 && $payment->expired >= $currentTime) {
                 $sub = true;
             }
         }
