@@ -77,10 +77,10 @@
                                                         @endif
                                                     </td>
                                                     <td>
-                                                        @if ( $payment->success === 1)
+                                                        @if ( $payment->success == 1)
                                                         <a class="btn btn-success"
                                                             href="/payment/{{ $payment->reference }}">View</a>
-                                                        @elseif ($payment->processing === 1)
+                                                        @elseif ($payment->processing == 1)
                                                         <a class="btn btn-warning"
                                                             href="{{ $payment->authorization_url}}">Continue</a>
                                                         @else

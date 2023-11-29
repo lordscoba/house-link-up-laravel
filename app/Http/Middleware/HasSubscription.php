@@ -36,17 +36,17 @@ class HasSubscription
         foreach ($payment as $payment) {
             
         // check for recent payment
-        if ($payment->success === 1 && $payment->expired >= $currentTime) {
+        if ($payment->success == 1 && $payment->expired >= $currentTime) {
             $sub = true;
         }
 
         // check for processing payment
-        if ($payment->processing === 1 ) {
+        if ($payment->processing == 1 ) {
             $has_processing = true;
         }
         }
 
-        if ($sub === true) {
+        if ($sub == true) {
             return back()->withErrors(['errors' => "you are already subscribed, You can continue using our services till your subscription expires"]);
         }
 
