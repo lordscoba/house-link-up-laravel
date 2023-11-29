@@ -36,16 +36,19 @@
                 <div class="col-lg-4">
                     <label>Property Type</label>
                     <select wire:model.="search_type" class="form-control font-rubik">
-                        <option selected value=""><span>Choose</span> <i class="fas fa-angle-down"></i></span>
-                        </option>
+                        <option selected value=""><span>Choose</span> <i class="fas fa-angle-down"></i></span></option>
                         <option value="Apartment">Apartment</option>
-                        <option value="Family House">Family House</option>
+                        <option value="Self Contain">Self Contain</option>
+                        <option value="Bedroom Flats">Bedroom Flats</option>
+                        <option value="Bungalow">Bungalow</option>
+                        <option value="Company">Company</option>
                         <option value="Cottage">Cottage</option>
                         <option value="Duplex">Duplex</option>
-                        <option value="Bungalow">Bungalow</option>
-                        <option value="Block of Flats">Block of Flats</option>
-                        <option value="Shops">Shops</option>
+                        <option value="Family house">Family house</option>
+                        <option value="Villa">Villa</option>
                         <option value="Mall">Mall</option>
+                        <option value="Office">Office</option>
+                        <option value="Shops">Shops</option>
                     </select>
                 </div>
                 <div class="col-lg-4">
@@ -103,68 +106,67 @@
         </div>
         <div class="property-2 row column-sm zoom-gallery property-label property-grid list-view" wire:ignore.self>
             @foreach ($properties as $property)
-                <div class="col-md-12" wire:key="property-{{ $property->id }}">
-                    <div class="property-box">
-                        <div class="property-image">
-                            <div class="property-slider">
-                                @forelse (DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
-                                    <a href="javascript:void(0)">
-                                        <img style="width:400px" src="{{ URL::asset('images/' . $picture->image_path) }}"
-                                            class="bg-img" alt="">
+            <div class="col-md-12" wire:key="property-{{ $property->id }}">
+                <div class="property-box">
+                    <div class="property-image">
+                        <div class="property-slider">
+                            @forelse (DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
+                            <a href="javascript:void(0)">
+                                <img style="width:400px" src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                    class="bg-img" alt="">
 
-                                    </a>
-                                @empty
-                                    <a href="javascript:void(0)">
-                                        <img style="width:400px" src="../assets/images/property/4.jpg" class="bg-img"
-                                            alt="">
+                            </a>
+                            @empty
+                            <a href="javascript:void(0)">
+                                <img style="width:400px" src="../assets/images/property/4.jpg" class="bg-img" alt="">
 
-                                    </a>
-                                @endforelse
+                            </a>
+                            @endforelse
+                        </div>
+                        <div class="labels-left">
+                            <div>
+                                <span class="label label-shadow">{{ $property->property_status }}</span>
                             </div>
-                            <div class="labels-left">
-                                <div>
-                                    <span class="label label-shadow">{{ $property->property_status }}</span>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="property-details">
-                            <span class="font-roboto">{{ $property->country }}</span>
-                            <div class="my-listing font-roboto">{{ $property->created_at }}</div>
-                            <a href="single-property-8.html">
-                                <h3>{{ $property->property_type }}</h3>
-                            </a>
-                            <h6>${{ $property->property_price }}.00*</h6>
-                            <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides
-                                wonderful entertaining spaces with a chef
-                                kitchen opening…</p>
-                            <ul>
-                                <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
-                                        alt="">Bed : {{ $property->beds }}</li>
-                                <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
-                                        alt="">Baths : {{ $property->bathrooms }}</li>
-                                <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                        class="img-fluid ruler-tool" alt="">Sq Ft : {{ $property->area }}
-                                </li>
-                            </ul>
-                            <div class="property-btn d-flex">
-                                {{-- <span>{{ $property->created_at }}</span> --}}
-                                <a href="properties/{{ $property->id }}/edit"
-                                    class="btn btn-dashed btn-pill color-2 float-left">Edit</a>
-                                <form action="/admin/properties/{{ $property->id }}" class="pt-0" method="POST">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit"
-                                        class="btn btn-dashed btn-pill color-2 float-right">Delete</button>
-                                </form>
-                                <a href="/admin/properties/{{ $property->id }}"
-                                    class="btn btn-dashed btn-pill color-2 float-right">Details</a>
-                                {{-- <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button> --}}
-                            </div>
+                    </div>
+
+                    <div class="property-details">
+                        <span class="font-roboto">{{ $property->country }}</span>
+                        <div class="my-listing font-roboto">{{ $property->created_at }}</div>
+                        <a href="single-property-8.html">
+                            <h3>{{ $property->property_type }}</h3>
+                        </a>
+                        <h6>${{ $property->property_price }}.00*</h6>
+                        <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides
+                            wonderful entertaining spaces with a chef
+                            kitchen opening…</p>
+                        <ul>
+                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed :
+                                {{ $property->beds }}</li>
+                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths :
+                                {{ $property->bathrooms }}</li>
+                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool"
+                                    alt="">Sq Ft : {{ $property->area }}
+                            </li>
+                        </ul>
+                        <div class="property-btn d-flex">
+                            {{-- <span>{{ $property->created_at }}</span> --}}
+                            <a href="properties/{{ $property->id }}/edit"
+                                class="btn btn-dashed btn-pill color-2 float-left">Edit</a>
+                            <form action="/admin/properties/{{ $property->id }}" class="pt-0" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit"
+                                    class="btn btn-dashed btn-pill color-2 float-right">Delete</button>
+                            </form>
+                            <a href="/admin/properties/{{ $property->id }}"
+                                class="btn btn-dashed btn-pill color-2 float-right">Details</a>
+                            {{-- <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button> --}}
                         </div>
                     </div>
                 </div>
+            </div>
             @endforeach
         </div>
         <nav class="theme-pagination">

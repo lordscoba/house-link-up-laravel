@@ -74,7 +74,7 @@
                             <div class="vertical-search">
                                 <div class="left-sidebar">
                                     <div class="row gx-3">
-                                        <div class="col-lg-6">
+                                        <div class="col-6 col-lg-6">
                                             <div class="form-group">
                                                 <label>Property Status</label>
                                                 <div>
@@ -87,7 +87,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-6 col-lg-6">
                                             <div class="form-group">
                                                 <label>Property Type</label>
                                                 <div>
@@ -95,20 +95,22 @@
                                                         <option selected value=""><span>Choose</span> <i
                                                                 class="fas fa-angle-down"></i></span></option>
                                                         <option value="Apartment">Apartment</option>
-                                                        <option value="Family House">Family House</option>
-                                                        <option value="Villa">Villa</option>
+                                                        <option value="Self Contain">Self Contain</option>
+                                                        <option value="Bedroom Flats">Bedroom Flats</option>
+                                                        <option value="Bungalow">Bungalow</option>
                                                         <option value="Company">Company</option>
                                                         <option value="Cottage">Cottage</option>
                                                         <option value="Duplex">Duplex</option>
-                                                        <option value="Bungalow">Bungalow</option>
-                                                        <option value="Block of Flats">Block of Flats</option>
-                                                        <option value="Shops">Shops</option>
+                                                        <option value="Family house">Family house</option>
+                                                        <option value="Villa">Villa</option>
                                                         <option value="Mall">Mall</option>
+                                                        <option value="Office">Office</option>
+                                                        <option value="Shops">Shops</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-6 col-lg-6">
                                             <div class="form-group">
                                                 <label>Rooms</label>
                                                 <select wire:model="search_room" class="form-control font-rubik">
@@ -151,8 +153,8 @@
                                                     <option value="6">6</option>
                                                 </select>
                                             </div>
-                                        </div> --}}
-                                        <div class="col-sm-6">
+                                        </div> 
+                                        <div class="col-6 col-lg-6">
                                             <div class="form-group">
                                                 <label>Agencies</label>
                                                 <select wire:model="search_agency" class="form-control font-rubik">
@@ -160,78 +162,77 @@
                                                             class="fas fa-angle-down"></i></option>
                                                     @forelse (DB::table('agencies')->get() as $agency)
                                                     <option value="{{ $agency->name }}</">{{ $agency->name }}</option>
-                                                    @empty
-                                                    <option value="">None</option>
-                                                    @endforelse
-                                                </select>
-                                            </div>
+                                        @empty
+                                        <option value="">None</option>
+                                        @endforelse
+                                        </select>
+                                    </div>
+                                </div> --}}
+                                <div class="col-6 col-lg-6">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="amount">Price : </label>
+                                            <input class="form-control" type="number" wire:model="search_price">
                                         </div>
-                                        <div class="col-lg-12 col-sm-6">
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label for="amount">Price : </label>
-                                                    <input class="form-control" type="number" wire:model="search_price">
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>State</label>
+                                        <div>
+                                            <select wire:model="state_value" class="form-control font-rubik">
+                                                <option selected value=""><span>Choose</span> <i
+                                                        class="fas fa-angle-down"></i></span></option>
+                                                @forelse ($location as $state)
+                                                <option value="{{ $state->state }}">{{ $state->state }}
+                                                </option>
+                                                @empty
+                                                <option value="">None</option>
+                                                @endforelse
+                                            </select>
                                         </div>
-                                        <div class="col-lg-12 col-sm-6">
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label for="amount">Area : </label>
-                                                    <input class="form-control" type="number" wire:model="search_area">
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label>LGA</label>
+                                        <div>
+                                            <select wire:model="lga_value" class="form-control font-rubik">
+                                                <option selected value=""><span>Choose</span> <i
+                                                        class="fas fa-angle-down"></i></span></option>
+                                                @forelse ($lgas as $lga)
+                                                <option value="{{ $lga->lga }}">{{ $lga->lga }}
+                                                </option>
+                                                @empty
+                                                <option value="">None</option>
+                                                @endforelse
+                                            </select>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <label>State</label>
-                                                <div>
-                                                    <select wire:model="state_value" class="form-control font-rubik">
-                                                        <option selected value=""><span>Choose</span> <i
-                                                                class="fas fa-angle-down"></i></span></option>
-                                                        @forelse ($location as $state)
-                                                        <option value="{{ $state->state }}">{{ $state->state }}
-                                                        </option>
-                                                        @empty
-                                                        <option value="">None</option>
-                                                        @endforelse
-                                                    </select>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label>Town</label>
+                                        <div>
+                                            <select wire:model="town_value" class="form-control font-rubik">
+                                                <option selected value=""><span>Choose</span> <i
+                                                        class="fas fa-angle-down"></i></span></option>
+                                                @forelse ($towns as $town)
+                                                <option value="{{ $town->town }}">{{ $town->town }}
+                                                </option>
+                                                @empty
+                                                <option value="">None</option>
+                                                @endforelse
+                                            </select>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>LGA</label>
-                                                <div>
-                                                    <select wire:model="lga_value" class="form-control font-rubik">
-                                                        <option selected value=""><span>Choose</span> <i
-                                                                class="fas fa-angle-down"></i></span></option>
-                                                        @forelse ($lgas as $lga)
-                                                        <option value="{{ $lga->lga }}">{{ $lga->lga }}
-                                                        </option>
-                                                        @empty
-                                                        <option value="">None</option>
-                                                        @endforelse
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>Town</label>
-                                                <div>
-                                                    <select wire:model="town_value" class="form-control font-rubik">
-                                                        <option selected value=""><span>Choose</span> <i
-                                                                class="fas fa-angle-down"></i></span></option>
-                                                        @forelse ($towns as $town)
-                                                        <option value="{{ $town->town }}">{{ $town->town }}
-                                                        </option>
-                                                        @empty
-                                                        <option value="">None</option>
-                                                        @endforelse
-                                                    </select>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="amount">Address : </label>
+                                            <input class="form-control" type="text" wire:model="search_address"
+                                                autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
@@ -241,95 +242,97 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- home section end -->
+</div>
+</div>
+</section>
+<!-- home section end -->
 
-    <!-- property section start -->
-    <section class="property-section slick-between slick-shadow property-color-6">
-        <div class="container">
-            <div class="row ratio_landscape">
-                <div class="col">
-                    <div class="title-1 color-6">
-                        <span class="label label-gradient color-6">Properties</span>
-                        <h2>Latest</h2>
-                        <hr>
-                    </div>
+<!-- property section start -->
+<section class="property-section slick-between slick-shadow property-color-6">
+    <div class="container">
+        <div class="row ratio_landscape">
+            <div class="col">
+                <div class="title-1 color-6">
+                    <span class="label label-gradient color-6">Properties</span>
+                    <h2>Latest</h2>
+                    <hr>
+                </div>
 
 
-                    <div class="listing-hover-property row">
-                        {{-- @forelse (DB::table('properties')->limit(6)->orderBy('created_at','desc')->get() as $property)
+                <div class="listing-hover-property row">
+                    {{-- @forelse (DB::table('properties')->limit(6)->orderBy('created_at','desc')->get() as $property)
                     --}}
-                        @forelse ($properties as $property)
-                        <div class="col-xl-4 col-md-6 wow fadeInUp" wire:key="property-{{ $property->id }}">
-                            <div class="property-box">
-                                <div class="property-image">
-                                    @forelse (DB::table('pictures')->limit(1)->where('properties_id',
-                                    $property->id)->get() as $picture)
-                                    <a href="javascript:void(0)">
-                                        <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img"
-                                            alt="" width="600px">
-                                        <div class="labels-left">
-                                            <span class="label label-shadow">{{ $property->property_status }}</span>
-                                        </div>
-                                    </a>
+                    @forelse ($properties as $property)
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" wire:key="property-{{ $property->id }}">
+                        <div class="property-box">
+                            <div class="property-image">
+                                @forelse (DB::table('pictures')->limit(1)->where('properties_id',
+                                $property->id)->get() as $picture)
+                                <a href="javascript:void(0)">
+                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img" alt=""
+                                        width="600px">
+                                    <div class="labels-left">
+                                        <span class="label label-shadow">{{ $property->property_status }}</span>
+                                    </div>
+                                </a>
 
-                                    @empty
-                                    <a href="javascript:void(0)">
-                                        <img src="../assets/images/others/1.jpg" class="bg-img" alt="" width="600px">
-                                        <div class="labels-left">
-                                            <span class="label label-shadow">{{ $property->property_status }}</span>
+                                @empty
+                                <a href="javascript:void(0)">
+                                    <img src="../assets/images/others/1.jpg" class="bg-img" alt="" width="600px">
+                                    <div class="labels-left">
+                                        <span class="label label-shadow">{{ $property->property_status }}</span>
+                                    </div>
+                                </a>
+                                @endforelse
+                                <div class="bottom-property">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5><a href="single-property-6.html">{{ $property->property_type }}</a>
+                                            </h5>
+                                            <h6>${{ $property->property_price }} <small>/ start from</small></h6>
                                         </div>
-                                    </a>
-                                    @endforelse
-                                    <div class="bottom-property">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5><a href="single-property-6.html">{{ $property->property_type }}</a>
-                                                </h5>
-                                                <h6>${{ $property->property_price }} <small>/ start from</small></h6>
-                                            </div>
-                                            <button type="button" class="btn btn-gradient color-6 mt-3"
-                                                onclick="document.location='{{ route('description', ['id' => $property->id]) }}'">Details</button>
-                                        </div>
-                                        <div class="overlay-option">
-                                            <ul>
-                                                <li>
-                                                    <span>Beds</span>
-                                                    <h6>{{ $property->beds }}</h6>
-                                                </li>
-                                                <li>
-                                                    <span>Baths</span>
-                                                    <h6>{{ $property->bathrooms }}</h6>
-                                                </li>
-                                                <li>
-                                                    <span>Garage</span>
-                                                    <h6>{{ $property->garage }}</h6>
-                                                </li>
-                                                <li>
-                                                    <span>Area</span>
-                                                    <h6>{{ $property->area }}m<sup>2</sup></h6>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <button type="button" class="btn btn-gradient color-6 mt-3"
+                                            onclick="document.location='{{ route('description', ['id' => $property->id]) }}'">Details</button>
+                                    </div>
+                                    <div class="overlay-option">
+                                        <ul>
+                                            <li>
+                                                <span>Beds</span>
+                                                <h6>{{ $property->beds }}</h6>
+                                            </li>
+                                            <li>
+                                                <span>Baths</span>
+                                                <h6>{{ $property->bathrooms }}</h6>
+                                            </li>
+                                            <li>
+                                                <span>Garage</span>
+                                                <h6>{{ $property->garage }}</h6>
+                                            </li>
+                                            <li>
+                                                <span>Area</span>
+                                                <h6>{{ $property->area }}m<sup>2</sup></h6>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        @empty
-                        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <div class="">
-
-                                <div><strong>No result for this search</strong></div>
-
-                            </div>
-                        </div>
-                        @endforelse
-                        {{ $properties->links() }}
                     </div>
+                    @empty
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="">
 
+                            <div><strong>No result for this search</strong></div>
+
+                        </div>
+                    </div>
+                    @endforelse
+                    {{ $properties->links() }}
                 </div>
+
             </div>
         </div>
-    </section>
-    <!-- property section end -->
+    </div>
+</section>
+<!-- property section end -->
 </div>

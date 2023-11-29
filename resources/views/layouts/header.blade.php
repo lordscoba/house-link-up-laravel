@@ -70,6 +70,10 @@
 
                                         </li>
                                         <li class="dropdown">
+                                            <a href="{{ route('search') }}" class="nav-link menu-title">Search</a>
+
+                                        </li>
+                                        <li class="dropdown">
                                             <a href="{{ route('about-us') }}" class="nav-link menu-title">About Us</a>
                                         </li>
                                         <li class="dropdown">
@@ -88,11 +92,10 @@
                                         <li class="dropdown">
                                             <a href="{{ route('agent-list') }}" class="nav-link menu-title">Agent</a>
 
-                                        </li>
-                                        <li class="dropdown">
+                                        </li> {{-- <li class="dropdown">
                                             <a href="{{ route('agency-list') }}" class="nav-link menu-title">Agency</a>
 
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </div>

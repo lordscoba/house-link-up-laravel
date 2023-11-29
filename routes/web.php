@@ -46,6 +46,7 @@ Route::post('reviewfeed', [ReviewFeedController::class, 'store']);
 Route::get('description/{id}', [LandingPagesController::class, 'description'])->name('description');
 Route::get('/', [LandingPagesController::class, 'index'])->name('landing');
 Route::get('/about-us', [LandingPagesController::class, 'about_us'])->name('about-us');
+Route::get('/search', [LandingPagesController::class, 'search'])->name('search');
 Route::get('/contact', [LandingPagesController::class, 'contact'])->name('contact-us');
 Route::get('/faq', [LandingPagesController::class, 'faq'])->name('faq');
 Route::get('/privacy-policy', [LandingPagesController::class, 'privacy_policy'])->name('privacy-policy');

@@ -32,6 +32,11 @@ class LandingPagesController extends Controller
         return view('faq');
     }
 
+        public function search()
+    {
+        return view('search');
+    }
+
     public function services()
     {
         return view('services');

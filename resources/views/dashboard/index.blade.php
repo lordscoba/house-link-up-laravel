@@ -155,7 +155,7 @@
 
                                                         @forelse(DB::table('properties')->where('property_status','!=','Paid')->limit(3)->get()
                                                         as $properties)
-                                                    <tr>
+                                                    <tr class="my-3">
                                                         <td>
                                                             <div class="d-flex">
 
@@ -170,7 +170,7 @@
                                                         </td>
                                                     </tr>
                                                     @empty
-                                                    <p>NO properties</p>
+                                                    <tr class="my-3">NO properties</tr>
                                                     @endforelse
                                                 </tbody>
                                             </table>
@@ -197,7 +197,7 @@
                                                 <tbody>
                                                     @forelse(DB::table('properties')->where('property_status','!=','Paid')->limit(5)->get()
                                                     as $properties)
-                                                    <tr>
+                                                    <tr class="my-3">
                                                         <td>
                                                             <div class="d-flex">
                                                                 <h6>${{ $properties->property_price }}</h6>
@@ -211,7 +211,7 @@
                                                         </td>
                                                     </tr>
                                                     @empty
-                                                    <p>NO properties</p>
+                                                    <tr class="my-3">NO properties</tr>
                                                     @endforelse
                                                 </tbody>
 

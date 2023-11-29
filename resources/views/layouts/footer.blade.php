@@ -1,211 +1,212 @@
 <!-- footer start -->
-   <footer>
-       <div class="footer footer-bg">
-           <div class="container">
-               <div class="row">
-                   <div class="col-xl-3">
-                       <div class="footer-details text-center">
-                           <img style="width:210px" src="{{ asset('assets/img/house_link_up_top.png') }}" alt="">
-                           </a>
-                           <p>Elegant retreat in a quiet Coral Gables setting. This home provides
-                               wonderful entertaining spaces with a chef kitchen opening
-                           </p>
-                           <h6>Contact us</h6>
-                           <ul class="icon-list">
-                               <li><a href="{{ route('contact-us') }}"><i class="fas fa-map-marker-alt"></i></a></li>
-                               <li><a href="{{ route('contact-us') }}"><i class="fas fa-phone-alt"></i></a></li>
-                               {{-- <li><a href="signup.html"><i class="fas fa-envelope"></i></a></li> --}}
-                               <li><a href="{{ route('contact-us') }}"><i class="fas fa-globe"></i></a></li>
-                               <li><a href="{{ route('contact-us') }}"><i class="fas fa-wifi"></i></a></li>
-                           </ul>
-                       </div>
-                   </div>
-                   <div class="col-xl-9">
-                       <div class="row">
-                           <div class="col-lg-3 col-md-4">
-                               <div class="footer-links footer-left-space">
-                                   <h5 class="footer-title ">Useful links
-                                       <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
-                                   </h5>
-                                   <ul class="footer-content">
-                                       <li>
-                                           <a href="{{ route('about-us') }}">About us</a>
-                                       </li>
-                                       <li>
-                                           <a href="{{ route('about-us') }}">New Arrivals</a>
-                                       </li>
-                                       <li>
-                                           <a href="{{ route('agency-list') }}">Agencies</a>
-                                       </li>
-                                       <li>
-                                           <a href="{{ route('faq') }}">Faq</a>
-                                       </li>
-                                       <li>
-                                           <a href="{{ route('contact-us') }}">Contact</a>
-                                       </li>
-                                   </ul>
-                               </div>
-                           </div>
-                           <div class="col-lg-2 col-md-4">
-                               <div class="footer-links">
-                                   <h5 class="footer-title">feature
-                                       <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
-                                   </h5>
-                                   <ul class="footer-content">
-                                       <li>
-                                           <a href="{{ route('contact-us') }}">Services</a>
-                                       </li>
-                                       <li>
-                                           <a href="{{ route('contact-us') }}">Agency</a>
-                                       </li>
-                                       <li>
-                                           <a href="{{ route('contact-us') }}">Agents</a>
-                                       </li>
-                                   </ul>
-                               </div>
-                           </div>
-                           <div class="col-lg-2 col-md-4">
-                               <div class="footer-links">
-                                   <h5 class="footer-title">Social
-                                       <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
-                                   </h5>
-                                   <ul class="footer-content">
-                                       <li>
-                                           <a href="https://www.facebook.com/">Facebook</a>
-                                       </li>
-                                       <li>
-                                           <a href="https://www.instagram.com/">Instagram</a>
-                                       </li>
-                                       <li>
-                                           <a href="https://twitter.com/">Twitter</a>
-                                       </li>
-                                   </ul>
-                               </div>
-                           </div>
-                           <div class="col-lg-4">
-                               <div class="footer-links">
-                                   <h5 class="footer-title">subscribe
-                                       <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
-                                   </h5>
-                                   <div class="footer-content">
-                                       <p class="mb-0">
-                                           This home provides wonderful entertaining spaces with a chef kitchen opening.
-                                           Elegant retreat in a quiet Coral Gables setting.
-                                       </p>
+<footer>
+    <div class="footer footer-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="footer-details text-center">
+                        <img style="width:210px" src="{{ asset('assets/img/house_link_up_top.png') }}" alt="">
+                        </a>
+                        <p>Elegant retreat in a quiet Coral Gables setting. This home provides
+                            wonderful entertaining spaces with a chef kitchen opening
+                        </p>
+                        <h6>Contact us</h6>
+                        <ul class="icon-list">
+                            <li><a href="{{ route('contact-us') }}"><i class="fas fa-map-marker-alt"></i></a></li>
+                            <li><a href="{{ route('contact-us') }}"><i class="fas fa-phone-alt"></i></a></li>
+                            {{-- <li><a href="signup.html"><i class="fas fa-envelope"></i></a></li> --}}
+                            <li><a href="{{ route('contact-us') }}"><i class="fas fa-globe"></i></a></li>
+                            <li><a href="{{ route('contact-us') }}"><i class="fas fa-wifi"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-9">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="footer-links footer-left-space">
+                                <h5 class="footer-title ">Useful links
+                                    <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
+                                </h5>
+                                <ul class="footer-content">
+                                    <li>
+                                        <a href="{{ route('about-us') }}">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('about-us') }}">New Arrivals</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('agency-list') }}">Agencies</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('faq') }}">Faq</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('contact-us') }}">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-links">
+                                <h5 class="footer-title">feature
+                                    <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
+                                </h5>
+                                <ul class="footer-content">
+                                    <li>
+                                        <a href="{{ route('contact-us') }}">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('contact-us') }}">Agency</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('contact-us') }}">Agents</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-links">
+                                <h5 class="footer-title">Social
+                                    <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
+                                </h5>
+                                <ul class="footer-content">
+                                    <li>
+                                        <a href="https://www.facebook.com/">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/">Instagram</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/">Twitter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="footer-links">
+                                <h5 class="footer-title">subscribe
+                                    <span class="according-menu"><i class="fas fa-chevron-down"></i></span>
+                                </h5>
+                                <div class="footer-content">
+                                    <p class="mb-0">
+                                        This home provides wonderful entertaining spaces with a chef kitchen opening.
+                                        Elegant retreat in a quiet Coral Gables setting.
+                                    </p>
 
-                                       <form action="/suscribers" class="row gx-2 gx-sm-3" method="POST">
-                                           @csrf
-                                           @if ($errors->any())
-                                           <div class="alert alert-danger">
-                                               <ul>
-                                                   @foreach ($errors->all() as $error)
-                                                   <li>{{ $error }}</li><br>
-                                                   @endforeach
-                                               </ul>
-                                           </div>
-                                           @endif
-                                           <div class="input-group">
-                                               <input type="email" name="email" class="form-control"
-                                                   placeholder="Email Address" required>
-                                               <span class="input-group-apend">
-                                                   <button type="submit" class="input-group-text" id="basic-addon2"><i
-                                                           class="fas fa-paper-plane"></i></button>
-                                               </span>
-                                           </div>
-                                       </form>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="bottom-blog">
-                           <div class="slick-between">
-                               <div class="footer-slider">
-                                   <div>
-                                       <div class="media">
-                                           <a href="blog-detail-left-sidebar.html">
-                                               <div class="img-overlay">
-                                                   <img src="{{ asset('assets/img/house_link_up_logo.png') }}" alt="">
-                                               </div>
-                                           </a>
-                                           <div class="media-body">
-                                               <h6><a href="blog-detail-left-sidebar.html">House Linkup Real Estate
-                                                       Company</a></h6>
-                                               <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
-                                                       Electronic version of the real estate industry.</a></p>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div>
-                                       <div class="media">
-                                           <a href="blog-detail-left-sidebar.html">
-                                               <div class="img-overlay">
-                                                   <img src="../assets/images/footer/2.jpg" alt="">
-                                               </div>
-                                           </a>
-                                           <div class="media-body">
-                                               <h6><a href="blog-detail-left-sidebar.html">Entertaining Spaces</a></h6>
-                                               <p class="font-roboto"><a href="blog-detail-right-sidebar.html">This home
-                                                       provides
-                                                       wonderful entertaining spaces.</a></p>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div>
-                                       <div class="media">
-                                           <a href="blog-detail-left-sidebar.html">
-                                               <div class="img-overlay">
-                                                   <img src="../assets/images/footer/3.jpg" alt="">
-                                               </div>
-                                           </a>
-                                           <div class="media-body">
-                                               <h6><a href="blog-detail-left-sidebar.html">Estate Agents Work</a></h6>
-                                               <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
-                                                       market of buying and selling real estate.</a></p>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div>
-                                       <div class="media">
-                                           <a href="blog-detail-left-sidebar.html">
-                                               <div class="img-overlay">
-                                                   <img src="../assets/images/footer/4.jpg" alt="">
-                                               </div>
-                                           </a>
-                                           <div class="media-body">
-                                               <h6><a href="blog-detail-left-sidebar.html">Increase in Demand</a></h6>
-                                               <p class="font-roboto"><a href="">The effects of an increase demand in
-                                                       short run.</a></p>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <div class="sub-footer footer-light">
-           <div class="container">
-               <div class="row">
-                   <div class="col-xl-6 col-md-6">
-                       <div class="copy-right">
-                           <p class="mb-0">Copyright 2022, All Right Reserved Imhoteb</p>
-                       </div>
-                   </div>
-                   <div class="col-xl-6 col-md-6 text-end">
-                       <ul class="sub-footer-link">
-                           <li><a href="{{ route('landing') }}">Home</a></li>
-                           <li><a href="{{ route('terms-conditions') }}">Terms</a></li>
-                           <li><a href="{{ route('privacy-policy') }}">Privacy policy</a></li>
-                           <li><a href="{{ route('contact-us') }}">Contact</a></li>
-                       </ul>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </footer>
-   <!-- footer end -->
+                                    <form action="/suscribers" class="row gx-2 gx-sm-3" method="POST">
+                                        @csrf
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li><br>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        @endif
+                                        <div class="input-group">
+                                            <input type="email" name="email" class="form-control"
+                                                placeholder="Email Address" required>
+                                            <span class="input-group-apend">
+                                                <button type="submit" class="input-group-text" id="basic-addon2"><i
+                                                        class="fas fa-paper-plane"></i></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-blog">
+                        <div class="slick-between">
+                            <div class="footer-slider">
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="{{ asset('assets/img/house_link_up_logo.png') }}" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">House Linkup Real Estate
+                                                    Company</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
+                                                    Electronic version of the real estate industry.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/2.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Entertaining Spaces</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">This home
+                                                    provides
+                                                    wonderful entertaining spaces.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/3.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Estate Agents Work</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    market of buying and selling real estate.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/4.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Increase in Demand</a></h6>
+                                            <p class="font-roboto"><a href="">The effects of an increase demand in
+                                                    short run.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer footer-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="copy-right">
+                        <p class="mb-0">Copyright 2022, All Right Reserved <a
+                                href="https://www.snappy-fix.com/">Snappy-fix Technologies</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 text-end">
+                    <ul class="sub-footer-link">
+                        <li><a href="{{ route('landing') }}">Home</a></li>
+                        <li><a href="{{ route('terms-conditions') }}">Terms</a></li>
+                        <li><a href="{{ route('privacy-policy') }}">Privacy policy</a></li>
+                        <li><a href="{{ route('contact-us') }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
 
 
 <!-- tap to top start -->
@@ -325,28 +326,28 @@
 {{-- for change of picture --}}
 
 <script type="text/javascript">
-    $(document).ready(function () {
+$(document).ready(function() {
 
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
 
 
-        function showMember() {
+    function showMember() {
 
-            window.location = {
+        window.location = {
             {
-                URL:: current()
+                URL::current()
             }
         };
 
     }
 
 
-    $('#editPicture').on('submit', function (e) {
+    $('#editPicture').on('submit', function(e) {
         e.preventDefault();
         var form = $(this).serialize();
         var url = $(this).attr('action');
@@ -364,7 +365,7 @@
             contentType: false,
             cache: false,
             processData: false,
-            success: function (data) {
+            success: function(data) {
                 if (data) {
                     $("#editmessageEmail").html(
                         "<div class='alert alert-success'>success</div>");
@@ -372,7 +373,7 @@
                 showMember();
 
             },
-            error: function (request, status, error) {
+            error: function(request, status, error) {
                 $("#editmessageEmail").html(
                     "<div class='alert alert-danger'>There was an error with the Ajax Call. Please try again later.</div>"
                 );
