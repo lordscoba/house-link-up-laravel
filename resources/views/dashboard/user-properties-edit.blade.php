@@ -30,14 +30,17 @@
                 <div class="dashboard-content">
                     <div class="create-tab" id="create-property">
                         <div class="property-wizard common-card">
-                            <div class="common-header">
+                            <div class="common-header d-flex justify-content-between">
                                 <h5>Update property</h5>
+                                <div class="">required fields=<span class="text-danger">(*)</span> , optional fields =
+                                    <span class="text-info">(optional)</span>
+                                </div>
                             </div>
                             <div class="create-property-form">
                                 <div class="form-inputs">
                                     <h6>Basic information</h6>
                                     <a href="/dashboard/tin-pictures/{{ $properties->id }}"
-                                        class="btn btn-dashed btn-pill color-2 float-right">Edit
+                                        class="btn btn-dashed btn-pill color-2 float-right my-3">Edit
                                         Pictures</a>
                                 </div>
 
@@ -61,7 +64,7 @@
                                     </div>
 
                                     <div class="form-group col-sm-4">
-                                        <label>Property Type</label>
+                                        <label>Property Type <span class="text-danger">(*)</span></label>
                                         <select name="property_type" id="property_type" class="form-control">
                                             <option selected value="{{ $properties->property_type }}">Choose...
                                             </option>
@@ -80,7 +83,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
-                                        <label>Property Status</label>
+                                        <label>Property Status <span class="text-danger">(*)</span></label>
                                         <select name="property_status" id="property_status" class="form-control">
                                             <option selected value="{{ $properties->property_status }}">Choose...
                                             </option>
@@ -91,12 +94,16 @@
                                     </div>
 
                                     <div class="form-group col-sm-4">
-                                        <label>Property Price</label>
+                                        <label>Property Price/ Rent Price <span class="text-danger">(*)</span></label>
                                         <input name="property_price" type="text" class="form-control"
                                             placeholder="$2800" value="{{ $properties->property_price }}">
                                     </div>
+                                                                        {{--for location --}}
+                                                                        @livewire('select-location-update', ["property_id" =>
+                                                                        request()->route('user_property')])
+                                                                        {{--<livewire:select-location-update /> --}}
                                     <div class="form-group col-sm-4">
-                                        <label>Max Rooms</label>
+                                        <label>Rooms <span class="text-danger">(*)</span></label>
                                         <select name="rooms" id="rooms" class="form-control">
                                             <option selected value="{{ $properties->rooms }}">Choose...</option>
                                             <option value="1">1</option>
@@ -106,9 +113,8 @@
                                             <option value="5">5</option>
                                             <option value="6">6</option>
                                         </select>
-                                    </div>
-                                    <div class="form-group col-sm-4">
-                                        <label>Beds</label>
+                                    </div> {{-- <div class="form-group col-sm-4">
+                                        <label>Beds </label>
                                         <select name="beds" id="beds" class="form-control">
                                             <option selected value="{{ $properties->beds }}">Choose...</option>
                                             <option value="2">2</option>
@@ -128,9 +134,10 @@
                                             <option value="5">5</option>
                                             <option value="6">6</option>
                                         </select>
-                                    </div>
+                                    </div> --}}
+                                    
                                     <div class="form-group col-sm-4">
-                                        <label>Halls</label>
+                                        <label>Halls <span class="text-info">(optional)</span></label>
                                         <select name="halls" id="halls" class="form-control">
                                             <option selected value="{{ $properties->halls }}">Choose...</option>
                                             <option value="2">2</option>
@@ -141,7 +148,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
-                                        <label>Emergency Exit</label>
+                                        <label>Emergency Exit <span class="text-info">(optional)</span></label>
                                         <select name="emergency_exit" id="emergency_exit" class="form-control">
                                             <option selected value="{{ $properties->emergency_exit }}">Choose...
                                             </option>
@@ -150,7 +157,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
-                                        <label>CCTV</label>
+                                        <label>CCTV <span class="text-info">(optional)</span></label>
                                         <select name="cctv" id="cctv" class="form-control">
                                             <option selected value="{{ $properties->cctv }}">Choose...</option>
                                             <option value="yes">Yes</option>
@@ -158,7 +165,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
-                                        <label>Free wi-fi</label>
+                                        <label>Free wi-fi <span class="text-info">(optional)</span></label>
                                         <select name="free_wi_fi" id="free_wi_fi" class="form-control">
                                             <option selected value="{{ $properties->free_wi_fi }}">Choose...</option>
                                             <option value="yes">Yes</option>
@@ -166,7 +173,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
-                                        <label>free parking In the area</label>
+                                        <label>free parking In the area <span class="text-info">(optional)</span></label>
                                         <select name="free_parking_in_the_area" id="free_parking_in_the_area"
                                             class="form-control">
                                             <option selected value="{{ $properties->free_parking_in_the_area }}">
@@ -176,7 +183,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-4">
-                                        <label>Air Conditioning</label>
+                                        <label>Air Conditioning <span class="text-info">(optional)</span></label>
                                         <select name="air_conditioning" id="air_conditioning" class="form-control">
                                             <option selected value="{{ $properties->air_conditioning }}">Choose...
                                             </option>
@@ -184,11 +191,7 @@
                                             <option value="no">No</option>
                                         </select>
                                     </div>
-                                    {{--for location --}}
-                                    @livewire('select-location-update', ["property_id" =>
-                                    request()->route('user_property')])
-                                    {{--<livewire:select-location-update /> --}}
-                                    <div class="form-group col-sm-4">
+                                    {{-- <div class="form-group col-sm-4">
                                         <label>Area</label>
                                         <input name="area" type="text" class="form-control" placeholder="85 sq ft"
                                             value="{{ $properties->area }}">
@@ -210,92 +213,91 @@
                                             @foreach (DB::table('agencies')->get() as $agency)
                                             <option value="Blue Sky">{{ $agency->name }}</option>
                                             @endforeach
-                                            {{-- <option value="Zephyr">Zephyr</option> --}}
-                                            {{-- <option value="Premiere">Premiere</option> --}}
                                         </select>
-                                    </div>
+                                    </div> --}}
+                                    
                                     <div class="form-group col-sm-12">
-                                        <label>Video (youtube link)</label>
+                                        <label>Video (youtube link) <span class="text-info">(optional)</span></label>
                                         <input type="text" class="form-control" placeholder="mp4 video link"
                                             value="{{ $properties->video_link }}">
                                     </div>
                                     <div class="form-group col-sm-12">
-                                        <label>Description</label>
+                                        <label>Description <span class="text-info">(optional)</span></label>
                                         <textarea name="description" class="form-control"
                                             rows="4">{{ $properties->description }}</textarea>
                                     </div>
-                                    <div class="form-group col-sm-4">
-                                        <label>Address</label>
+                                    <div class="form-group col-12">
+                                        <label>Address <span class="text-danger">(*)</span></label>
                                         <input name="address" type="text" class="form-control"
                                             placeholder="Address of your property" value="{{ $properties->address }}">
                                     </div>
-                                    <div class="form-group col-sm-4">
+                                   
+
+                                    {{--  <div class="form-group col-sm-4">
                                         <label>Zip code</label>
                                         <input name="zip_code" type="number" class="form-control" placeholder="39702"
                                             value="{{ $properties->zip_code }}">
-                                    </div>
-                                    <div class="form-group col-sm-4">
+                                    </div><div class="form-group col-sm-4">
                                         <label>Any Country</label>
                                         <input name="country" type="text" class="form-control" placeholder="Uruguay"
                                             value="{{ $properties->country }}">
-                                    </div>
-                                    <div class="form-group col-sm-4">
-                                        <label>Any City</label>
-                                        <input name="city" type="text" class="form-control" placeholder="New York"
-                                            value="{{ $properties->city }}">
-                                    </div>
-                                    <div class="form-group col-sm-4">
-                                        <label>Landmark</label>
-                                        <input name="landmark" type="text" class="form-control"
-                                            placeholder="landmark place name" value="{{ $properties->landmark }}">
-                                    </div>
-                                    <h3>Agent details</h3>
-                                    <div class="form-group col-4">
-                                        <label>Agent Contact Email</label>
-                                        <input name="contact_email" type="text" class="form-control"
-                                            placeholder="Enter Agent Email" value="{{ $properties->contact_email }}">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label>Agent Contact Name</label>
-                                        <input name="contact_name" type="text" class="form-control"
-                                            placeholder="Enter Agent Name" value="{{ $properties->contact_name }}">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label>Agent Contact address</label>
-                                        <input name="contact_address" type="text" class="form-control"
-                                            placeholder="Agent Address" value="{{ $properties->contact_address }}">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label>Contact Phone Number</label>
-                                        <input name="contact_phone_number" type="text" class="form-control"
-                                            placeholder="Agent Phone Number"
-                                            value="{{ $properties->contact_phone_number }}">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label>Agent Telegram link</label>
-                                        <input name="contact_telegram_link" type="text" class="form-control"
-                                            placeholder="Agent Telegram link"
-                                            value="{{ $properties->contact_telegram_link }}">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label>Agent Whatsapp link</label>
-                                        <input name="contact_whatsapp_link" type="text" class="form-control"
-                                            placeholder="Agent whatsapp link"
-                                            value="{{ $properties->contact_whatsapp_link }}">
-                                    </div>
                             </div>
-                            <div class="text-end">
-                                <button type="submit" class="btn btn-gradient color-2 btn-pill">Submit</button>
+                            <div class="form-group col-sm-4">
+                                <label>Any City</label>
+                                <input name="city" type="text" class="form-control" placeholder="New York"
+                                    value="{{ $properties->city }}">
                             </div>
-                            </form>
-
-
-
+                            <div class="form-group col-sm-4">
+                                <label>Landmark</label>
+                                <input name="landmark" type="text" class="form-control"
+                                    placeholder="landmark place name" value="{{ $properties->landmark }}">
+                            </div>
+                            --}}
+                            <h3>Agent details</h3>
+                            <div class="form-group col-4">
+                                <label>Agent Contact Email <span class="text-danger">(*)</span></label>
+                                <input name="contact_email" type="text" class="form-control"
+                                    placeholder="Enter Agent Email" value="{{ $properties->contact_email }}">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Agent Contact Name <span class="text-danger">(*)</span></label>
+                                <input name="contact_name" type="text" class="form-control"
+                                    placeholder="Enter Agent Name" value="{{ $properties->contact_name }}">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Contact Phone Number <span class="text-danger">(*)</span></label>
+                                <input name="contact_phone_number" type="text" class="form-control"
+                                    placeholder="Agent Phone Number" value="{{ $properties->contact_phone_number }}">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Agent Contact address <span class="text-info">(optional)</span></label>
+                                <input name="contact_address" type="text" class="form-control"
+                                    placeholder="Agent Address" value="{{ $properties->contact_address }}">
+                            </div>
+                            
+                            <div class="form-group col-4">
+                                <label>Agent Telegram link <span class="text-info">(optional)</span></label>
+                                <input name="contact_telegram_link" type="text" class="form-control"
+                                    placeholder="Agent Telegram link" value="{{ $properties->contact_telegram_link }}">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Agent Whatsapp link <span class="text-info">(optional)</span></label>
+                                <input name="contact_whatsapp_link" type="text" class="form-control"
+                                    placeholder="Agent whatsapp link" value="{{ $properties->contact_whatsapp_link }}">
+                            </div>
                         </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-gradient color-2 btn-pill">Submit</button>
+                        </div>
+                        </form>
+
+
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
 </section>
