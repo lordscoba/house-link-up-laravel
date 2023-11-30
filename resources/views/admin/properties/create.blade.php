@@ -12,7 +12,7 @@
                 <nav aria-label="breadcrumb" class="theme-breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Create User</li>
+                        <li class="breadcrumb-item active" aria-current="page">Upload Property</li>
                     </ol>
                 </nav>
             </div>
@@ -32,8 +32,10 @@
                 <div class="dashboard-content">
                     <div class="create-tab" id="create-property">
                         <div class="property-wizard common-card">
-                            <div class="common-header">
+                            <div class="common-header d-flex justify-content-between">
                                 <h5>Create property</h5>
+                                <div class="">required fields = <span class="text-danger">(*)</span> , optional fields =
+                                    <span class="text-info">(optional)</span> </div>
                             </div>
                             <div class="create-property-form">
                                 <div class="form-inputs">
@@ -57,7 +59,7 @@
                                                 placeholder="Inititator id" value="{{ Auth::User()->id }}" readonly>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>Property Type</label>
+                                            <label>Property Type <span class="text-danger">(*)</span></label>
                                             <select name="property_type" id="property_type" class="form-control">
                                                 <option selected value=""><span>Choose</span> <i
                                                         class="fas fa-angle-down"></i></span></option>
@@ -75,23 +77,23 @@
                                                 <option value="Shops">Shops</option>
                                             </select>
                                         </div>
-
                                         <div class="form-group col-sm-4">
-                                            <label>Property Status</label>
+                                            <label>Property Status <span class="text-danger">(*)</span></label>
                                             <select name="property_status" id="property_status" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="Rent">For Rent</option>
                                                 <option value="Sale">For Sale</option>
                                             </select>
                                         </div>
-
                                         <div class="form-group col-sm-4">
-                                            <label>Property Price</label>
+                                            <label>Property Price / Rent Price <span class="text-danger">(*)</span></label>
                                             <input name="property_price" type="text" class="form-control"
-                                                placeholder="$2800">
+                                                placeholder="#2800">
                                         </div>
+                                                                                {{--for location --}}
+                                                                                <livewire:select-location />
                                         <div class="form-group col-sm-4">
-                                            <label>Max Rooms</label>
+                                            <label>Rooms <span class="text-danger">(*)</span></label>
                                             <select name="rooms" id="rooms" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="1">1</option>
@@ -101,8 +103,7 @@
                                                 <option value="5">5</option>
                                                 <option value="6">6</option>
                                             </select>
-                                        </div>
-                                        <div class="form-group col-sm-4">
+                                        </div> {{-- <div class="form-group col-sm-4">
                                             <label>Beds</label>
                                             <select name="beds" id="beds" class="form-control">
                                                 <option selected value="">Choose...</option>
@@ -123,9 +124,9 @@
                                                 <option value="5">5</option>
                                                 <option value="6">6</option>
                                             </select>
-                                        </div>
+                                        </div> --}} 
                                         <div class="form-group col-sm-4">
-                                            <label>Halls</label>
+                                            <label>Halls <span class="text-info">(optional)</span></label>
                                             <select name="halls" id="halls" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="2">2</option>
@@ -136,7 +137,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>Emergency Exit</label>
+                                            <label>Emergency Exit <span class="text-info">(optional)</span></label>
                                             <select name="emergency_exit" id="emergency_exit" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="yes">Yes</option>
@@ -144,7 +145,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>CCTV</label>
+                                            <label>CCTV <span class="text-info">(optional)</span></label>
                                             <select name="cctv" id="cctv" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="yes">Yes</option>
@@ -152,7 +153,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>Free wi-fi</label>
+                                            <label>Free wi-fi <span class="text-info">(optional)</span></label>
                                             <select name="free_wi_fi" id="free_wi_fi" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="yes">Yes</option>
@@ -160,7 +161,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>free parking In the area</label>
+                                            <label>free parking In the area <span class="text-info">(optional)</span></label>
                                             <select name="free_parking_in_the_area" id="free_parking_in_the_area"
                                                 class="form-control">
                                                 <option selected value="">Choose...</option>
@@ -169,16 +170,15 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>Air Conditioning</label>
+                                            <label>Air Conditioning <span class="text-info">(optional)</span></label>
                                             <select name="air_conditioning" id="air_conditioning" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="yes">Yes</option>
                                                 <option value="no">No</option>
                                             </select>
                                         </div>
-                                        {{--for location --}}
-                                        <livewire:select-location />
-                                        <div class="form-group col-sm-4">
+
+                                        {{--  <div class="form-group col-sm-4">
                                             <label>Area</label>
                                             <input name="area" type="text" class="form-control" placeholder="85 sq ft">
                                         </div>
@@ -201,30 +201,27 @@
                                                 @foreach (DB::table('agencies')->get() as $agency)
                                                 <option value="{{ $agency->name }}">{{ $agency->name }}</option>
                                                 @endforeach
-                                                {{-- <option value="Zephyr">Zephyr</option> --}}
-                                                {{-- <option value="Premiere">Premiere</option> --}}
                                             </select>
-                                        </div>
+                                        </div> --}}
+                                       
                                         <div class="form-group col-sm-12">
-                                            <label>Description</label>
+                                            <label>Description <span class="text-info">(optional)</span></label>
                                             <textarea name="description" class="form-control" rows="4"></textarea>
                                         </div>
-                                        <div class="form-group col-sm-4">
-                                            <label>Address</label>
+                                        <div class="form-group col-12">
+                                            <label>Address <span class="text-danger">(*)</span></label>
                                             <input name="address" type="text" class="form-control"
                                                 placeholder="Address of your property">
                                         </div>
-                                        <div class="form-group col-sm-4">
+                                         {{--<div class="form-group col-sm-4">
                                             <label>Zip code</label>
                                             <input name="zip_code" type="number" class="form-control"
                                                 placeholder="39702">
-                                        </div>
-                                        <div class="form-group col-sm-4">
+                                        </div> <div class="form-group col-sm-4">
                                             <label>Any Country</label>
                                             <input name="country" type="text" class="form-control"
                                                 placeholder="Uruguay">
-                                        </div>
-                                        <div class="form-group col-sm-4">
+                                        </div> <div class="form-group col-sm-4">
                                             <label>Any City</label>
                                             <input name="city" type="text" class="form-control" placeholder="New York">
                                         </div>
@@ -232,43 +229,43 @@
                                             <label>Landmark</label>
                                             <input name="landmark" type="text" class="form-control"
                                                 placeholder="landmark place name">
-                                        </div>
-
+                                        </div> --}}
                                         <h3>Agent details</h3>
                                         <div class="form-group col-4">
-                                            <label>Agent Contact Email</label>
+                                            <label>Agent Contact Email <span class="text-danger">(*)</span></label>
                                             <input name="contact_email" type="text" class="form-control"
                                                 placeholder="Enter Agent Email">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label>Agent Contact Name</label>
+                                            <label>Agent Contact Name <span class="text-danger">(*)</span></label>
                                             <input name="contact_name" type="text" class="form-control"
                                                 placeholder="Enter Agent Name">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label>Agent Contact address</label>
-                                            <input name="contact_address" type="text" class="form-control"
-                                                placeholder="Agent Address">
-                                        </div>
-                                        <div class="form-group col-4">
-                                            <label>Contact Phone Number</label>
+                                            <label>Contact Phone Number <span class="text-danger">(*)</span></label>
                                             <input name="contact_phone_number" type="text" class="form-control"
                                                 placeholder="Agent Phone Number">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label>Agent Telegram link</label>
+                                            <label>Agent Contact address <span class="text-info">(optional)</span></label>
+                                            <input name="contact_address" type="text" class="form-control"
+                                                placeholder="Agent Address">
+                                        </div>
+                                        
+                                        <div class="form-group col-4">
+                                            <label>Agent Telegram link <span class="text-info">(optional)</span></label>
                                             <input name="contact_telegram_link" type="text" class="form-control"
                                                 placeholder="Agent Telegram link">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label>Agent Whatsapp link</label>
+                                            <label>Agent Whatsapp link <span class="text-info">(optional)</span></label>
                                             <input name="contact_whatsapp_link" type="text" class="form-control"
                                                 placeholder="Agent whatsapp link">
                                         </div>
                                 </div>
 
                                 <div class="form-group col-sm-12">
-                                    <label>Video (Youtube link)</label>
+                                    <label>Video (Youtube link) <span class="text-info">(optional)</span></label>
                                     <input name="video_link" type="text" class="form-control"
                                         placeholder="mp4 video link">
                                 </div>

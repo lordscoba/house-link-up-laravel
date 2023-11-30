@@ -11,7 +11,7 @@
                 <div class="col-10 col-lg-8 mx-auto text-center w-100">
                     <div class="container">
                         <div class="home-left">
-                            <div  class="py-5">
+                            <div class="py-5">
                                 <div class="home-slider-1 arrow-light slick-shadow">
                                     <div>
                                         <div class="home-content">
@@ -20,7 +20,8 @@
                                                     class="img-fluid m-0 mx-auto" alt="">
                                                 <h6>Want to upload properties ?</h6>
                                                 <h1>Reality Properties solve your problems</h1>
-                                                <a href="{{ route('user-properties.create') }}" class="btn btn-gradient color-6">Upload
+                                                <a href="{{ route('user-properties.create') }}"
+                                                    class="btn btn-gradient color-6">Upload
                                                     property</a>
                                             </div>
                                         </div>
@@ -32,19 +33,20 @@
                                                     class="img-fluid m-0" alt="">
                                                 <h6>Want to upload properties ?</h6>
                                                 <h1>Elegant houses for rent and sale</h1>
-                                                <a href="{{ route('user-properties.create') }}" class="btn btn-gradient color-6">Upload
+                                                <a href="{{ route('user-properties.create') }}"
+                                                    class="btn btn-gradient color-6">Upload
                                                     property</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                
+
 
                             </div>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -54,22 +56,22 @@
 
 <!-- home section start -->
 
-    <section class="home-section layout-1 layout-5 my-5">
+<section class="home-section layout-1 layout-5 mb-5">
     <div class="home-main">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8 mx-auto text-center w-100">
                     <div class="container">
                         <div class="home-left">
-                            <div  class="py-5">
+                            <div class="py-5">
                                 <div class="home-slider-1 arrow-light slick-shadow">
                                     <div>
                                         <div class="home-content">
                                             <div>
                                                 <img src="{{ asset('assets/img/house_link_up_side.png') }}"
-                                                class="img-fluid m-0 mx-auto" alt="">
+                                                    class="img-fluid m-0 mx-auto" alt="">
                                                 <h6>Want to check property ?</h6>
-                                                <h1>Reality Properties solve your problems</h1>
+                                                <h1>Realty Properties solve your problems</h1>
                                                 <a href="{{ route('search') }}" class="btn btn-gradient color-6">Check
                                                     property</a>
                                             </div>
@@ -121,11 +123,11 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
-</section> 
+</section>
 <!-- home section end -->
 
 
@@ -141,7 +143,8 @@
                     <hr>
                 </div>
                 <div class="feature-1 arrow-light">
-                    @forelse (DB::table('properties')->where('property_status','Sale')->limit(2)->inRandomOrder()->get() as $property)
+                    @forelse (DB::table('properties')->where('property_status','Sale')->limit(2)->inRandomOrder()->get()
+                    as $property)
                     <div>
                         <div class="feature-wrapper">
                             <div class="row">
