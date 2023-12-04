@@ -29,7 +29,7 @@
                                                             class="label label-dark label-pill">{{ $property->property_status }}</span></span>
                                                 </h3>
                                             </a>
-                                            <h6 class="color-6">${{ $property->property_price }}.00*</h6>
+                                            <h6 class="color-6">#{{ $property->property_price }}.00*</h6>
                                             <p class="font-roboto">{{ $property->description }}</p>
                                             <ul>
                                                 <li><i class="fas fa-map-marker-alt"></i>State :
@@ -245,14 +245,14 @@
                                 <a href="single-property-8.html">
                                     <h3>{{ $property->property_type }}</h3>
                                 </a>
-                                <h6 class="color-6">${{ $property->property_price }}.00*</h6>
+                                <h6 class="color-6">#{{ $property->property_price }}.00*</h6>
                                 <p class="font-roboto">{{ $property->description }}</p>
                                 <ul>
                                     <li><i class="fas fa-map-marker-alt"></i>State
                                         : {{ $property->state }}</li>
                                     <li><i class="fas fa-map-marker-alt"></i>LGA
                                         : {{ $property->lga }}</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Town
+                                    <li><i class="fas fa-map-marker-alt"></i>Town/City
                                         :
                                         {{ $property->town }}</li>
                                 </ul>

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Properties;
 use App\Models\Reviews;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
 Use Auth;
 
 class UserPropertiesController extends Controller
@@ -250,11 +251,16 @@ class UserPropertiesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Properties $property)
+    public function destroy($id)
     {
-        
+        // Find the record by ID
+        $property = Properties::findOrFail($id);
+
+
+        // Delete the record
         $property->delete();
-        // return view('properties.index');
+
+        // Log::info("hy");
         return redirect()->route('user-properties.index')
             ->withSuccess(__('property delete successfully.'));
     }

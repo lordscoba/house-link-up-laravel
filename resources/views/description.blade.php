@@ -114,7 +114,7 @@
                                 @endfor
                                 @endif
                     </div>
-                    <h2 class="price">${{ $properties->property_price }} <span>/ start From</span></h2>
+                    <h2 class="price">#{{ $properties->property_price }} <span>/ start From</span></h2>
                     <div class="feature-label gap-2">
                         @if ($properties->free_wi_fi == 'yes')
                         <span class="btn btn-dashed color-2 btn-pill">Wi-fi</span>
@@ -303,19 +303,19 @@
                                         {{-- <li><span>Property ID :</span> ZOEA245</li> --}}
                                         <li><span>Property status :</span> For {{ $properties->property_status }}
                                         </li>
-                                        <li><span>Operating Since :</span> 2008</li>
+                                        <li><span>City :</span> {{ $properties->city }}</li>
+                                        {{-- <li><span>Operating Since :</span> 2008</li> --}}
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-xl-4">
                                     <ul class="property-list-details">
-                                        <li><span>Price :</span> $ {{ $properties->property_price }}</li>
-                                        {{-- <li><span>Property Size :</span>{{ $properties->area }} sq / ft</li> --}}
+                                        <li><span>Price :</span> # {{ $properties->property_price }}</li>
+                                        <li><span>Rooms :</span>{{ $properties->rooms }}</li>
                                         <li><span>Balcony :</span> {{ $properties->balcony }}</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-xl-4">
                                     <ul class="property-list-details">
-                                        <li><span>City :</span> {{ $properties->city }}</li>
                                         <li><span>State :</span> {{ $properties->state }}</li>
                                         <li><span>LGA :</span> {{ $properties->lga }}</li>
                                         <li><span>Town :</span> {{ $properties->town }}</li>

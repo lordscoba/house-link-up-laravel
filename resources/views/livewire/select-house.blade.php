@@ -118,6 +118,7 @@
                                         <option selected value=""><span>Choose</span> <i
                                                 class="fas fa-angle-down"></i></span>
                                         </option>
+                                        <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -213,7 +214,7 @@
                     </div>
                     <div class="col-6 col-lg-6">
                         <div class="form-group">
-                            <label>Town</label>
+                            <label>Town/City</label>
                             <div>
                                 <select wire:model="town_value" class="form-control font-rubik">
                                     <option selected value=""><span>Choose</span> <i
@@ -254,7 +255,7 @@
             <div class="col">
                 <div class="title-1 color-6">
                     <span class="label label-gradient color-6">Properties</span>
-                    <h2>Latest</h2>
+                    <h2>Search Results</h2>
                     <hr>
                 </div>
 
@@ -266,8 +267,7 @@
                     <div class="col-xl-4 col-md-6 wow fadeInUp" wire:key="property-{{ $property->id }}">
                         <div class="property-box">
                             <div class="property-image">
-                                @forelse (DB::table('pictures')->limit(1)->where('properties_id',
-                                $property->id)->get() as $picture)
+                                @forelse (DB::table('pictures')->limit(1)->where('properties_id', $property->id)->get() as $picture)
                                 <a href="javascript:void(0)">
                                     <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img" alt=""
                                         width="600px">
@@ -289,7 +289,7 @@
                                         <div>
                                             <h5><a href="single-property-6.html">{{ $property->property_type }}</a>
                                             </h5>
-                                            <h6>${{ $property->property_price }} <small>/ start from</small></h6>
+                                            <h6>#{{ $property->property_price }} <small>/ start from</small></h6>
                                         </div>
                                         <button type="button" class="btn btn-gradient color-6 mt-3"
                                             onclick="document.location='{{ route('description', ['id' => $property->id]) }}'">Details</button>

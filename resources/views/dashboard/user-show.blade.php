@@ -110,7 +110,7 @@
                                 @endfor
                             @endif
                         </div>
-                        <h2 class="price">${{ $properties->property_price }} <span>/ start From</span></h2>
+                        <h2 class="price">#{{ $properties->property_price }} <span>/ start From</span></h2>
                         <div class="feature-label">
                             @if ($properties->free_wi_fi == 'yes')
                             <span class="btn btn-dashed color-2 btn-pill">Wi-fi</span> 

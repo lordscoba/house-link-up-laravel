@@ -93,7 +93,7 @@
                                         <div class="form-group col-sm-4">
                                             <label>Property Price/ Rent Price <span
                                                     class="text-danger">(*)</span></label>
-                                            <input name="property_price" type="text" class="form-control"
+                                            <input name="property_price" type="number" class="form-control"
                                                 placeholder="#2800">
                                         </div>
                                         {{--for location --}}
@@ -137,6 +137,7 @@
                                             <label>Halls <span class="text-info">(optional)</span> </label>
                                             <select name="halls" id="halls" class="form-control">
                                                 <option selected value="">Choose...</option>
+                                                <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>
@@ -216,7 +217,8 @@
                                     <textarea name="description" class="form-control" rows="4"></textarea>
                                 </div>
                                 <div class="form-group col-12">
-                                    <label>Address <span class="text-info">(optional)</span></label>
+                                    <label>Address <span
+                                        class="text-danger">(*)</span></label>
                                     <input name="address" type="text" class="form-control"
                                         placeholder="Address of your property">
                                 </div>

@@ -81,15 +81,16 @@
                                                 <a href="single-property-8.html">
                                                     <h3>{{ $property->property_type }}</h3>
                                                 </a>
-                                                <h6>${{ $property->property_price }}.00*</h6>
+                                                <h6>#{{ $property->property_price }}.00*</h6>
                                                 <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting.
                                                     This home provides wonderful entertaining spaces with a chef
                                                     kitchen opening…</p>
                                                 <ul>
-                                                    <li><i class="fas fa-map-marker-alt"></i>  State : {{ $property->state }}</li>
-                                                    <li><i class="fas fa-map-marker-alt"></i>  LGA : {{ $property->lga }}
+                                                    <li><i class="fas fa-map-marker-alt"></i> State :
+                                                        {{ $property->state }}</li>
+                                                    <li><i class="fas fa-map-marker-alt"></i> LGA : {{ $property->lga }}
                                                     </li>
-                                                    <li><i class="fas fa-map-marker-alt"></i>  Town :
+                                                    <li><i class="fas fa-map-marker-alt"></i> Town :
                                                         {{ $property->town }}</li>
                                                 </ul>
                                                 <div class="property-btn d-flex flex-wrap gap-1">
@@ -99,8 +100,8 @@
                                                     <a href="/dashboard/tin-pictures/{{ $property->id }}"
                                                         class="btn btn-dashed btn-pill color-2 float-right">Edit
                                                         Pictures</a>
-                                                    <form action="user-properties/{{ $property->id }}" class="pt-0"
-                                                        method="POST">
+                                                    <form action="/dashboard/user-properties/{{ $property->id }}"
+                                                        class="pt-0" method="POST">
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit"
