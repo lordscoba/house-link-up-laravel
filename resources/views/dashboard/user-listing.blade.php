@@ -86,14 +86,11 @@
                                                     This home provides wonderful entertaining spaces with a chef
                                                     kitchen opening…</p>
                                                 <ul>
-                                                    <li><img src="../assets/images/svg/icon/double-bed.svg"
-                                                            class="img-fluid" alt="">Bed : {{ $property->beds }}</li>
-                                                    <li><img src="../assets/images/svg/icon/bathroom.svg"
-                                                            class="img-fluid" alt="">Baths : {{ $property->bathrooms }}
+                                                    <li><i class="fas fa-map-marker-alt"></i>  State : {{ $property->state }}</li>
+                                                    <li><i class="fas fa-map-marker-alt"></i>  LGA : {{ $property->lga }}
                                                     </li>
-                                                    <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                                            class="img-fluid ruler-tool" alt="">Sq Ft :
-                                                        {{ $property->area }}</li>
+                                                    <li><i class="fas fa-map-marker-alt"></i>  Town :
+                                                        {{ $property->town }}</li>
                                                 </ul>
                                                 <div class="property-btn d-flex flex-wrap gap-1">
                                                     {{-- <span>{{ $property->created_at }}</span> --}}

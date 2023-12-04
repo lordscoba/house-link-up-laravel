@@ -297,16 +297,16 @@
                                     <div class="overlay-option">
                                         <ul>
                                             <li>
-                                                <span>Beds</span>
-                                                <h6>{{ $property->beds }}</h6>
+                                                <span>State</span>
+                                                <h6>{{ $property->state }}</h6>
                                             </li>
                                             <li>
-                                                <span>Baths</span>
-                                                <h6>{{ $property->bathrooms }}</h6>
+                                                <span>LGA</span>
+                                                <h6>{{ $property->lga }}</h6>
                                             </li>
                                             <li>
-                                                <span>Garage</span>
-                                                <h6>{{ $property->garage }}</h6>
+                                                <span>Town</span>
+                                                <h6>{{ $property->town }}</h6>
                                             </li>
                                             <li>
                                                 <span>Area</span>

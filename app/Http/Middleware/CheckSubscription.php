@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Payments;
+use App\Models\Properties;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
@@ -29,12 +30,14 @@ class CheckSubscription
 
         $payment = Payments::where('user_id', $userID)->get();
 
+        $properties = Properties::where('user_id', $userID)->get();
+
+        // Log::info($properties);
+        // Log::info($properties->count());
+
+
+
         foreach ($payment as $payment) {
-
-            // Log::info($payment->success);
-            // Log::info($payment->expired);
-            // Log::info($currentTime);
-
             // update if expired
             if ($payment->success == 1 && $payment->expired < $currentTime && $payment->has_expired != 1) {
             $payments = Payments::where('reference', $payment->reference)
@@ -47,6 +50,17 @@ class CheckSubscription
             if ($payment->success == 1 && $payment->expired >= $currentTime) {
                 $sub = true;
             }
+        }
+
+
+        if ($sub === false && $properties->count() < 3) {
+
+        $remaining = 3 - $properties->count();
+
+        // Flash a message to the session
+        $message = "You are on 3 Upload trial limit, You have " . $remaining . " more uploads remaining. Please subscribe to use our services.";
+            session()->flash('status', $message);
+            return $next($request);
         }
         
         if ($sub === false) {

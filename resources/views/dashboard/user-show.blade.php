@@ -38,25 +38,23 @@
                         <ul>
                             <li>
                                 <div>
-                                    <img src=".../.././assets/images/svg/icon/double-bed.svg" class="img-fluid"
-                                        alt="">
-                                    <span>{{ $properties->beds }} Bedrooms</span>
+                                    <i class="fas fa-map-marker-alt p-2"></i> 
+                                    <span>{{ $properties->state }} State</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid"
-                                        alt="">
-                                    <span>{{ $properties->bathrooms }} Bathrooms</span>
+                                    <i class="fas fa-map-marker-alt p-2"></i> 
+                                    <span>{{ $properties->lga }} Local Government</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <img src="../../../assets/images/svg/icon/sofa.svg" class="img-fluid" alt="">
-                                    <span>{{ $properties->halls }} Halls</span>
+                                    <i class="fas fa-map-marker-alt p-2"></i> 
+                                    <span>{{ $properties->towns }} Town</span>
                                 </div>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <div>
                                     <img src="../../../assets/images/svg/icon/square-ruler-tool.svg"
                                         class="img-fluid ruler-tool" alt="">
@@ -68,7 +66,21 @@
                                     <img src="../../../assets/images/svg/icon/garage.svg" class="img-fluid" alt="">
                                     <span>{{ $properties->garage }} Garage</span>
                                 </div>
+                            </li> --}}
+                            {{--  <li>
+                                <div>
+                                    <img src="../../../assets/images/svg/icon/square-ruler-tool.svg"
+                                        class="img-fluid ruler-tool" alt="">
+                                    <span>{{ $properties->area }} Sq ft</span>
+                                </div>
                             </li>
+                            <li>
+                                <div>
+                                    <img src="../../../assets/images/svg/icon/garage.svg" class="img-fluid" alt="">
+                                    <span>{{ $properties->garage }} Garage</span>
+                                </div>
+                            </li> --}}
+                        
                         </ul>
                         <div class="share-buttons">
                         </div>
@@ -297,14 +309,14 @@
                                             <ul class="property-list-details">
                                                 <li><span>Price :</span> $ {{ $properties->property_price }}</li>
                                                 <li><span>Property Size :</span>{{ $properties->area }} sq / ft</li>
-                                                <li><span>Balcony :</span> {{ $properties->balcony }}</li>
+                                                <li><span>State :</span> {{ $properties->state }}</li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-xl-4">
                                             <ul class="property-list-details">
                                                 <li><span>City :</span> {{ $properties->city }}</li>
-                                                <li><span>Bedrooms :</span> {{ $properties->beds }}</li>
-                                                <li><span>Bathrooms :</span> {{ $properties->bathrooms }}</li>
+                                                <li><span>LGA :</span> {{ $properties->lga }}</li>
+                                                <li><span>Towns :</span> {{ $properties->town }}</li>
                                             </ul>
                                         </div>
                                     </div>
