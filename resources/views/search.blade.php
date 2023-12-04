@@ -32,15 +32,12 @@
                                             <h6 class="color-6">${{ $property->property_price }}.00*</h6>
                                             <p class="font-roboto">{{ $property->description }}</p>
                                             <ul>
-                                                <li><img src="../assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed :
-                                                    {{ $property->beds }}</li>
-                                                <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
-                                                        alt="">Baths :
-                                                    {{ $property->bathrooms }}</li>
-                                                <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft :
-                                                    {{ $property->area }}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i>State :
+                                                    {{ $property->state }}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i>LGA :
+                                                    {{ $property->lga }}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i>Town:
+                                                    {{ $property->town }}</li>
                                             </ul>
                                             <a href="user-favourites.html">
                                                 <span class="round-half color-6">
@@ -151,14 +148,11 @@
                                                 relationship between units and common areas and concerns. Different
                                                 types of housing can be use same physical type.</p>
                                             <ul>
-                                                <li><img src="../assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 3
+                                                <li><i class="fas fa-map-marker-alt"></i>State : 3
                                                 </li>
-                                                <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
-                                                        alt="">Baths : 2
+                                                <li><i class="fas fa-map-marker-alt"></i>LGA : 2
                                                 </li>
-                                                <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 1000
+                                                <li><i class="fas fa-map-marker-alt"></i>Town : 1000
                                                 </li>
                                             </ul>
                                             <a href="user-favourites.html">
@@ -254,14 +248,13 @@
                                 <h6 class="color-6">${{ $property->property_price }}.00*</h6>
                                 <p class="font-roboto">{{ $property->description }}</p>
                                 <ul>
-                                    <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed
-                                        : {{ $property->beds }}</li>
-                                    <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths
-                                        : {{ $property->bathrooms }}</li>
-                                    <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                            class="img-fluid ruler-tool" alt="">Sq Ft
+                                    <li><i class="fas fa-map-marker-alt"></i>State
+                                        : {{ $property->state }}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>LGA
+                                        : {{ $property->lga }}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>Town
                                         :
-                                        {{ $property->area }}</li>
+                                        {{ $property->town }}</li>
                                 </ul>
                                 <div class="property-btn d-flex">
                                     <span>{{ $property->created_at }}</span>

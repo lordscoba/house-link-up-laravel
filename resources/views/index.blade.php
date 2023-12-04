@@ -131,7 +131,6 @@
 <!-- home section end -->
 
 
-
 <!-- feature section start -->
 <section class="feature-section banner-4">
     <div class="container">
@@ -143,8 +142,7 @@
                     <hr>
                 </div>
                 <div class="feature-1 arrow-light">
-                    @forelse (DB::table('properties')->where('property_status','Sale')->limit(2)->inRandomOrder()->get()
-                    as $property)
+                    @forelse (DB::table('properties')->where('property_status','Sale')->limit(2)->inRandomOrder()->get() as $property)
                     <div>
                         <div class="feature-wrapper">
                             <div class="row">
@@ -160,12 +158,10 @@
                                             <h6 class="color-6">${{ $property->property_price }}.00*</h6>
                                             <p class="font-roboto">{{ $property->description }}</p>
                                             <ul>
-                                                <li><img src="../assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed :
-                                                    {{ $property->beds }}</li>
-                                                <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
-                                                        alt="">Baths :
-                                                    {{ $property->bathrooms }}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i>state :
+                                                    {{ $property->state }}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i>lga :
+                                                    {{ $property->lga }}</li>
                                                 <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                         class="img-fluid ruler-tool" alt="">Sq Ft :
                                                     {{ $property->area }}</li>
@@ -380,10 +376,10 @@
                                 <h6 class="color-6">${{ $property->property_price }}.00*</h6>
                                 <p class="font-roboto">{{ $property->description }}</p>
                                 <ul>
-                                    <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed
-                                        : {{ $property->beds }}</li>
-                                    <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths
-                                        : {{ $property->bathrooms }}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> State
+                                        : {{ $property->state }}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> Lga
+                                        : {{ $property->lga }}</li>
                                     <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
                                             class="img-fluid ruler-tool" alt="">Sq Ft
                                         :
