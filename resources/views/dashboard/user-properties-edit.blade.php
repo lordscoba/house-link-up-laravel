@@ -95,8 +95,8 @@
 
                                     <div class="form-group col-sm-4">
                                         <label>Property Price/ Rent Price <span class="text-danger">(*)</span></label>
-                                        <input name="property_price" type="text" class="form-control"
-                                            placeholder="$2800" value="{{ $properties->property_price }}">
+                                        <input name="property_price" type="number" class="form-control"
+                                            placeholder="#2800" value="{{ $properties->property_price }}">
                                     </div>
                                                                         {{--for location --}}
                                                                         @livewire('select-location-update', ["property_id" =>
@@ -140,6 +140,7 @@
                                         <label>Halls <span class="text-info">(optional)</span></label>
                                         <select name="halls" id="halls" class="form-control">
                                             <option selected value="{{ $properties->halls }}">Choose...</option>
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -227,7 +228,8 @@
                                             rows="4">{{ $properties->description }}</textarea>
                                     </div>
                                     <div class="form-group col-12">
-                                        <label>Address <span class="text-danger">(*)</span></label>
+                                        <label>Address <span
+                                            class="text-danger">(*)</span></label>
                                         <input name="address" type="text" class="form-control"
                                             placeholder="Address of your property" value="{{ $properties->address }}">
                                     </div>

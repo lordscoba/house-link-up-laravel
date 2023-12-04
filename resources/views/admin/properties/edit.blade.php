@@ -109,7 +109,7 @@
 
                                         <div class="form-group col-sm-4">
                                             <label>Property Price / Rent Price <span class="text-danger">(*)</span></label>
-                                            <input name="property_price" type="text" class="form-control"
+                                            <input name="property_price" type="number" class="form-control"
                                                 placeholder="#2800" value="{{ $properties->property_price }}">
                                         </div>
                                                                                 {{--for location --}}

@@ -4,7 +4,7 @@
 
 @livewireStyles
 <!-- home section start -->
-<section class="home-section layout-1 layout-6">
+<section class="home-section layout-1 layout-6 mb-0" style="height: 80vh">
     <div class="home-main">
         <div class="container">
             <div class="row">
@@ -19,7 +19,7 @@
                                                 <img src="{{ asset('assets/img/house_link_up_side.png') }}"
                                                     class="img-fluid m-0 mx-auto" alt="">
                                                 <h6>Want to upload properties ?</h6>
-                                                <h1>Reality Properties solve your problems</h1>
+                                                <h1>Realty Properties solve your problems</h1>
                                                 <a href="{{ route('user-properties.create') }}"
                                                     class="btn btn-gradient color-6">Upload
                                                     property</a>
@@ -55,8 +55,7 @@
 
 
 <!-- home section start -->
-
-<section class="home-section layout-1 layout-5 mb-5">
+<section class="home-section layout-1 layout-5 mb-5 mt-0" style="height: 80vh">
     <div class="home-main">
         <div class="container">
             <div class="row">
