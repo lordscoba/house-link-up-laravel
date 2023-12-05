@@ -83,6 +83,8 @@
                                                 <option selected value="">Choose...</option>
                                                 <option value="Rent">For Rent</option>
                                                 <option value="Sale">For Sale</option>
+                                                <option value="Draft">Draft</option>
+                                                <option value="Unavailable">Unavailable</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">

@@ -104,6 +104,8 @@
                                                 <option value="Rent">For Rent</option>
                                                 <option value="Sale">For Sale</option>
                                                 <option value="Sold">Sold (paid)</option>
+                                                <option value="Draft">Draft</option>
+                                                <option value="Unavailable">Unavailable</option>
                                             </select>
                                         </div>
 

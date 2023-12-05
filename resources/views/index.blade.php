@@ -4,7 +4,7 @@
 
 @livewireStyles
 <!-- home section start -->
-<section class="home-section layout-1 layout-6 mb-0" style="height: 80vh">
+<section class="home-section layout-1 layout-6 mb-0">
     <div class="home-main">
         <div class="container">
             <div class="row">
@@ -55,7 +55,7 @@
 
 
 <!-- home section start -->
-<section class="home-section layout-1 layout-5 mb-5 mt-0" style="height: 80vh">
+<section class="home-section layout-1 layout-5 mb-5 mt-0">
     <div class="home-main">
         <div class="container">
             <div class="row">
@@ -379,10 +379,8 @@
                                         : {{ $property->state }}</li>
                                     <li><i class="fas fa-map-marker-alt"></i> Lga
                                         : {{ $property->lga }}</li>
-                                    <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                            class="img-fluid ruler-tool" alt="">Sq Ft
-                                        :
-                                        {{ $property->area }}</li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Town
+                                            : {{ $property->town }}</li>
                                 </ul>
                                 <div class="property-btn d-flex">
                                     <span>{{ $property->created_at }}</span>

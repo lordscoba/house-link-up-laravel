@@ -91,7 +91,7 @@
                                                         <div class="d-flex">
                                                             <div>
                                                                 <p>Total Price</p>
-                                                                <h4>${{ DB::table('properties')
+                                                                <h4>#{{ DB::table('properties')
                                                                     ->sum('property_price')   }}</h4>
                                                             </div>
                                                         </div>
@@ -100,7 +100,7 @@
                                                         <div class="d-flex">
                                                             <div>
                                                                 <p>Total sold</p>
-                                                                <h4>${{ DB::table('properties')->where('property_status','Paid')
+                                                                <h4>#{{ DB::table('properties')->where('property_status','Paid')
                                                                     ->sum('property_price')   }}</h4>
                                                             </div>
                                                         </div>
@@ -109,7 +109,7 @@
                                                         <div class="d-flex">
                                                             <div>
                                                                 <p>Max Price</p>
-                                                                <h4>${{ DB::table('properties')
+                                                                <h4>#{{ DB::table('properties')
                                                                     ->max('property_price')   }}</h4>
                                                             </div>
                                                         </div>
@@ -162,7 +162,7 @@
                                                                         <h6>{{ $properties->property_type }}</h6>
                                                                     </div>
                                                                 </td>
-                                                                <td>${{ $properties->property_price }}.00</td>
+                                                                <td>#{{ $properties->property_price }}.00</td>
                                                                 <td>{{ $properties->created_at }}</td>
                                                                
                                                              <td><span class="label label-light color-3">{{ $properties->property_status }}</span></td> 
@@ -199,7 +199,7 @@
                                                                         <h6>{{ $properties->property_type }}</h6>
                                                                     </div>
                                                                 </td>
-                                                                <td>${{ $properties->property_price }}.00</td>
+                                                                <td>#{{ $properties->property_price }}.00</td>
                                                                 <td>{{ $properties->created_at }}</td>
                                                                
                                                              <td><span class="label label-light color-3">{{ $properties->property_status }}</span></td> 

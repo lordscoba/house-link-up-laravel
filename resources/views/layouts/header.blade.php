@@ -102,7 +102,7 @@
                         </nav>
                         <ul class="header-right">
                             <li class="right-menu">
-                                <ul class="nav-menu">
+                                <ul class="nav-menu d-flex justify-content-between">
                                     <!-- Authentication Links -->
                                     @guest
                                     @if (Route::has('login'))
@@ -127,13 +127,13 @@
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                             @if (Auth::user()->email == "admin@houselinkup.com")
                                             <a class="dropdown-item" href="{{ route('super.admin.home') }}"><strong
-                                                    class="text-dark">Dashboard</strong></a>
+                                                    class="text-dark">Admin Dashboard</strong></a>
                                             @elseif (Auth::user()->email == "manager@houselinkup.com")
                                             <a class="dropdown-item" href="{{ route('manger.home') }}"><strong
-                                                    class="text-dark">Dashboard</strong></a>
+                                                    class="text-dark">Admin Dashboard</strong></a>
                                             @else
                                             <a class="dropdown-item" href="{{ route('home') }}"><strong
-                                                    class="text-dark">Dashboard</strong></a>
+                                                    class="text-dark">User Dashboard</strong></a>
                                             @endif
 
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -149,15 +149,6 @@
                                         </div>
                                     </li>
                                     @endguest
-                                    {{-- <li class="dropdown">
-                            <a href="javascript:void(0)">
-
-                            </a>
-                            <ul class="nav-submenu">
-                                <li><a href="javascript:void(0)">Dollar</a></li>
-
-                            </ul>
-                        </li> --}}
                                 </ul>
                             </li>
                         </ul>

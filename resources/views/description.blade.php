@@ -114,7 +114,7 @@
                                 @endfor
                                 @endif
                     </div>
-                    <h2 class="price">#{{ $properties->property_price }} <span>/ start From</span></h2>
+                    <h2 class="price">#{{ number_format($properties->property_price,2,'.',',') }} <span>/ start From</span></h2>
                     <div class="feature-label gap-2">
                         @if ($properties->free_wi_fi == 'yes')
                         <span class="btn btn-dashed color-2 btn-pill">Wi-fi</span>
@@ -300,18 +300,9 @@
                                 <div class="col-md-6 col-xl-4">
                                     <ul class="property-list-details">
                                         <li><span>Property Type :</span> {{ $properties->property_type }}</li>
-                                        {{-- <li><span>Property ID :</span> ZOEA245</li> --}}
                                         <li><span>Property status :</span> For {{ $properties->property_status }}
                                         </li>
                                         <li><span>City :</span> {{ $properties->city }}</li>
-                                        {{-- <li><span>Operating Since :</span> 2008</li> --}}
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <ul class="property-list-details">
-                                        <li><span>Price :</span> # {{ $properties->property_price }}</li>
-                                        <li><span>Rooms :</span>{{ $properties->rooms }}</li>
-                                        <li><span>Balcony :</span> {{ $properties->balcony }}</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-xl-4">
@@ -321,28 +312,15 @@
                                         <li><span>Town :</span> {{ $properties->town }}</li>
                                     </ul>
                                 </div>
+                                <div class="col-md-6 col-xl-4">
+                                    <ul class="property-list-details">
+                                        <li><span>Price :</span> # {{ $properties->property_price }}</li>
+                                        <li><span>Rooms :</span>{{ $properties->rooms }} rooms</li>
+                                    </ul>
+                                </div>
                             </div>
-                            {{-- <h4 class="content-title mt-4">Attachments</h4>
-                                    <a href="javascript:void(0)" class="attach-file"><i class="far fa-file-pdf"></i>Demo
-                                        Property
-                                        Document </a> --}}
                         </div>
                     </div>
-                    {{-- <div class="desc-box">
-                                <div class="page-section" id="floor_plan">
-                                    <h4 class="content-title">Floor plan</h4>
-                                    <img src="../../../assets/images/single-property/floor-plan.png" alt=""
-                                        class="img-fluid">
-                                </div>
-                            </div> --}}
-                    {{-- <div class="desc-box">
-                                <div class="page-section" id="location-map">
-                                    <h4 class="content-title">Location</h4>
-                                    <iframe title="realestate location"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583091352!2d-74.11976373946229!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1563449626439!5m2!1sen!2sin"
-                                        allowfullscreen></iframe>
-                                </div>
-                            </div> --}}
                     <div class="desc-box">
                         <div class="page-section">
                             <h4 class="content-title">Reviews</h4>
