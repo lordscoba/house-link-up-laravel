@@ -154,16 +154,15 @@
                                                             class="label label-dark label-pill">{{ $property->property_status }}</span></span>
                                                 </h3>
                                             </a>
-                                            <h6 class="color-6">${{ $property->property_price }}.00*</h6>
+                                            <h6 class="color-6">#{{ number_format($property->property_price,2,'.',',') }}</h6>
                                             <p class="font-roboto">{{ $property->description }}</p>
                                             <ul>
                                                 <li><i class="fas fa-map-marker-alt"></i>state :
                                                     {{ $property->state }}</li>
                                                 <li><i class="fas fa-map-marker-alt"></i>lga :
                                                     {{ $property->lga }}</li>
-                                                <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft :
-                                                    {{ $property->area }}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i> Rooms :
+                                                    {{ $property->rooms }}</li>
                                             </ul>
                                             <a href="user-favourites.html">
                                                 <span class="round-half color-6">
@@ -372,7 +371,7 @@
                                 <a href="single-property-8.html">
                                     <h3>{{ $property->property_type }}</h3>
                                 </a>
-                                <h6 class="color-6">${{ $property->property_price }}.00*</h6>
+                                <h6 class="color-6">#{{ number_format($property->property_price,2,'.',',') }}</h6>
                                 <p class="font-roboto">{{ $property->description }}</p>
                                 <ul>
                                     <li><i class="fas fa-map-marker-alt"></i> State
@@ -810,8 +809,8 @@
                     <h2>Looking to Buy a new property or Sell an existing one?
                         Real Homes provides an easy solution!</h2>
                     <div class="button-banner">
-                        <a href="{{ route('login') }}" class="btn btn-gradient color-6">Submit property</a>
-                        <a href="{{ route('login') }}" class="btn btn-white color-6"> <span>Browse
+                        <a href="{{ route('user-properties.create') }}" class="btn btn-gradient color-6">Submit property</a>
+                        <a href="{{ route('search') }}" class="btn btn-white color-6"> <span>Browse
                                 property</span></a>
                     </div>
                 </div>
