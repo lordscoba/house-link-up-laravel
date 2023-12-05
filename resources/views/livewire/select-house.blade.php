@@ -15,29 +15,16 @@
                                                     <img src="{{ asset('assets/img/house_link_up_side.png') }}"
                                                         class="img-fluid m-0" alt="">
                                                     <h6>Want to buy or rent Home ?</h6>
-                                                    <h1>Reality Properties solve your problems</h1>
-                                                    <a href="{{ route('login') }}"
+                                                    <h1>Realty Properties solve your problems</h1>
+                                                    <a href="{{ route('user-properties.create') }}"
                                                         class="btn btn-gradient color-6">submit
                                                         property</a>
                                                 </div>
                                             </div>
-                                        </div> {{-- 
-                                            
-                                             <div>
-                                            <div class="home-content">
-                                                <div>
-                                                    <img src="{{ asset('assets/img/house_link_up_side.png') }}"
-                                        class="img-fluid m-0" alt="">
-                                        <h6>Want to buy or sell Land ?</h6>
-                                        <h1>Elegant houses for rent and sale</h1>
-                                        <a href="{{ route('login') }}" class="btn btn-gradient color-6">submit
-                                            property</a>
-                                    </div>
-                                </div>
-                            </div>--}}
+                                        </div> 
 
                         </div>
-                        <div class="looking-icons">
+                        {{-- <div class="looking-icons">
                             <h5>What are you looking for?</h5>
                             <ul>
                                 <li>
@@ -65,7 +52,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -289,7 +276,7 @@
                                         <div>
                                             <h5><a href="single-property-6.html">{{ $property->property_type }}</a>
                                             </h5>
-                                            <h6>#{{ $property->property_price }} <small>/ start from</small></h6>
+                                            <h6>#{{ number_format($property->property_price,2,'.',',') }} <small>/ start from</small></h6>
                                         </div>
                                         <button type="button" class="btn btn-gradient color-6 mt-3"
                                             onclick="document.location='{{ route('description', ['id' => $property->id]) }}'">Details</button>
@@ -309,8 +296,8 @@
                                                 <h6>{{ $property->town }}</h6>
                                             </li>
                                             <li>
-                                                <span>Area</span>
-                                                <h6>{{ $property->area }}m<sup>2</sup></h6>
+                                                <span>Rooms</span>
+                                                <h6 class="text-break">{{ $property->rooms }}</h6>
                                             </li>
                                         </ul>
                                     </div>

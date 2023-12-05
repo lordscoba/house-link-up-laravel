@@ -87,6 +87,8 @@
                                                 <option selected value="">Choose...</option>
                                                 <option value="Rent">For Rent</option>
                                                 <option value="Sale">For Sale</option>
+                                                <option value="Draft">Draft</option>
+                                                <option value="Unavailable">Unavailable</option>
                                             </select>
                                         </div>
 
@@ -217,8 +219,7 @@
                                     <textarea name="description" class="form-control" rows="4"></textarea>
                                 </div>
                                 <div class="form-group col-12">
-                                    <label>Address <span
-                                        class="text-danger">(*)</span></label>
+                                    <label>Address <span class="text-danger">(*)</span></label>
                                     <input name="address" type="text" class="form-control"
                                         placeholder="Address of your property">
                                 </div>

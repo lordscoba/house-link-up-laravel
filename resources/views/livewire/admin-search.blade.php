@@ -137,19 +137,18 @@
                         <a href="single-property-8.html">
                             <h3>{{ $property->property_type }}</h3>
                         </a>
-                        <h6>${{ $property->property_price }}.00*</h6>
+                        <h6>#{{ $property->property_price }}.00*</h6>
                         <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides
                             wonderful entertaining spaces with a chef
                             kitchen opening…</p>
-                        <ul>
-                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed :
-                                {{ $property->beds }}</li>
-                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths :
-                                {{ $property->bathrooms }}</li>
-                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool"
-                                    alt="">Sq Ft : {{ $property->area }}
-                            </li>
-                        </ul>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> State :
+                                    {{ $property->state }}</li>
+                                <li><i class="fas fa-map-marker-alt"></i> LGA : {{ $property->lga }}
+                                </li>
+                                <li><i class="fas fa-map-marker-alt"></i> Town :
+                                    {{ $property->town }}</li>
+                            </ul>
                         <div class="property-btn d-flex">
                             {{-- <span>{{ $property->created_at }}</span> --}}
                             <a href="properties/{{ $property->id }}/edit"

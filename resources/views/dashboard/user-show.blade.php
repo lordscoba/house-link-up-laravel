@@ -54,32 +54,6 @@
                                     <span>{{ $properties->towns }} Town</span>
                                 </div>
                             </li>
-                            {{-- <li>
-                                <div>
-                                    <img src="../../../assets/images/svg/icon/square-ruler-tool.svg"
-                                        class="img-fluid ruler-tool" alt="">
-                                    <span>{{ $properties->area }} Sq ft</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="../../../assets/images/svg/icon/garage.svg" class="img-fluid" alt="">
-                                    <span>{{ $properties->garage }} Garage</span>
-                                </div>
-                            </li> --}}
-                            {{--  <li>
-                                <div>
-                                    <img src="../../../assets/images/svg/icon/square-ruler-tool.svg"
-                                        class="img-fluid ruler-tool" alt="">
-                                    <span>{{ $properties->area }} Sq ft</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="../../../assets/images/svg/icon/garage.svg" class="img-fluid" alt="">
-                                    <span>{{ $properties->garage }} Garage</span>
-                                </div>
-                            </li> --}}
                         
                         </ul>
                         <div class="share-buttons">
@@ -299,24 +273,22 @@
                                         <div class="col-md-6 col-xl-4">
                                             <ul class="property-list-details">
                                                 <li><span>Property Type :</span> {{ $properties->property_type }}</li>
-                                                {{-- <li><span>Property ID :</span> ZOEA245</li> --}}
                                                 <li><span>Property status :</span> For {{ $properties->property_status }}
                                                 </li>
-                                                <li><span>Operating Since :</span> 2008</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-xl-4">
-                                            <ul class="property-list-details">
-                                                <li><span>Price :</span> $ {{ $properties->property_price }}</li>
-                                                <li><span>Property Size :</span>{{ $properties->area }} sq / ft</li>
-                                                <li><span>State :</span> {{ $properties->state }}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-xl-4">
-                                            <ul class="property-list-details">
                                                 <li><span>City :</span> {{ $properties->city }}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                            <ul class="property-list-details">
+                                                <li><span>State :</span> {{ $properties->state }}</li>
                                                 <li><span>LGA :</span> {{ $properties->lga }}</li>
-                                                <li><span>Towns :</span> {{ $properties->town }}</li>
+                                                <li><span>Town :</span> {{ $properties->town }}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                            <ul class="property-list-details">
+                                                <li><span>Price :</span> # {{ $properties->property_price }}</li>
+                                                <li><span>Rooms :</span>{{ $properties->rooms }} rooms</li>
                                             </ul>
                                         </div>
                                     </div>

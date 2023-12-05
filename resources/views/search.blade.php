@@ -245,7 +245,7 @@
                                 <a href="single-property-8.html">
                                     <h3>{{ $property->property_type }}</h3>
                                 </a>
-                                <h6 class="color-6">#{{ $property->property_price }}.00*</h6>
+                                <h6 class="color-6">#{{ number_format($property->property_price,2,'.',',') }}.00*</h6>
                                 <p class="font-roboto">{{ $property->description }}</p>
                                 <ul>
                                     <li><i class="fas fa-map-marker-alt"></i>State

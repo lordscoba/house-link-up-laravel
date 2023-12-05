@@ -88,8 +88,8 @@
                                                 <div class="d-flex">
                                                     <div>
                                                         <p>Total Prices</p>
-                                                        <h4>${{ DB::table('properties')
-                                                                    ->sum('property_price')   }}</h4>
+                                                        <h4>#{{ number_format(DB::table('properties')
+                                                            ->sum('property_price') ,2,'.',',') }}</h4>
                                                     </div>
                                                     {{-- <span><span class="label label-success">+30%</span></span> --}}
                                                 </div>
@@ -98,18 +98,17 @@
                                                 <div class="d-flex">
                                                     <div>
                                                         <p>Total sold</p>
-                                                        <h4>${{ DB::table('properties')->where('property_status','Paid')
-                                                                    ->sum('property_price')   }}</h4>
+                                                        <h4>#{{ number_format(DB::table('properties')->where('property_status','Paid')
+                                                            ->sum('property_price'),2,'.',',') }}</h4>
                                                     </div>
-                                                    {{-- <span><span class="label label-success">+20%</span></span> --}}
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex">
                                                     <div>
                                                         <p>Max Price</p>
-                                                        <h4>${{ DB::table('properties')
-                                                                    ->max('property_price')   }}</h4>
+                                                        <h4>#{{ number_format(DB::table('properties')
+                                                            ->max('property_price'),2,'.',',') }}</h4>
                                                     </div>
                                                 </div>
 
@@ -162,7 +161,7 @@
                                                                 <h6>{{ $properties->property_type }}</h6>
                                                             </div>
                                                         </td>
-                                                        <td>${{ $properties->property_price }}</td>
+                                                        <td>#{{ number_format($properties->property_price,2,'.',',') }}</td>
                                                         <td>{{ $properties->created_at }}</td>
 
                                                         <td><span
@@ -200,7 +199,7 @@
                                                     <tr class="my-3">
                                                         <td>
                                                             <div class="d-flex">
-                                                                <h6>${{ $properties->property_price }}</h6>
+                                                                <h6>#{{ number_format($properties->property_price,2,'.',',') }}</h6>
                                                             </div>
                                                         </td>
                                                         <td>{{ $properties->property_status }}</td>
