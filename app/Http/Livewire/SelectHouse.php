@@ -56,17 +56,18 @@ class SelectHouse extends Component
 
         // info('Debug message', ['data' => $towns]);
 
-            return view('livewire.select-house', [
+        return view('livewire.select-house', [
             'properties' => Properties::where(function ($query) {
-            $query->where('property_type', 'like','%'. $this->search_type . '%')
-            ->orWhere('property_type', '') // Include records with an empty string
-            ->orWhereNull('property_type'); // Include records with a null value
+                $query->where('property_type', 'like', '%' . $this->search_type . '%')
+                    ->orWhere('property_type', '') // Include records with an empty string
+                    ->orWhereNull('property_type'); // Include records with a null value
             })
-            ->where(function ($query) {
-            $query->where('property_status', 'like','%'. $this->search_status . '%')
-            ->orWhere('property_status', '') // Include records with an empty string
-            ->orWhereNull('property_status'); // Include records with a null value
-            })
+                ->where(function ($query) {
+                    $query->where('property_status', 'like', '%' . $this->search_status . '%')
+                        ->orWhere('property_status', '') // Include records with an empty string
+                        ->orWhereNull('property_status'); // Include records with a null value
+                        // ->whereNotIn('property_status', ['Draft', 'Unavailable', 'Sold']);
+            })->whereNotIn('property_status', ['Draft', 'Unavailable', 'Sold'])// exclude sold and unavailable houses
             ->where(function ($query) {
             $query->where('rooms', 'like','%'.$this->search_room . '%')
             ->orWhere('rooms', '') // Include records with an empty string

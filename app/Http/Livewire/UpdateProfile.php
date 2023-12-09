@@ -118,10 +118,10 @@ class UpdateProfile extends Component
             'city' => 'required',
             'state' => 'required',
             'agent_status' => 'required',
-            'agency' => 'required',
+            // 'agency' => 'required',
             'about_agent' => 'required',
             'phone_number' => 'required',
-            'license_year' => 'required',
+            // 'license_year' => 'required',
             'twitter_link' => 'required',
             'facebook_link' => 'required',
         ]);

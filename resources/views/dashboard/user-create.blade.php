@@ -96,7 +96,7 @@
                                             <label>Property Price/ Rent Price <span
                                                     class="text-danger">(*)</span></label>
                                             <input name="property_price" type="number" class="form-control"
-                                                placeholder="#2800">
+                                                placeholder="#150,000">
                                         </div>
                                         {{--for location --}}
                                         <livewire:select-location />
@@ -195,7 +195,7 @@
                                         </div>
                                         <div class="form-group col-sm-4">
                                             <label>Price <span class="text-info">(optional)</span> </label>
-                                            <input name="price" type="text" class="form-control" placeholder="$3000">
+                                            <input name="price" type="text" class="form-control" placeholder="#150,000">
                                         </div>
                                         <div class="form-group col-sm-4">
                                             <label>Year built <span class="text-info">(optional)</span> </label>
