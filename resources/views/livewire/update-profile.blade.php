@@ -47,13 +47,9 @@
                                     @enderror
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="agency">Agency = {{ $user->agency }}</label>
-                                    <select wire:model.defer="agency" id="agency" class="form-control">
-                                        <option selected value="{{ $user->agency }}">Choose...</option>
-                                        @foreach (DB::table('agencies')->get() as $agency)
-                                            <option value="{{ $agency->name }}">{{ $agency->name }}</option>
-                                        @endforeach
-                                    </select>
+                                    <label for="agency">Agency = {{ $user->agency }} (optional)</label>
+                                    <input type="text" wire:model.defer="agency" class="form-control"
+                                        id="agency" placeholder="Agency" value="{{ $user->agency  }}">
                                     @error('agency')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -102,7 +98,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="city">City</label>
+                                    <label for="city">Town/City</label>
                                     <input wire:model.defer="city" type="text" class="form-control" id="city"
                                         value="{{ $user->city }}">
                                     @error('city')
@@ -126,7 +122,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="license_year">License Year</label>
+                                    <label for="license_year">License Year (optional)</label>
                                     <input wire:model.defer="license_year" type="number" class="form-control"
                                         id="license_year" min="1900" max="2030"
                                         value="{{ $user->license_year }}">

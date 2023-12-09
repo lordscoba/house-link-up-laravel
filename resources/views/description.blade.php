@@ -302,14 +302,16 @@
                                         <li><span>Property Type :</span> {{ $properties->property_type }}</li>
                                         <li><span>Property status :</span> For {{ $properties->property_status }}
                                         </li>
-                                        <li><span>City :</span> {{ $properties->city }}</li>
+                                        {{-- <li><span>City :</span> {{ $properties->city }}</li> --}}
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-xl-4">
                                     <ul class="property-list-details">
                                         <li><span>State :</span> {{ $properties->state }}</li>
                                         <li><span>LGA :</span> {{ $properties->lga }}</li>
-                                        <li><span>Town :</span> {{ $properties->town }}</li>
+                                        <li><span>Town/City :</span> {{ $properties->town }} @if ($properties->city != "")
+                                            ({{ $properties->city }})
+                                        @endif</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-xl-4">

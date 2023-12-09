@@ -81,7 +81,7 @@
                                                 <a href="single-property-8.html">
                                                     <h3>{{ $property->property_type }}</h3>
                                                 </a>
-                                                <h6>#{{ $property->property_price }}.00*</h6>
+                                                <h6>#{{ number_format($property->property_price,2,'.',',') }}</h6>
                                                 <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting.
                                                     This home provides wonderful entertaining spaces with a chef
                                                     kitchen opening…</p>
