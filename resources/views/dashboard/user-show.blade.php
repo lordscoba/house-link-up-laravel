@@ -32,29 +32,29 @@
                             <h2 class="mb-0">{{ $properties->property_type }}</h2>
                             <span><span class="label label-shadow ms-2">For
                                     {{ $properties->property_status }}</span></span>
-                                    &nbsp;<h2 class="mb-0">{{ $properties->country }}</h2>
+                            &nbsp;<h2 class="mb-0">{{ $properties->country }}</h2>
                         </div>
                         <p class="mt-2">{{ $properties->address }}</p>
                         <ul>
                             <li>
                                 <div>
-                                    <i class="fas fa-map-marker-alt p-2"></i> 
+                                    <i class="fas fa-map-marker-alt p-2"></i>
                                     <span>{{ $properties->state }} State</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <i class="fas fa-map-marker-alt p-2"></i> 
+                                    <i class="fas fa-map-marker-alt p-2"></i>
                                     <span>{{ $properties->lga }} Local Government</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <i class="fas fa-map-marker-alt p-2"></i> 
+                                    <i class="fas fa-map-marker-alt p-2"></i>
                                     <span>{{ $properties->towns }} Town</span>
                                 </div>
                             </li>
-                        
+
                         </ul>
                         <div class="share-buttons">
                         </div>
@@ -84,22 +84,23 @@
                                 @endfor
                             @endif
                         </div>
-                        <h2 class="price">#{{ number_format($properties->property_price,2,'.',',') }} <span>/ start From</span></h2>
+                        <h2 class="price">#{{ number_format($properties->property_price, 2, '.', ',') }} <span>/
+                                {{ $properties->divisions }}</span></h2>
                         <div class="feature-label">
                             @if ($properties->free_wi_fi == 'yes')
-                            <span class="btn btn-dashed color-2 btn-pill">Wi-fi</span> 
+                                <span class="btn btn-dashed color-2 btn-pill">Wi-fi</span>
                             @endif
                             @if ($properties->emergency_exit == 'yes')
-                            <span class="btn btn-dashed color-2 btn-pill">Emergency Exit</span> 
+                                <span class="btn btn-dashed color-2 btn-pill">Emergency Exit</span>
                             @endif
                             @if ($properties->cctv == 'yes')
-                            <span class="btn btn-dashed color-2 btn-pill">CCTV</span> 
+                                <span class="btn btn-dashed color-2 btn-pill">CCTV</span>
                             @endif
                             @if ($properties->air_conditioning == 'yes')
-                            <span class="btn btn-dashed color-2 btn-pill">Air Conditioning</span> 
+                                <span class="btn btn-dashed color-2 btn-pill">Air Conditioning</span>
                             @endif
                             @if ($properties->free_parking_in_the_area == 'yes')
-                            <span class="btn btn-dashed color-2 btn-pill">Car Park</span> 
+                                <span class="btn btn-dashed color-2 btn-pill">Car Park</span>
                             @endif
                         </div>
                     </div>
@@ -153,156 +154,160 @@
                                     <div class="single-feature row">
                                         <div class="col-xxl-3 col-xl-4 col-6">
                                             <ul>
-                                                
+
                                                 @if ($properties->free_wi_fi == 'yes')
-                                                <li>
-                                                    <i class="fas fa-wifi"></i> Free Wi-Fi
-                                                </li>    
+                                                    <li>
+                                                        <i class="fas fa-wifi"></i> Free Wi-Fi
+                                                    </li>
                                                 @endif
                                                 @if ($properties->free_wi_fi == 'yes')
-
                                                 @endif
                                                 @if ($properties->cctv == 'yes')
-                                                <li>
-                                                    <i class="fas fa-video"></i> CCTV
-                                                </li>
+                                                    <li>
+                                                        <i class="fas fa-video"></i> CCTV
+                                                    </li>
                                                 @endif
-                                                
+
                                                 @if ($properties->emergency_exit == 'yes')
-                                                <li>
-                                                    <i class="fas fa-door-open"></i> Emergency Exit
-                                                </li>
+                                                    <li>
+                                                        <i class="fas fa-door-open"></i> Emergency Exit
+                                                    </li>
                                                 @endif
                                             </ul>
                                         </div>
                                         <div class="col-xxl-3 col-xl-4 col-6">
                                             <ul>
-                                                
+
                                                 @if ($properties->free_parking_in_the_area == 'yes')
-                                                <li>
-                                                    <i class="fas fa-car"></i> free Parking in the area
-                                                </li>
+                                                    <li>
+                                                        <i class="fas fa-car"></i> free Parking in the area
+                                                    </li>
                                                 @endif
                                                 @if ($properties->air_conditioning == 'yes')
-                                                <li>
-                                                    <i class="fas fa-fan"></i> Air Conditioning
-                                                </li>
-                                                @endif 
+                                                    <li>
+                                                        <i class="fas fa-fan"></i> Air Conditioning
+                                                    </li>
+                                                @endif
                                             </ul>
-                                        
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="desc-box">
-                                <div class="page-section ratio3_2" id="gallery">
-                                    <h4 class="content-title">gallery</h4>
-                                    <div class="single-gallery">
-                                        <div class="gallery-for">
-                                       
-                                            @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
+                                <div class="desc-box">
+                                    <div class="page-section ratio3_2" id="gallery">
+                                        <h4 class="content-title">gallery</h4>
+                                        <div class="single-gallery">
+                                            <div class="gallery-for">
+
+                                                @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
+                                                    <div>
+                                                        <div class="bg-size">
+                                                            <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                                class="bg-img" alt="">
+                                                        </div>
+                                                    </div>
+                                                @empty
+                                                    <div>
+                                                        <div class="bg-size">
+                                                            <img src="../../../assets/images/property/4.jpg" class="bg-img"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="bg-size">
+                                                            <img src="../../../assets/images/property/3.jpg" class="bg-img"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                @endforelse
+                                            </div>
+                                            <div class="gallery-nav">
+
+                                                @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
+                                                    <div>
+                                                        <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                @empty
+                                                    <div>
+                                                        <img src="../../../assets/images/property/4.jpg" class="img-fluid"
+                                                            alt="">
+                                                    </div>
+                                                    <div>
+                                                        <img src="../../../assets/images/property/3.jpg" class="img-fluid"
+                                                            alt="">
+                                                    </div>
+                                                @endforelse
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desc-box">
+                                    <div class="page-section ratio_40" id="video">
+                                        <h4 class="content-title">video</h4>
+                                        <div class="play-bg-image">
                                             <div>
-                                                <div class="bg-size">
-                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img"
+                                                @if ($properties->video_link != '')
+                                                    <iframe width="560" height="315"
+                                                        src="{{ $properties->video_link }}" title="YouTube video player"
+                                                        frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+                                                @else
+                                                    <img src="../../../assets/images/property/11.jpg" class="bg-img"
                                                         alt="">
-                                                </div>
-                                            </div>
-                                        @empty
-                                        <div>
-                                            <div class="bg-size">
-                                                <img src="../../../assets/images/property/4.jpg" class="bg-img"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="bg-size">
-                                                <img src="../../../assets/images/property/3.jpg" class="bg-img"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                        @endforelse 
-                                        </div>
-                                        <div class="gallery-nav">
-                                            
-                                            @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
-                                            <div>
-                                                <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="img-fluid"
-                                                    alt="">
-                                            </div>
-                                        @empty
-                                        <div>
-                                            <img src="../../../assets/images/property/4.jpg" class="img-fluid"
-                                                alt="">
-                                        </div>
-                                        <div>
-                                            <img src="../../../assets/images/property/3.jpg" class="img-fluid"
-                                                alt="">
-                                        </div>
-                                        @endforelse
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="desc-box">
-                                <div class="page-section ratio_40" id="video">
-                                    <h4 class="content-title">video</h4>
-                                    <div class="play-bg-image">
-                                        <div >
-                                            @if ( $properties->video_link != "")
-                                            <iframe width="560" height="315" src="{{ $properties->video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                                            @else
-                                            <img src="../../../assets/images/property/11.jpg" class="bg-img"
-                                            alt="">   
-                                            @endif
-                                            {{-- <img src="../../../assets/images/property/11.jpg" class="bg-img"
+                                                @endif
+                                                {{-- <img src="../../../assets/images/property/11.jpg" class="bg-img"
                                                 alt=""> --}}
-                                        </div>
-                                        {{-- <div class="icon-video">
+                                            </div>
+                                            {{-- <div class="icon-video">
                                             <a href="javascript:void(0)" data-bs-toggle="modal"
                                                 data-bs-target="#videomodal">
                                                 <i class="fas fa-play"></i>
                                             </a>
                                         </div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="desc-box">
-                                <div class="page-section" id="details">
-                                    <h4 class="content-title">Property Details
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col-md-6 col-xl-4">
-                                            <ul class="property-list-details">
-                                                <li><span>Property Type :</span> {{ $properties->property_type }}</li>
-                                                <li><span>Property status :</span> For {{ $properties->property_status }}
-                                                </li>
-                                                <li><span>City :</span> {{ $properties->city }}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-xl-4">
-                                            <ul class="property-list-details">
-                                                <li><span>State :</span> {{ $properties->state }}</li>
-                                                <li><span>LGA :</span> {{ $properties->lga }}</li>
-                                                <li><span>Town :</span> {{ $properties->town }}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-xl-4">
-                                            <ul class="property-list-details">
-                                                <li><span>Price :</span> # {{ $properties->property_price }}</li>
-                                                <li><span>Rooms :</span>{{ $properties->rooms }} rooms</li>
-                                            </ul>
                                         </div>
                                     </div>
-                                
                                 </div>
-                            </div>
-                            {{-- <div class="desc-box">
+                                <div class="desc-box">
+                                    <div class="page-section" id="details">
+                                        <h4 class="content-title">Property Details
+                                        </h4>
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-4">
+                                                <ul class="property-list-details">
+                                                    <li><span>Property Type :</span> {{ $properties->property_type }}</li>
+                                                    <li><span>Property status :</span> For
+                                                        {{ $properties->property_status }}
+                                                    </li>
+                                                    <li><span>City :</span> {{ $properties->city }}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <ul class="property-list-details">
+                                                    <li><span>State :</span> {{ $properties->state }}</li>
+                                                    <li><span>LGA :</span> {{ $properties->lga }}</li>
+                                                    <li><span>Town :</span> {{ $properties->town }}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <ul class="property-list-details">
+                                                    <li><span>Price :</span> # {{ $properties->property_price }}</li>
+                                                    <li><span>Rooms :</span>{{ $properties->rooms }} rooms</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                {{-- <div class="desc-box">
                                 <div class="page-section" id="floor_plan">
                                     <h4 class="content-title">Floor plan</h4>
                                     <img src="../../../assets/images/single-property/floor-plan.png" alt=""
                                         class="img-fluid">
                                 </div>
                             </div> --}}
-                            {{-- <div class="desc-box">
+                                {{-- <div class="desc-box">
                                 <div class="page-section" id="location-map">
                                     <h4 class="content-title">Location</h4>
                                     <iframe title="realestate location"
@@ -310,7 +315,7 @@
                                         allowfullscreen></iframe>
                                 </div>
                             </div> --}}
-                            {{-- <div class="desc-box">
+                                {{-- <div class="desc-box">
                                 <div class="page-section">
                                     <h4 class="content-title">Reviews</h4>
                                     <div class="review">
@@ -394,8 +399,8 @@
                                 </div>
                             </div> --}}
 
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4">
@@ -416,10 +421,12 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <i data-feather="map-pin" class="me-2"></i>{{ $properties->contact_address }}
+                                            <i data-feather="map-pin"
+                                                class="me-2"></i>{{ $properties->contact_address }}
                                         </li>
                                         <li>
-                                            <i data-feather="phone-call" class="me-2"></i>{{ $properties->contact_phone_number }}
+                                            <i data-feather="phone-call"
+                                                class="me-2"></i>{{ $properties->contact_phone_number }}
                                         </li>
                                     </ul>
                                 </div>

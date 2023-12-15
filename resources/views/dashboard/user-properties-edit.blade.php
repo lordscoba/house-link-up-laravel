@@ -89,6 +89,7 @@
                                             </option>
                                             <option value="Rent">For Rent</option>
                                             <option value="Sale">For Sale</option>
+                                            <option value="Short Let">Short Let</option>
                                             <option value="Sold">Sold (paid)</option>
                                             <option value="Draft">Draft</option>
                                             <option value="Unavailable">Unavailable</option>
@@ -96,10 +97,22 @@
                                     </div>
 
                                     <div class="form-group col-sm-4">
-                                        <label>Property Price/ Rent Price <span class="text-danger">(*)</span></label>
-                                        <input name="property_price" type="number" class="form-control"
-                                            placeholder="#2800" value="{{ $properties->property_price }}">
-                                    </div>
+                                            <label>Property Price / Rent Price <span
+                                                    class="text-danger">(*)</span></label>
+                                                    <div class="d-flex flex-row">
+                                                        <input name="property_price" type="number" class="form-control"
+                                                placeholder="#2800" value="{{ $properties->property_price }}">
+                                                <select name="divisions" id="divisions" class="form-control">
+                                                <option selected value="{{ $properties->divisions }}">Choose...</option>
+                                                <option value="per year">per year</option>
+                                                 <option value="per half year">per half year</option>
+                                                 <option value="per month">per month</option>
+                                                 <option value="per week">per week</option>
+                                                <option value="per day">per day</option>    
+                                            </select>
+                                                    </div>
+                                            
+                                        </div>
                                     {{--for location --}}
                                     @livewire('select-location-update', ["property_id" =>
                                     request()->route('user_property')])

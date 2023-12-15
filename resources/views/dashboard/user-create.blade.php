@@ -86,6 +86,7 @@
                                             <select name="property_status" id="property_status" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="Rent">For Rent</option>
+                                                <option value="Short Let">Short Let</option>
                                                 <option value="Sale">For Sale</option>
                                                 <option value="Draft">Draft</option>
                                                 <option value="Unavailable">Unavailable</option>
@@ -95,8 +96,17 @@
                                         <div class="form-group col-sm-4">
                                             <label>Property Price/ Rent Price <span
                                                     class="text-danger">(*)</span></label>
-                                            <input name="property_price" type="number" class="form-control"
-                                                placeholder="#150,000">
+                                                    <div class="d-flex flex-row">
+                                                        <input name="property_price" type="number" class="form-control"
+                                                placeholder="#150,000"><select name="divisions" id="divisions" class="form-control">
+                                                <!-- <option selected value="">Choose...</option> -->
+                                                <option value="per year">per year</option>
+                                                 <option value="per half year">per half year</option>
+                                                 <option value="per month">per month</option>
+                                                 <option value="per week">per week</option>
+                                                <option value="per day">per day</option>    
+                                            </select>
+                                                    </div>
                                         </div>
                                         {{--for location --}}
                                         <livewire:select-location />
