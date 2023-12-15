@@ -283,6 +283,10 @@
 <script src="../assets/js/feather-icon/feather-icon.js"></script> --}}
 <script src="{{ asset('assets/js/feather-icon/feather-icon.js') }}"></script>
 
+   <!-- smooth scroll js -->
+    {{-- <script src="../assets/js/smooth-scroll.js"></script> --}}
+    <script src="{{ asset('assets/js/smooth-scroll.js') }}"></script>
+
 <!-- tilt js-->
 <script src="{{ asset('assets/js/tilt.jquery.js') }}"></script>
 {{--
@@ -318,6 +322,23 @@
 {{--
 <script src="../assets/js/color/template-color.js"></script> --}}
 <script src="{{ asset('assets/js/color/template-color.js') }}"></script>
+
+   <!-- print js -->
+   {{-- <script src="../assets/js/print.js"></script> --}}
+   <script src="{{ asset('assets/js/print.js') }}"></script>
+
+    <!-- Color-picker js-->
+    {{-- <script src="../assets/js/color/single-property.js"></script> --}}
+    <script src="{{ asset('assets/js/color/single-property.js') }}"></script>
+
+        <!-- range slider js -->
+        {{-- <script src="../assets/js/jquery-ui.js"></script> --}}
+        {{-- <script src="../assets/js/jquery.ui.touch-punch.min.js"></script> --}}
+        {{-- <script src="../assets/js/range-slider.js"></script> --}}
+
+        <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.ui.touch-punch.min.js') }}"></script>
+        <script src="{{ asset('assets/js/range-slider.js') }}"></script>
 
 </body>
 

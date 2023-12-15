@@ -51,6 +51,7 @@ class Properties extends Model
                          'contact_phone_number',
                          'contact_telegram_link',
                          'contact_whatsapp_link',
+                         'divisions',
                         ];
         
 

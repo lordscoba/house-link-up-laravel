@@ -35,7 +35,8 @@
                             <div class="common-header d-flex justify-content-between">
                                 <h5>Create property</h5>
                                 <div class="">required fields = <span class="text-danger">(*)</span> , optional fields =
-                                    <span class="text-info">(optional)</span> </div>
+                                    <span class="text-info">(optional)</span>
+                                </div>
                             </div>
                             <div class="create-property-form">
                                 <div class="form-inputs">
@@ -82,18 +83,29 @@
                                             <select name="property_status" id="property_status" class="form-control">
                                                 <option selected value="">Choose...</option>
                                                 <option value="Rent">For Rent</option>
+                                                <option value="Short Let">Short Let</option>
                                                 <option value="Sale">For Sale</option>
                                                 <option value="Draft">Draft</option>
                                                 <option value="Unavailable">Unavailable</option>
                                             </select>
                                         </div>
-                                        <div class="form-group col-sm-4">
-                                            <label>Property Price / Rent Price <span class="text-danger">(*)</span></label>
-                                            <input name="property_price" type="number" class="form-control"
-                                                placeholder="#2800">
+                                       <div class="form-group col-sm-4">
+                                            <label>Property Price/ Rent Price <span
+                                                    class="text-danger">(*)</span></label>
+                                                    <div class="d-flex flex-row">
+                                                        <input name="property_price" type="number" class="form-control"
+                                                placeholder="#150,000"><select name="divisions" id="divisions" class="form-control">
+                                                <!-- <option selected value="">Choose...</option> -->
+                                                <option value="per year">per year</option>
+                                                 <option value="per half year">per half year</option>
+                                                 <option value="per month">per month</option>
+                                                 <option value="per week">per week</option>
+                                                <option value="per day">per day</option>    
+                                            </select>
+                                                    </div>
                                         </div>
-                                                                                {{--for location --}}
-                                                                                <livewire:select-location />
+                                        {{--for location --}}
+                                        <livewire:select-location />
                                         <div class="form-group col-sm-4">
                                             <label>Rooms <span class="text-danger">(*)</span></label>
                                             <select name="rooms" id="rooms" class="form-control">
@@ -126,7 +138,7 @@
                                                 <option value="5">5</option>
                                                 <option value="6">6</option>
                                             </select>
-                                        </div> --}} 
+                                        </div> --}}
                                         <div class="form-group col-sm-4">
                                             <label>Halls <span class="text-info">(optional)</span></label>
                                             <select name="halls" id="halls" class="form-control">
@@ -163,7 +175,8 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label>free parking In the area <span class="text-info">(optional)</span></label>
+                                            <label>free parking In the area <span
+                                                    class="text-info">(optional)</span></label>
                                             <select name="free_parking_in_the_area" id="free_parking_in_the_area"
                                                 class="form-control">
                                                 <option selected value="">Choose...</option>
@@ -202,20 +215,20 @@
                                                 <option selected value="">Choose...</option>
                                                 @foreach (DB::table('agencies')->get() as $agency)
                                                 <option value="{{ $agency->name }}">{{ $agency->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div> --}}
-                                       
-                                        <div class="form-group col-sm-12">
-                                            <label>Description <span class="text-info">(optional)</span></label>
-                                            <textarea name="description" class="form-control" rows="4"></textarea>
-                                        </div>
-                                        <div class="form-group col-12">
-                                            <label>Address <span class="text-danger">(*)</span></label>
-                                            <input name="address" type="text" class="form-control"
-                                                placeholder="Address of your property">
-                                        </div>
-                                         {{--<div class="form-group col-sm-4">
+                                        @endforeach
+                                        </select>
+                                </div> --}}
+
+                                <div class="form-group col-sm-12">
+                                    <label>Description <span class="text-info">(optional)</span></label>
+                                    <textarea name="description" class="form-control" rows="4"></textarea>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label>Address <span class="text-danger">(*)</span></label>
+                                    <input name="address" type="text" class="form-control"
+                                        placeholder="Address of your property">
+                                </div>
+                                {{--<div class="form-group col-sm-4">
                                             <label>Zip code</label>
                                             <input name="zip_code" type="number" class="form-control"
                                                 placeholder="39702">
@@ -232,46 +245,45 @@
                                             <input name="landmark" type="text" class="form-control"
                                                 placeholder="landmark place name">
                                         </div> --}}
-                                        <h3>Agent details</h3>
-                                        <div class="form-group col-4">
-                                            <label>Agent Contact Email <span class="text-danger">(*)</span></label>
-                                            <input name="contact_email" type="text" class="form-control"
-                                                placeholder="Enter Agent Email">
-                                        </div>
-                                        <div class="form-group col-4">
-                                            <label>Agent Contact Name <span class="text-danger">(*)</span></label>
-                                            <input name="contact_name" type="text" class="form-control"
-                                                placeholder="Enter Agent Name">
-                                        </div>
-                                        <div class="form-group col-4">
-                                            <label>Contact Phone Number <span class="text-danger">(*)</span></label>
-                                            <input name="contact_phone_number" type="text" class="form-control"
-                                                placeholder="Agent Phone Number">
-                                        </div>
-                                        <div class="form-group col-4">
-                                            <label>Agent Contact address <span class="text-info">(optional)</span></label>
-                                            <input name="contact_address" type="text" class="form-control"
-                                                placeholder="Agent Address">
-                                        </div>
-                                        
-                                        <div class="form-group col-4">
-                                            <label>Agent Telegram link <span class="text-info">(optional)</span></label>
-                                            <input name="contact_telegram_link" type="text" class="form-control"
-                                                placeholder="Agent Telegram link">
-                                        </div>
-                                        <div class="form-group col-4">
-                                            <label>Agent Whatsapp link <span class="text-info">(optional)</span></label>
-                                            <input name="contact_whatsapp_link" type="text" class="form-control"
-                                                placeholder="Agent whatsapp link">
-                                        </div>
+                                <h3>Agent details</h3>
+                                <div class="form-group col-4">
+                                    <label>Agent Contact Email <span class="text-danger">(*)</span></label>
+                                    <input name="contact_email" type="text" class="form-control"
+                                        placeholder="Enter Agent Email">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label>Agent Contact Name <span class="text-danger">(*)</span></label>
+                                    <input name="contact_name" type="text" class="form-control"
+                                        placeholder="Enter Agent Name">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label>Contact Phone Number <span class="text-danger">(*)</span></label>
+                                    <input name="contact_phone_number" type="text" class="form-control"
+                                        placeholder="Agent Phone Number">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label>Agent Contact address <span class="text-info">(optional)</span></label>
+                                    <input name="contact_address" type="text" class="form-control"
+                                        placeholder="Agent Address">
                                 </div>
 
-                                <div class="form-group col-sm-12">
-                                    <label>Video (Youtube link) <span class="text-info">(optional)</span></label>
-                                    <input name="video_link" type="text" class="form-control"
-                                        placeholder="mp4 video link">
+                                <div class="form-group col-4">
+                                    <label>Agent Telegram link <span class="text-info">(optional)</span></label>
+                                    <input name="contact_telegram_link" type="text" class="form-control"
+                                        placeholder="Agent Telegram link">
                                 </div>
-                                {{-- <div class="form-inputs">
+                                <div class="form-group col-4">
+                                    <label>Agent Whatsapp link <span class="text-info">(optional)</span></label>
+                                    <input name="contact_whatsapp_link" type="text" class="form-control"
+                                        placeholder="Agent whatsapp link">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-12">
+                                <label>Video (Youtube link) <span class="text-info">(optional)</span></label>
+                                <input name="video_link" type="text" class="form-control" placeholder="mp4 video link">
+                            </div>
+                            {{-- <div class="form-inputs">
                                         <h6>Gallery</h6>
                                         <div class="input-group mb-3">
                                             <input name="image_one" type="file" class="form-control" id="inputGroupFile02">
@@ -290,17 +302,17 @@
                                             <label class="input-group-text" for="inputGroupFile02">File 4</label>
                                           </div>
                                 </div> --}}
-                                <div class="text-end">
-                                    <button type="submit" class="btn btn-gradient color-2 btn-pill">Submit</button>
-                                </div>
-                                </form>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-gradient color-2 btn-pill">Submit</button>
                             </div>
-
+                            </form>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- user dashboard section end -->

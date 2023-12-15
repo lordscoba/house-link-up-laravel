@@ -14,10 +14,10 @@ class AdminSearch extends Component
     
     public $search_status = '';
     public $search_type = '';
-    public $search_country = '';
+    // public $search_country = '';
     public $search_room = '';
-    public $search_bed = '';
-    public $search_bath = '';
+    // public $search_bed = '';
+    // public $search_bath = '';
 
     public function updatingSearch()
     {
@@ -30,9 +30,9 @@ class AdminSearch extends Component
             'properties' => Properties::where('property_type','like','%'.$this->search_type.'%')
             ->where('property_status','like','%'.$this->search_status.'%')
             ->where('rooms','like','%'.$this->search_room.'%')
-            ->where('country','like','%'.$this->search_country.'%')
-            ->where('beds','like','%'.$this->search_bed.'%')
-            ->where('bathrooms','like','%'.$this->search_bath.'%')
+            // ->where('country','like','%'.$this->search_country.'%')
+            // ->where('beds','like','%'.$this->search_bed.'%')
+            // ->where('bathrooms','like','%'.$this->search_bath.'%')
             ->paginate(10, ['*'], 'index'),
             // 'properties' => Properties::paginate(10),
         ]);

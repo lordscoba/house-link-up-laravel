@@ -122,8 +122,8 @@ class UpdateProfile extends Component
             'about_agent' => 'required',
             'phone_number' => 'required',
             // 'license_year' => 'required',
-            'twitter_link' => 'required',
-            'facebook_link' => 'required',
+            // 'twitter_link' => 'required',
+            // 'facebook_link' => 'required',
         ]);
         $id = Auth::user()->id;
         // if($this->filled('birthday')) {

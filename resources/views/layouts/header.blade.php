@@ -27,6 +27,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
     {{-- <link rel="stylesheet" type="text/css" href="../assets/css/color1.css"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color1.css') }}">
+
+        <!-- magnific css -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/magnific-popup.css') }}">
+        <!-- range slider css -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery-ui.css') }}">
 </head>
 
 <body>
