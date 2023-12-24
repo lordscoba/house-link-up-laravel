@@ -49,7 +49,7 @@
                                                         <div class="property-slider">
 
                                                             @forelse (DB::table('pictures')->where('properties_id',
-                                                                        $property->id)->get() as $picture)
+                                                                                $property->id)->get() as $picture)
                                                                 <a href="javascript:void(0)">
                                                                     <img src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                                         class="bg-img" alt="">
@@ -103,9 +103,12 @@
                                                             {{-- <span>{{ $property->created_at }}</span> --}}
                                                             <a href="user-properties/{{ $property->id }}/edit"
                                                                 class="btn btn-dashed btn-pill color-2 float-left">Edit</a>
-                                                            <a href="/dashboard/tin-pictures/{{ $property->id }}"
+                                                            <a href="/dashboard/tin-pictures/{{ $property->id }}/edit"
                                                                 class="btn btn-dashed btn-pill color-2 float-right">Edit
                                                                 Pictures</a>
+                                                            {{-- <a href="{{ route('tin-pictures.index') }}"
+                                                                class="btn btn-dashed btn-pill color-2 float-right">Edit
+                                                                Pictures</a> --}}
                                                             <form action="/dashboard/user-properties/{{ $property->id }}"
                                                                 class="pt-0" method="POST">
                                                                 @csrf

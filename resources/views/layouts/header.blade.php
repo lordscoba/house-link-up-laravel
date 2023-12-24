@@ -28,10 +28,10 @@
     {{-- <link rel="stylesheet" type="text/css" href="../assets/css/color1.css"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color1.css') }}">
 
-        <!-- magnific css -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/magnific-popup.css') }}">
-        <!-- range slider css -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery-ui.css') }}">
+    <!-- magnific css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <!-- range slider css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery-ui.css') }}">
 </head>
 
 <body>
@@ -56,8 +56,8 @@
                         <div class="brand-logo">
                             <a href="/">
                                 {{-- <img src="../assets/images/logo/2.png" alt="" class="img-fluid"> --}}
-                                <img style="width:150px" src="{{ asset('assets/img/house_link_up_side.png') }}" alt=""
-                                    class="img-fluid"> </a>
+                                <img style="width:150px" src="{{ asset('assets/img/house_link_up_side.png') }}"
+                                    alt="" class="img-fluid"> </a>
                         </div>
                         <nav>
                             <div class="main-navbar">
@@ -85,19 +85,20 @@
                                             <a href="{{ route('contact-us') }}" class="nav-link menu-title">Contact</a>
 
                                         </li>
-                                        <li class="mega-menu">
+                                        {{-- <li class="mega-menu">
                                             <a href="{{ route('services') }}" class="nav-link menu-title">
                                                 Services
                                             </a>
 
-                                        </li>
+                                        </li> --}}
                                         <li class="dropdown">
                                             <a href="{{ route('faq') }}" class="nav-link menu-title">F.A.Q</a>
                                         </li>
-                                        <li class="dropdown">
+                                        {{--  <li class="dropdown">
                                             <a href="{{ route('agent-list') }}" class="nav-link menu-title">Agent</a>
 
-                                        </li> {{-- <li class="dropdown">
+                                        </li> 
+                                        <li class="dropdown">
                                             <a href="{{ route('agency-list') }}" class="nav-link menu-title">Agency</a>
 
                                         </li> --}}
@@ -110,49 +111,53 @@
                                 <ul class="nav-menu d-flex justify-content-between">
                                     <!-- Authentication Links -->
                                     @guest
-                                    @if (Route::has('login'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                    @endif
+                                        @if (Route::has('login'))
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                            </li>
+                                        @endif
 
-                                    @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
-                                    @endif
+                                        @if (Route::has('register'))
+                                            <li class="nav-item">
+                                                <a class="nav-link"
+                                                    href="{{ route('register') }}">{{ __('Register') }}</a>
+                                            </li>
+                                        @endif
                                     @else
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            <i data-feather="user" class=""></i>
-                                            {{ Auth::user()->name }}
-                                        </a>
-
-                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                            @if (Auth::user()->email == "admin@houselinkup.com")
-                                            <a class="dropdown-item" href="{{ route('super.admin.home') }}"><strong
-                                                    class="text-dark">Admin Dashboard</strong></a>
-                                            @elseif (Auth::user()->email == "manager@houselinkup.com")
-                                            <a class="dropdown-item" href="{{ route('manger.home') }}"><strong
-                                                    class="text-dark">Admin Dashboard</strong></a>
-                                            @else
-                                            <a class="dropdown-item" href="{{ route('home') }}"><strong
-                                                    class="text-dark">User Dashboard</strong></a>
-                                            @endif
-
-                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                                <strong class="text-dark">{{ __('Logout') }}</strong>
-
+                                        <li class="nav-item dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
+                                                role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" v-pre>
+                                                <i data-feather="user" class=""></i>
+                                                {{ Auth::user()->name }}
                                             </a>
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                                class="d-none">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                    </li>
+                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                @if (Auth::user()->email == 'admin@houselinkup.com')
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('super.admin.home') }}"><strong
+                                                            class="text-dark">Admin Dashboard</strong></a>
+                                                @elseif (Auth::user()->email == 'manager@houselinkup.com')
+                                                    <a class="dropdown-item" href="{{ route('manger.home') }}"><strong
+                                                            class="text-dark">Admin Dashboard</strong></a>
+                                                @else
+                                                    <a class="dropdown-item" href="{{ route('home') }}"><strong
+                                                            class="text-dark">User Dashboard</strong></a>
+                                                @endif
+
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                                    <strong class="text-dark">{{ __('Logout') }}</strong>
+
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </li>
                                     @endguest
                                 </ul>
                             </li>

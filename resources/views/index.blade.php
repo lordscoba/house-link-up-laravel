@@ -864,7 +864,7 @@
     <!-- banner section end -->
 
     <!-- testimonial section start -->
-    <section class="testimonial-bg testimonial-layout6">
+    {{-- <section class="testimonial-bg testimonial-layout6">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -932,7 +932,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- testimonial section end -->
 
     @livewireScripts
