@@ -75,12 +75,13 @@ $properties_id = $request->input('properties_id');
         // return redirect('/admin/pictures/show');
         // For a route with the following URI: /profile/{id}
  
-echo "<script>
-   function myFunction() {
-   window.location = '/dashboard/tin-pictures/".$properties_id."';
-   }
-   setTimeout(myFunction, 1000);
-   </script>";
+// echo "<script>
+//    function myFunction() {
+//    window.location = '/dashboard/tin-pictures/".$properties_id."';
+//    }
+//    setTimeout(myFunction, 1000);
+//    </script>";
+return redirect()->route('tin-pictures.show', ['tin_picture' => $properties_id]);
 
 
     }
