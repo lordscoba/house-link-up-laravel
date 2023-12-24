@@ -43,7 +43,7 @@
                                 <div class="create-property-form">
                                     <div class="form-inputs">
                                         <h6>Add picture details</h6>
-                                        <form action="/dashboard/tin-pictures/" class="row gx-2 gx-sm-3" method="POST"
+                                        <form action="/dashboard/tin-pictures" class="row gx-2 gx-sm-3" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
                                             {{-- @method('PUT') --}}
