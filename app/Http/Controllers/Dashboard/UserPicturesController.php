@@ -140,7 +140,7 @@ return redirect()->route('tin-pictures.show', ['tin_picture' => $properties_id])
 
         ]);
 
-        $newImageName = time().'-'.$request->Picture_name . '.'.$request->image->extension();
+        $newImageName = time().'-'.$request->picture_name . '.'.$request->image->extension();
         $request->image->move(public_path('images'),$newImageName); 
 
         $pictures = Pictures::create([
