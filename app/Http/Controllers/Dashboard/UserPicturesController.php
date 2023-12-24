@@ -9,6 +9,7 @@ use App\Models\Pictures;
 use App\Models\Properties;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class UserPicturesController extends Controller
 {
@@ -92,12 +93,11 @@ echo "<script>
      */
     public function show($id)
     {
-        //
-        $pictures = Pictures::findOrFail($id);
-        $property = DB::table('properties')->where('id', $id)->first();
+        // $pictures = Pictures::findOrFail($id);
+        // $property = DB::table('properties')->where('id', $id)->first();
 
         return view('dashboard.tin-pictures.show', [
-                'property' => $property,
+                'id' => $id,
     
     ]);
 
@@ -155,7 +155,7 @@ $properties_id = $request->input('properties_id');
         // $property = DB::table('properties')->where('id', $id)->first();
 
         // return redirect(/admin/pictures/$property->id);
-        return redirect('dashboard/tin-pictures/$property->properties_id');
+        // return redirect('dashboard/tin-pictures/$property->properties_id');
  
     }
 
@@ -165,10 +165,20 @@ $properties_id = $request->input('properties_id');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pictures $picture)
+    public function destroy($id)
     {
-        //
+
+        // Find the record by ID
+        $picture = Pictures::findOrFail($id);
+
+
+        // Delete the record
         $picture->delete();
-                return redirect()->back();
+
+        $file_path = public_path('images/' . $picture->image_path);
+        if (File::exists($file_path)) {
+        File::delete($file_path);
+        }
+        return redirect()->back();
     }
 }

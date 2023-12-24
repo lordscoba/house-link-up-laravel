@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Pictures;
 use App\Models\Properties;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\File;
 
 class PicturesController extends Controller
 {
@@ -84,6 +85,14 @@ $properties_id = $request->input('properties_id');
 //   </script>";
    
 //   return redirect()->back();
+return redirect()->route('pictures.show', ['picture' => $properties_id]);
+
+// echo "<script>
+//    function myFunction() {
+//    window.location = '/admin/pictures/".$properties_id."';
+//    }
+//    setTimeout(myFunction, 1000);
+//    </script>";
 
 }
 
@@ -96,11 +105,11 @@ $properties_id = $request->input('properties_id');
     public function show($id)
     {
         //
-        $pictures = Pictures::find($id);
-        $property = DB::table('properties')->where('id', $id)->first();
+        // $pictures = Pictures::find($id);
+        // $property = DB::table('properties')->where('id', $id)->first();
 
         return view('admin.pictures.show', [
-                'property' => $property,
+                'id' => $id,
     
     ]);
     
@@ -146,7 +155,7 @@ $properties_id = $request->input('properties_id');
             'picture_name' => $request->input('picture_name'),
             'image_path' => $newImageName,
         ]);
-$properties_id = $request->input('properties_id');
+// $properties_id = $request->input('properties_id');
         // return view('admin.properties.store');
         // return redirect('/admin/pictures/show');
         // For a route with the following URI: /profile/{id}
@@ -156,7 +165,9 @@ $properties_id = $request->input('properties_id');
         // return redirect(/admin/pictures/$property->id);
         // return redirect('admin/pictures/$property->properties_id');
  
- return redirect()->back();
+//  return redirect()->back();
+// return redirect('admin/pictures/uyaya');
+// return redirect()->route('pictures.show', ['picture' => $id]);
 
     }
 
@@ -166,10 +177,19 @@ $properties_id = $request->input('properties_id');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pictures $picture)
+    public function destroy($id)
     {
-                //
-                $picture->delete();
+        // Find the record by ID
+        $picture = Pictures::findOrFail($id);
+
+
+        // Delete the record
+        $picture->delete();
+
+        $file_path = public_path('images/' . $picture->image_path);
+        if (File::exists($file_path)) {
+        File::delete($file_path);
+        }
                 return redirect()->back();
                 
     }

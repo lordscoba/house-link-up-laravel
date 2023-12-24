@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
-<!-- breadcrumb start -->
+    <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0 effect-cls">
         <img src="../assets/images/parallax/3.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
@@ -27,8 +26,8 @@
                 <div class="col">
                     <div class="title-2">
                         <h2>About Us</h2>
-                        <p class="font-roboto">Elegant retreat in Coral Gables setting. This home provides entertaining spaces with
-                            kitchen opening</p>
+                        <p class="font-roboto">This service is offered by JASSAT ReaL Estate Firm, a sector of JASSAT
+                            Subsidiaries.</p>
                     </div>
                     <div class="user-about">
                         <div class="row">
@@ -46,9 +45,10 @@
                             </div>
                             <div class="col-xl-5 col-lg-7">
                                 <div class="about-content">
-                                    <h3>We are the expert of team communication</h3>
-                                    <p class="font-roboto">Residences can be classified by and how they are connected to neighbouring residences and land. 
-                                        Different types of housing tenure can be used for the same physical type </p>
+                                    <h3>We are the expert of real estate</h3>
+                                    <p class="font-roboto">Houselinkup is a web-based platform for property rentals and
+                                        sales. We provide users with best property search experience both online and offline
+                                        by connecting them with real estate agents. </p>
                                 </div>
                                 <div class="about-listing">
                                     <ul>
@@ -57,7 +57,7 @@
                                             <p>Total property</p>
                                         </li>
                                         <li>
-                                            <h4>{{ DB::table('users')->where('agent_status','yes')->count() }}</h4>
+                                            <h4>{{ DB::table('users')->where('agent_status', 'yes')->count() }}</h4>
                                             <p>Agents</p>
                                         </li>
                                         <li>
@@ -65,7 +65,8 @@
                                             <p>Agency</p>
                                         </li>
                                         <li>
-                                            <h4>{{ DB::table('properties')->where('property_status','Sold')->count() }}</h4>
+                                            <h4>{{ DB::table('properties')->where('property_status', 'Sold')->count() }}
+                                            </h4>
                                             <p>Sold out property</p>
                                         </li>
                                     </ul>
@@ -80,7 +81,7 @@
     <!-- About us section end -->
 
     <!-- service section start -->
-    <section class="service-section service-2 bg-light">
+    {{-- <section class="service-section service-2 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -153,11 +154,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- service section end -->
 
     <!-- Our agent section start -->
-    <section class="about-section slick-between about-inner ratio_square">
+    {{-- <section class="about-section slick-between about-inner ratio_square">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -173,11 +174,10 @@
                                 <div class="col-xl-6">
                                     <div class="about-image">
                                         <div>
-                                            @if ($user->image_path != "")
+                                            @if ($user->image_path != '')
                 <img src="{{ URL::asset('images/'.$user->image_path) }}" class="img-fluid update_img" alt=""> 
                 @else
                 <img src="../assets/images/about/1.jpg" class="img-fluid update_img" alt="">
-                {{-- <img src="../assets/images/about/1.jpg" class="img-fluid update_img" alt="">   --}}
                 @endif
                                         </div>
                                         <div class="about-overlay"></div>
@@ -279,11 +279,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Our agent section end -->
 
     <!-- testimonial section start -->
-    <section class="bg-light about-people">
+    {{-- <section class="bg-light about-people">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -368,7 +368,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- testimonial section end -->
-
 @endsection

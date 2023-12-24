@@ -105,9 +105,7 @@
                 <div class="contact_wrap">
                     <i data-feather="map-pin"></i>
                     <h4>Where ?</h4>
-                    <p class="font-roboto">549 Sulphur Springs Road <br>
-                        Downers Grove, IL 60515 <br>
-                        support@houselinkup.com
+                    <p class="font-roboto">Gwagwalada, Abuja
                     </p>
                 </div>
             </div>
@@ -115,9 +113,7 @@
                 <div class="contact_wrap">
                     <i data-feather="map-pin"></i>
                     <h4>Second branch</h4>
-                    <p class="font-roboto">5415 Spring garden Road <br>
-                        Halifax, IL 97230 <br>
-                        <!--+91 187230014-->
+                    <p class="font-roboto">Calabar, Nigeria <br>
                         support@houselinkup.com
                     </p>
                 </div>
@@ -128,8 +124,10 @@
                     <h4>Online service</h4>
                     <ul>
                         <li>Suport: support@houselinkup.com</li>
-                        <li>LEO RYAN BRUCE</li>
-                        <li>+44 7361 627434</li>
+                        <li>Marcel Chidozie</li>
+                        <li>+234 9136487446</li>
+                        <li>Marcelo Chigozie</li>
+                        <li>+234 9043265371</li>
                     </ul>
                 </div>
             </div>
