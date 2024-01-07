@@ -289,25 +289,25 @@
                         </div> --}}
 
                                             <h3>Agent details</h3>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Contact Email <span class="text-danger">(*)</span></label>
                                                 <input name="contact_email" type="text" class="form-control"
                                                     placeholder="Enter Agent Email"
                                                     value="{{ $properties->contact_email }}">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Contact Name <span class="text-danger">(*)</span></label>
                                                 <input name="contact_name" type="text" class="form-control"
                                                     placeholder="Enter Agent Name"
                                                     value="{{ $properties->contact_name }}">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Contact Phone Number <span class="text-danger">(*)</span></label>
                                                 <input name="contact_phone_number" type="text" class="form-control"
                                                     placeholder="Agent Phone Number"
                                                     value="{{ $properties->contact_phone_number }}">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Contact address <span
                                                         class="text-info">(optional)</span></label>
                                                 <input name="contact_address" type="text" class="form-control"
@@ -315,14 +315,14 @@
                                                     value="{{ $properties->contact_address }}">
                                             </div>
 
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Telegram link <span
                                                         class="text-info">(optional)</span></label>
                                                 <input name="contact_telegram_link" type="text" class="form-control"
                                                     placeholder="Agent Telegram link"
                                                     value="{{ $properties->contact_telegram_link }}">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Whatsapp link <span
                                                         class="text-info">(optional)</span></label>
                                                 <input name="contact_whatsapp_link" type="text" class="form-control"

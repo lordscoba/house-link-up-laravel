@@ -84,8 +84,11 @@
                                 @endfor
                             @endif
                         </div>
-                        <h2 class="price">#{{ $properties->property_price }} <span>/
-                                {{ $properties->divisions }}</span></h2>
+                        <h2 class="price">#{{ number_format($properties->property_price, 2, '.', ',') }} @if ($properties->divisions !== 'none')
+                                <span>/
+                                    {{ $properties->divisions }}</span>
+                            @endif
+                        </h2>
                         <div class="feature-label">
                             <div class="feature-label">
                                 @if ($properties->free_wi_fi == 'yes')
@@ -200,7 +203,7 @@
                                     <div class="single-gallery">
                                         <div class="gallery-for">
                                             @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get()
-                                            as $picture)
+                                                    as $picture)
                                                 <div>
                                                     <div class="bg-size">
                                                         <img src="{{ URL::asset('images/' . $picture->image_path) }}"
@@ -224,7 +227,7 @@
                                         </div>
                                         <div class="gallery-nav">
                                             @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get()
-                                            as $picture)
+                                                    as $picture)
                                                 <div>
                                                     <img src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                         class="img-fluid" alt="">

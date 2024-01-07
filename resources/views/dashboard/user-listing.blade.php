@@ -49,7 +49,7 @@
                                                         <div class="property-slider">
 
                                                             @forelse (DB::table('pictures')->where('properties_id',
-                                                                                $property->id)->get() as $picture)
+                                                                                        $property->id)->get() as $picture)
                                                                 <a href="javascript:void(0)">
                                                                     <img src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                                         class="bg-img" alt="">
@@ -83,8 +83,10 @@
                                                             <h3>{{ $property->property_type }}</h3>
                                                         </a>
                                                         <h6>#{{ number_format($property->property_price, 2, '.', ',') }}
-                                                            <span>/
-                                                                {{ $property->divisions }}</span>
+                                                            @if ($property->divisions !== 'none')
+                                                                <span>/
+                                                                    {{ $property->divisions }}</span>
+                                                            @endif
                                                         </h6>
                                                         <p class="font-roboto">Elegant retreat in a quiet Coral Gables
                                                             setting.

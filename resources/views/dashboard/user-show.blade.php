@@ -84,8 +84,11 @@
                                 @endfor
                             @endif
                         </div>
-                        <h2 class="price">#{{ number_format($properties->property_price, 2, '.', ',') }} <span>/
-                                {{ $properties->divisions }}</span></h2>
+                        <h2 class="price">#{{ number_format($properties->property_price, 2, '.', ',') }} @if ($properties->divisions !== 'none')
+                                <span>/
+                                    {{ $properties->divisions }}</span>
+                            @endif
+                        </h2>
                         <div class="feature-label">
                             @if ($properties->free_wi_fi == 'yes')
                                 <span class="btn btn-dashed color-2 btn-pill">Wi-fi</span>
