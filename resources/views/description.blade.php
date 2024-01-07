@@ -90,7 +90,10 @@
                         </div>
                         <h2 class="price">
                             #{{ number_format($properties->property_price, 2, '.', ',') }}
-                            <span>/ {{ $properties->divisions }}</span>
+                            @if ($properties->divisions !== 'none')
+                                <span>/
+                                    {{ $properties->divisions }}</span>
+                            @endif
                         </h2>
                         <div class="feature-label gap-2">
                             @if ($properties->free_wi_fi == 'yes')

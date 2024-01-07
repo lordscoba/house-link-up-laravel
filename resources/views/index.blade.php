@@ -155,8 +155,12 @@
                                                         </h3>
                                                     </a>
                                                     <h6 class="color-6">
-                                                        #{{ number_format($property->property_price, 2, '.', ',') }}<span>/
-                                                            {{ $property->divisions }}</span></h6>
+                                                        #{{ number_format($property->property_price, 2, '.', ',') }}
+                                                        @if ($property->divisions !== 'none')
+                                                            <span>/
+                                                                {{ $property->divisions }}</span>
+                                                        @endif
+                                                    </h6>
                                                     <p class="font-roboto">{{ $property->description }}</p>
                                                     <ul>
                                                         <li><i class="fas fa-map-marker-alt"></i>state :
@@ -381,8 +385,10 @@
                                             <h3>{{ $property->property_type }}</h3>
                                         </a>
                                         <h6 class="color-6">
-                                            #{{ number_format($property->property_price, 2, '.', ',') }}<span>/
-                                                {{ $property->divisions }}</span>
+                                            #{{ number_format($property->property_price, 2, '.', ',') }}@if ($property->divisions !== 'none')
+                                                <span>/
+                                                    {{ $property->divisions }}</span>
+                                            @endif
                                         </h6>
                                         <p class="font-roboto">{{ $property->description }}</p>
                                         <ul>

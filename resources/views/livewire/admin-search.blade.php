@@ -141,8 +141,10 @@
                                 <h3>{{ $property->property_type }}</h3>
                             </a>
                             <h6>#{{ number_format($property->property_price, 2, '.', ',') }}
-                                <span>/
-                                    {{ $property->divisions }}</span>
+                                @if ($property->divisions !== 'none')
+                                    <span>/
+                                        {{ $property->divisions }}</span>
+                                @endif
                             </h6>
                             <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides
                                 wonderful entertaining spaces with a chef

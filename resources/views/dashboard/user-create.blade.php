@@ -260,34 +260,34 @@
                                         </div> --}}
 
                                             <h3>Agent details </h3>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Contact Email <span class="text-danger">(*)</span></label>
                                                 <input name="contact_email" type="text" class="form-control"
                                                     placeholder="Enter Agent Email">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Contact Name <span class="text-danger">(*)</span></label>
                                                 <input name="contact_name" type="text" class="form-control"
                                                     placeholder="Enter Agent Name">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Contact Phone Number <span class="text-danger">(*)</span></label>
                                                 <input name="contact_phone_number" type="text" class="form-control"
                                                     placeholder="Agent Phone Number">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Contact address <span
                                                         class="text-info">(optional)</span></label>
                                                 <input name="contact_address" type="text" class="form-control"
                                                     placeholder="Agent Address">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Telegram link <span
                                                         class="text-info">(optional)</span></label>
                                                 <input name="contact_telegram_link" type="text" class="form-control"
                                                     placeholder="Agent Telegram link">
                                             </div>
-                                            <div class="form-group col-4">
+                                            <div class="form-group col-6">
                                                 <label>Agent Whatsapp link <span
                                                         class="text-info">(optional)</span></label>
                                                 <input name="contact_whatsapp_link" type="text" class="form-control"

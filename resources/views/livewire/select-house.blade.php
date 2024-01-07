@@ -286,8 +286,12 @@
                                                     <h5><a
                                                             href="single-property-6.html">{{ $property->property_type }}</a>
                                                     </h5>
-                                                    <h6>#{{ number_format($property->property_price, 2, '.', ',') }}<small>/
-                                                            {{ $property->divisions }}</small></h6>
+                                                    <h6>#{{ number_format($property->property_price, 2, '.', ',') }}
+                                                        @if ($property->divisions !== 'none')
+                                                            <small>/
+                                                                {{ $property->divisions }}</small>
+                                                        @endif
+                                                    </h6>
                                                 </div>
                                                 <button type="button" class="btn btn-gradient color-6 mt-3"
                                                     onclick="document.location='{{ route('description', ['id' => $property->id]) }}'">Details</button>
