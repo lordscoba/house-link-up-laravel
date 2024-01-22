@@ -5,7 +5,7 @@
 
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" loading="lazy" src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-sm-6 ratio_landscape">
                                 <div class="agent-image">
-                                    <img src="{{ URL::asset('images/' . $agencies->image_path) }}" class="img-fluid bg-img"
+                                    <img loading="lazy" src="{{ URL::asset('images/' . $agencies->image_path) }}" class="img-fluid bg-img"
                                         alt="">
                                     <span
                                         class="label label-shadow">{{ DB::table('properties')->where('agency', $agencies->name)->count() }}
@@ -114,7 +114,7 @@
                                 <div class="property-box">
                                     <div class="agent-image">
                                         <div>
-                                            <img src="{{ URL::asset('images/' . $user->image_path) }}" class="img-fluid"
+                                            <img loading="lazy" src="{{ URL::asset('images/' . $user->image_path) }}" class="img-fluid"
                                                 alt="">
                                             <span
                                                 class="label label-shadow">{{ DB::table('properties')->where('user_id', $user->id)->count() }}
@@ -123,11 +123,11 @@
                                             <div class="overlay-content">
                                                 <ul>
                                                     </li>
-                                                    <li><a href="{{ $user->twitter_link }}"><img
+                                                    <li><a href="{{ $user->twitter_link }}"><img loading="lazy"
                                                                 src="../../../assets/images/about/icon-2.png"
                                                                 alt=""></a>
                                                     </li>
-                                                    <li><a href="{{ $user->facebook_link }}"><img
+                                                    <li><a href="{{ $user->facebook_link }}"><img loading="lazy"
                                                                 src="../../../assets/images/about/icon-3.png"
                                                                 alt=""></a>
                                                     </li>
@@ -178,17 +178,17 @@
                                             <div class="property-slider">
                                                 @forelse (DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
                                                     <a href="javascript:void(0)">
-                                                        <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                        <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                             class="bg-img" alt="">
                                                     </a>
                                                 @empty
                                                     <a href="javascript:void(0)">
-                                                        <img src="../../../assets/images/property/5.jpg" class="bg-img"
+                                                        <img loading="lazy" src="../../../assets/images/property/5.jpg" class="bg-img"
                                                             alt="">
 
                                                     </a>
                                                     <a href="javascript:void(0)">
-                                                        <img src="../../../assets/images/property/3.jpg" class="bg-img"
+                                                        <img loading="lazy" src="../../../assets/images/property/3.jpg" class="bg-img"
                                                             alt="">
 
                                                     </a>
@@ -215,13 +215,13 @@
                                             <h6>${{ $property->property_price }}.00*</h6>
                                             <p class="font-roboto">{{ $property->description }}</p>
                                             <ul>
-                                                <li><img src="../../../assets/images/svg/icon/double-bed.svg"
+                                                <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg"
                                                         class="img-fluid" alt="">Bed : {{ $property->beds }}
                                                 </li>
-                                                <li><img src="../../../assets/images/svg/icon/bathroom.svg"
+                                                <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg"
                                                         class="img-fluid" alt="">Baths :
                                                     {{ $property->bathrooms }}</li>
-                                                <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg"
+                                                <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg"
                                                         class="img-fluid ruler-tool" alt="">Sq Ft :
                                                     {{ $property->area }}</li>
                                             </ul>
@@ -251,7 +251,7 @@
                                     <ul>
                                         <li>
                                             <div class="media">
-                                                <img src="../../../assets/images/property/9.jpg" class="img-fluid"
+                                                <img loading="lazy" src="../../../assets/images/property/9.jpg" class="img-fluid"
                                                     alt="">
                                                 <div class="media-body">
                                                     <h5>Sea Breezes</h5>
@@ -261,7 +261,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img src="../../../assets/images/property/10.jpg" class="img-fluid"
+                                                <img loading="lazy" src="../../../assets/images/property/10.jpg" class="img-fluid"
                                                     alt="">
                                                 <div class="media-body">
                                                     <h5>Orchard House</h5>
@@ -271,7 +271,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img src="../../../assets/images/property/11.jpg" class="img-fluid"
+                                                <img loading="lazy" src="../../../assets/images/property/11.jpg" class="img-fluid"
                                                     alt="">
                                                 <div class="media-body">
                                                     <h5>Neverland</h5>

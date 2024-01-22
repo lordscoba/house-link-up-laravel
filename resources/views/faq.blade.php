@@ -3,7 +3,7 @@
 @section('content')
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-6 order-lg-1">
                     <div class="faq-image text-center">
-                        <img src="../assets/images/inner-pages/3.svg" class="img-fluid" alt="">
+                        <img loading="lazy" src="../assets/images/inner-pages/3.svg" class="img-fluid" alt="">
                         <h3>Have Any Questions ?</h3>
                         <p class="font-roboto">You can ask anything you want to know</p>
                     </div>

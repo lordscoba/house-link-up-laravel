@@ -4,7 +4,7 @@
     @livewireStyles
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -66,11 +66,12 @@
                                                     value="Apartment">
                                                     <option>Choose...
                                                     </option>
+                                                    <option value="One Room">One Room</option>
                                                     <option value="Apartment">Apartment</option>
                                                     <option value="Family House">Family House</option>
-                                                    <option value="Villa">Villa</option>
+                                                    {{-- <option value="Villa">Villa</option> --}}
                                                     <option value="Company">Company</option>
-                                                    <option value="Cottage">Cottage</option>
+                                                    {{-- <option value="Cottage">Cottage</option> --}}
                                                     <option value="Duplex">Duplex</option>
                                                     <option value="Bungalow">Bungalow</option>
                                                     <option value="Block of Flats">Block of Flats</option>

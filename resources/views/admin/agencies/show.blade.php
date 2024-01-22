@@ -4,7 +4,7 @@
 @section('content')
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-sm-6 ratio_landscape">
                                 <div class="agent-image">
-                                    <img src="../../../assets/images/agency/5.png" class="img-fluid bg-img" alt="">
+                                    <img loading="lazy" src="../../../assets/images/agency/5.png" class="img-fluid bg-img" alt="">
                                     <span class="label label-shadow">10 Properties</span>
                                 </div>
                             </div>
@@ -110,16 +110,16 @@
                             <div class="property-box">
                                 <div class="agent-image">
                                     <div>
-                                        <img src="../../../assets/images/avatar/5.jpg" class="bg-img" alt="">
+                                        <img loading="lazy" src="../../../assets/images/avatar/5.jpg" class="bg-img" alt="">
                                         <span class="label label-shadow">2 properties</span>
                                         <div class="agent-overlay"></div>
                                         <div class="overlay-content">
                                             <ul>
-                                                <li><a href="https://accounts.google.com/"><img src="../../../assets/images/about/icon-1.png" alt=""></a>
+                                                <li><a href="https://accounts.google.com/"><img loading="lazy" src="../../../assets/images/about/icon-1.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://twitter.com/"><img src="../../../assets/images/about/icon-2.png" alt=""></a>
+                                                <li><a href="https://twitter.com/"><img loading="lazy" src="../../../assets/images/about/icon-2.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://www.facebook.com/"><img src="../../../assets/images/about/icon-3.png" alt=""></a>
+                                                <li><a href="https://www.facebook.com/"><img loading="lazy" src="../../../assets/images/about/icon-3.png" alt=""></a>
                                                 </li>
                                             </ul>
                                             <span>Connect</span>
@@ -150,16 +150,16 @@
                             <div class="property-box">
                                 <div class="agent-image">
                                     <div>
-                                        <img src="../../../assets/images/avatar/3.jpg" class="bg-img" alt="">
+                                        <img loading="lazy" src="../../../assets/images/avatar/3.jpg" class="bg-img" alt="">
                                         <span class="label label-shadow">3 properties</span>
                                         <div class="agent-overlay"></div>
                                         <div class="overlay-content">
                                             <ul>
-                                                <li><a href="https://accounts.google.com/"><img src="../../../assets/images/about/icon-1.png" alt=""></a>
+                                                <li><a href="https://accounts.google.com/"><img loading="lazy" src="../../../assets/images/about/icon-1.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://twitter.com/"><img src="../../../assets/images/about/icon-2.png" alt=""></a>
+                                                <li><a href="https://twitter.com/"><img loading="lazy" src="../../../assets/images/about/icon-2.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://www.facebook.com/"><img src="../../../assets/images/about/icon-3.png" alt=""></a>
+                                                <li><a href="https://www.facebook.com/"><img loading="lazy" src="../../../assets/images/about/icon-3.png" alt=""></a>
                                                 </li>
                                             </ul>
                                             <span>Connect</span>
@@ -190,16 +190,16 @@
                             <div class="property-box">
                                 <div class="agent-image">
                                     <div>
-                                        <img src="../../../assets/images/avatar/2.jpg" class="bg-img" alt="">
+                                        <img loading="lazy" src="../../../assets/images/avatar/2.jpg" class="bg-img" alt="">
                                         <span class="label label-shadow">6 properties</span>
                                         <div class="agent-overlay"></div>
                                         <div class="overlay-content">
                                             <ul>
-                                                <li><a href="https://accounts.google.com/"><img src="../../../assets/images/about/icon-1.png" alt=""></a>
+                                                <li><a href="https://accounts.google.com/"><img loading="lazy" src="../../../assets/images/about/icon-1.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://twitter.com/"><img src="../../../assets/images/about/icon-2.png" alt=""></a>
+                                                <li><a href="https://twitter.com/"><img loading="lazy" src="../../../assets/images/about/icon-2.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://www.facebook.com/"><img src="../../../assets/images/about/icon-3.png" alt=""></a>
+                                                <li><a href="https://www.facebook.com/"><img loading="lazy" src="../../../assets/images/about/icon-3.png" alt=""></a>
                                                 </li>
                                             </ul>
                                             <span>Connect</span>
@@ -268,18 +268,18 @@
                                     <div class="property-image">
                                         <div class="property-slider">
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/10.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/10.jpg" class="bg-img" alt="">
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/5.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/5.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/3.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/3.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                         </div>
@@ -311,9 +311,9 @@
                                         <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides wonderful entertaining spaces with a chef
                                             kitchen opening…</p>
                                         <ul>
-                                            <li><img src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
                                             <span>August 4, 2022</span>
@@ -327,19 +327,19 @@
                                     <div class="property-image">
                                         <div class="property-slider">
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/11.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/11.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/2.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/2.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                         </div>
@@ -369,9 +369,9 @@
                                         <h6>$6558.00*</h6>
                                         <p class="font-roboto"> An interior designer is someone who plans,researches,coordinates,management and manages such enhancement projects.</p>
                                         <ul>
-                                            <li><img src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
                                             <span>June 20, 2022</span>
@@ -385,19 +385,19 @@
                                     <div class="property-image">
                                         <div class="property-slider">
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/14.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/14.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/10.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/10.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/9.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/9.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                         </div>
@@ -428,9 +428,9 @@
                                         <h6>$9554.00*</h6>
                                         <p class="font-roboto">The most common and most absolute type of estate, the tenant enjoys the greatest discretion over the disposal of the property.</p>
                                         <ul>
-                                            <li><img src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
                                             <span>July 18, 2022</span>
@@ -444,19 +444,19 @@
                                     <div class="property-image">
                                         <div class="property-slider">
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/15.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/15.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/9.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/9.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                         </div>
@@ -487,9 +487,9 @@
                                         <p class="font-roboto">This home provides wonderful entertaining spaces with a chef
                                             kitchen opening. Elegant retreat in a quiet Coral Gables setting.</p>
                                         <ul>
-                                            <li><img src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
                                             <span>January 6, 2022</span>
@@ -503,19 +503,19 @@
                                     <div class="property-image">
                                         <div class="property-slider">
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/12.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/12.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/10.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/10.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/6.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/9.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/9.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                         </div>
@@ -545,9 +545,9 @@
                                         <h6>$4513.00*</h6>
                                         <p class="font-roboto">The most common and most absolute type of estate, the tenant enjoys the greatest discretion over the disposal of the property.</p>
                                         <ul>
-                                            <li><img src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
                                             <span>January 6, 2022</span>
@@ -561,19 +561,19 @@
                                     <div class="property-image">
                                         <div class="property-slider">
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/16.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/16.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/5.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/5.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../../../assets/images/property/3.jpg" class="bg-img" alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/3.jpg" class="bg-img" alt="">
                                                 
                                             </a>
                                         </div>
@@ -604,9 +604,9 @@
                                         <h6>$9554.00*</h6>
                                         <p class="font-roboto">Real estate market in most countries are not as organize or efficient as markets for other, more liquid investment instruments.</p>
                                         <ul>
-                                            <li><img src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
-                                            <li><img src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                            <li><img loading="lazy" src="../../../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
                                             <span>May 14, 2022</span>

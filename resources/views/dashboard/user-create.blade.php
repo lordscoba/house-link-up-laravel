@@ -4,7 +4,7 @@
     @livewireStyles
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -68,15 +68,16 @@
                                                 <select name="property_type" id="property_type" class="form-control">
                                                     <option selected value=""><span>Choose</span> <i
                                                             class="fas fa-angle-down"></i></span></option>
+                                                    <option value="One Room">One Room</option>
                                                     <option value="Apartment">Apartment</option>
                                                     <option value="Self Contain">Self Contain</option>
                                                     <option value="Bedroom Flats">Bedroom Flats</option>
                                                     <option value="Bungalow">Bungalow</option>
                                                     <option value="Company">Company</option>
-                                                    <option value="Cottage">Cottage</option>
+                                                    {{-- <option value="Cottage">Cottage</option> --}}
                                                     <option value="Duplex">Duplex</option>
                                                     <option value="Family house">Family house</option>
-                                                    <option value="Villa">Villa</option>
+                                                    {{-- <option value="Villa">Villa</option> --}}
                                                     <option value="Mall">Mall</option>
                                                     <option value="Office">Office</option>
                                                     <option value="Shops">Shops</option>

@@ -14738,7 +14738,7 @@ input[type="date"] {
     padding: 0;
     height: unset; }
     .home-section.layout-6 .home-main {
-      background-image: url(../images/inner-pages/coming-soon.jpg);
+      /* background-image: url(../images/inner-pages/coming-soon.jpg); */
       background-color: rgba(0, 0, 0, 0.8);
       background-blend-mode: overlay;
       width: 100%;
@@ -14800,7 +14800,7 @@ input[type="date"] {
       .home-section.layout-6 .looking-icons ul li .looking-icon:hover h6 {
         color: var(--theme-default9) !important; }
   .home-section.layout-5 {
-    background-image: url(../images/parallax/3.jpg);
+    /* background-image: url(../images/parallax/3.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
@@ -15256,7 +15256,7 @@ input[type="date"] {
       top: -0.43em; }
 
 .banner-4 {
-  background-image: url(../images/banner-3.jpg);
+  /* background-image: url(../images/banner-3.jpg); */
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);

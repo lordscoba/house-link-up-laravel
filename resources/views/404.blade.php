@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center not-found">
-                    <img src="../assets/images/inner-pages/2.svg" class="img-fluid" alt="">
+                    <img loading="lazy" src="../assets/images/inner-pages/2.svg" class="img-fluid" alt="">
                     <h2>Whoops! something went wrong ?</h2>
                     <p class="font-roboto">we are sorry but the page you are looking for doesn't exist or has been removed. please check or search again.</p>
                     <div class="btns">

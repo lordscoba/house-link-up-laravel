@@ -5,9 +5,9 @@
                 <form method="POST" action="">
                     <div class="change-pic">
                         @if (Auth::user()->image_path != '')
-                        <img src="{{ URL::asset('images/' . Auth::user()->image_path) }}" alt="">
+                        <img loading="lazy" src="{{ URL::asset('images/' . Auth::user()->image_path) }}" alt="">
                         @else
-                        <img src="../../../assets/images/avatar/3.jpg" class="img-fluid update_img" alt="">
+                        <img loading="lazy" src="../../../assets/images/avatar/3.jpg" class="img-fluid update_img" alt="">
                         @endif
                         {{-- <div class="change-hover">
                             <button type="submit" class="btn"><i data-feather="camera"></i></button>

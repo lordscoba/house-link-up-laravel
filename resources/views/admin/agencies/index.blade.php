@@ -5,7 +5,7 @@
 
    <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -46,16 +46,16 @@
                                 <div class="property-box">
                                     <div class="agent-image">
                                         <div>
-                                            <img src="{{ URL::asset('images/'.$agency->image_path) }}" class="bg-img" alt="">
-                                            {{-- <img src="../assets/images/agency/1.png" class="bg-img" alt=""> --}}
+                                            <img loading="lazy" src="{{ URL::asset('images/'.$agency->image_path) }}" class="bg-img" alt="">
+                                            {{-- <img loading="lazy" src="../assets/images/agency/1.png" class="bg-img" alt=""> --}}
                                             <span class="label label-shadow">2 properties</span>
                                             <div class="agent-overlay"></div>
                                             <div class="overlay-content">
                                                 <ul>
 
-                                                    <li><a href="{{ $agency->twitter_link }}"><img src="../assets/images/about/icon-2.png" alt=""></a>
+                                                    <li><a href="{{ $agency->twitter_link }}"><img loading="lazy" src="../assets/images/about/icon-2.png" alt=""></a>
                                                     </li>
-                                                    <li><a href="{{ $agency->facebook_link }}"><img src="../assets/images/about/icon-3.png" alt=""></a>
+                                                    <li><a href="{{ $agency->facebook_link }}"><img loading="lazy" src="../assets/images/about/icon-3.png" alt=""></a>
                                                     </li>
                                                 </ul>
                                                 <span>Connect</span>

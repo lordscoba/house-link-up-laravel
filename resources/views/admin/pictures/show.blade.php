@@ -3,7 +3,7 @@
 @section('content')
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -51,13 +51,13 @@
                                         <div class="col-xxl-11 col-xl-11">
 
                                             @foreach (DB::table('pictures')->where('properties_id', $id)->get() as $picture)
-                                                {{-- <img src="{{ URL('images/'.$picture->image_path) }}" class="bg-img" alt=""> --}}
+                                                {{-- <img loading="lazy" src="{{ URL('images/'.$picture->image_path) }}" class="bg-img" alt=""> --}}
                                                 <div class="col-md-12">
                                                     <div class="property-box">
                                                         <div class="property-image">
                                                             <div class="property-slider">
                                                                 <a href="javascript:void(0)">
-                                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                                    <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                                         style="width:200px" alt="">
 
                                                                 </a>

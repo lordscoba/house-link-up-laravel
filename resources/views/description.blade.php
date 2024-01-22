@@ -5,18 +5,19 @@
             @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
                 <div>
                     <div>
-                        <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img" alt="" />
+                        <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img"
+                            alt="" />
                     </div>
                 </div>
             @empty
                 <div>
                     <div>
-                        <img src="../../../assets/images/property/2.jpg" class="bg-img" alt="" />
+                        <img loading="lazy" src="../../../assets/images/property/2.jpg" class="bg-img" alt="" />
                     </div>
                 </div>
                 <div>
                     <div>
-                        <img src="../../../assets/images/property/4.jpg" class="bg-img" alt="" />
+                        <img loading="lazy" src="../../../assets/images/property/4.jpg" class="bg-img" alt="" />
                     </div>
                 </div>
             @endforelse
@@ -178,8 +179,21 @@
                                         <div class="category-property gap-3">
                                             <div class="agent-info">
                                                 <div class="media">
-                                                    <img src="../../../assets/images/testimonial/3.png" class="img-50"
-                                                        alt="" />
+                                                    @forelse(DB::table('users')->where('id',$properties->user_id)->get() as $image)
+                                                        @if ($image->image_path == null)
+                                                            <img loading="lazy"
+                                                                src="{{ asset('assets/img/default-user.png') }}"
+                                                                class="img-50" alt="" />
+                                                        @else
+                                                            <img loading="lazy"
+                                                                src="{{ URL::asset('images/' . $image->image_path) }}"
+                                                                class="img-50" alt="" />
+                                                        @endif
+                                                    @empty
+                                                        <img loading="lazy"
+                                                            src="{{ asset('assets/img/default-user.png') }}" class="img-50"
+                                                            alt="" />
+                                                    @endforelse
                                                     <div class="media-body ms-2">
                                                         <h6>
                                                             {{ $properties->contact_name }}
@@ -275,21 +289,22 @@
                                         @forelse(DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
                                             <div>
                                                 <div class="bg-size">
-                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                    <img loading="lazy"
+                                                        src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                         class="bg-img" alt="" />
                                                 </div>
                                             </div>
                                         @empty
                                             <div>
                                                 <div class="bg-size">
-                                                    <img src="../../../assets/images/property/4.jpg" class="bg-img"
-                                                        alt="" />
+                                                    <img loading="lazy" src="../../../assets/images/property/4.jpg"
+                                                        class="bg-img" alt="" />
                                                 </div>
                                             </div>
                                             <div>
                                                 <div class="bg-size">
-                                                    <img src="../../../assets/images/property/3.jpg" class="bg-img"
-                                                        alt="" />
+                                                    <img loading="lazy" src="../../../assets/images/property/3.jpg"
+                                                        class="bg-img" alt="" />
                                                 </div>
                                             </div>
                                         @endforelse
@@ -297,17 +312,18 @@
                                     <div class="gallery-nav">
                                         @forelse(DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
                                             <div>
-                                                <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                <img loading="lazy"
+                                                    src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                     class="img-fluid" alt="" />
                                             </div>
                                         @empty
                                             <div>
-                                                <img src="../../../assets/images/property/4.jpg" class="img-fluid"
-                                                    alt="" />
+                                                <img loading="lazy" src="../../../assets/images/property/4.jpg"
+                                                    class="img-fluid" alt="" />
                                             </div>
                                             <div>
-                                                <img src="../../../assets/images/property/3.jpg" class="img-fluid"
-                                                    alt="" />
+                                                <img loading="lazy" src="../../../assets/images/property/3.jpg"
+                                                    class="img-fluid" alt="" />
                                             </div>
                                         @endforelse
                                     </div>
@@ -325,8 +341,8 @@
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen></iframe>
                                         @else
-                                            <img src="../../../assets/images/property/11.jpg" class="bg-img"
-                                                alt="" />
+                                            <img loading="lazy" src="../../../assets/images/property/11.jpg"
+                                                class="bg-img" alt="" />
                                         @endif
                                     </div>
                                 </div>
@@ -389,8 +405,8 @@
                                         <div
                                             class="review-box @php $side = $review->id%2 ; @endphp @if ($side == 0) review-child @endif">
                                             <div class="media d-flex gap-3">
-                                                <img src="../../../assets/images/avatar/3.jpg" class="img-70"
-                                                    alt="" />
+                                                <img loading="lazy" src="../../../assets/images/avatar/3.jpg"
+                                                    class="img-70" alt="" />
                                                 <div class="media-body">
                                                     <h6>
                                                         {{ $review->review_name }}
@@ -471,8 +487,19 @@
                                 <div class="category-property">
                                     <div class="agent-info">
                                         <div class="media">
-                                            <img src="../../../assets/images/testimonial/3.png" class="img-50"
-                                                alt="" />
+                                            @forelse(DB::table('users')->where('id',$properties->user_id)->get() as $image)
+                                                @if ($image->image_path == null)
+                                                    <img loading="lazy" src="{{ asset('assets/img/default-user.png') }}"
+                                                        class="img-50" alt="" />
+                                                @else
+                                                    <img loading="lazy"
+                                                        src="{{ URL::asset('images/' . $image->image_path) }}"
+                                                        class="img-50" alt="" />
+                                                @endif
+                                            @empty
+                                                <img loading="lazy" src="{{ asset('assets/img/default-user.png') }}"
+                                                    class="img-50" alt="" />
+                                            @endforelse
                                             <div class="media-body ms-2">
                                                 <h6>
                                                     {{ $properties->contact_name }}
