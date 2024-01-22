@@ -1,6 +1,6 @@
 <div>
     <!-- home section start -->
-    <section class="home-section layout-1 layout-6">
+    <section class="home-section layout-1 layout-6 lazy-background" data-src="{{ asset('assets/images/inner-pages/coming-soon.jpg') }}">
         <div class="home-main">
             <div class="container">
                 <div class="row">

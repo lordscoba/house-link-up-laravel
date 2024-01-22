@@ -5,7 +5,8 @@
             <div class="row">
                 <div class="col-xl-3">
                     <div class="footer-details text-center">
-                        <img loading="lazy" style="width:210px" src="{{ asset('assets/img/house_link_up_top.png') }}" alt="">
+                        <img loading="lazy" style="width:210px" src="{{ asset('assets/img/house_link_up_top.png') }}"
+                            alt="">
                         </a>
                         <p>This service is offered by JASSAT ReaL Estate Firm, a sector of JASSAT
                             Subsidiaries.
@@ -118,7 +119,8 @@
                                     <div class="media">
                                         <a href="blog-detail-left-sidebar.html">
                                             <div class="img-overlay">
-                                                <img loading="lazy" src="{{ asset('assets/img/house_link_up_logo.png') }}"
+                                                <img loading="lazy"
+                                                    src="{{ asset('assets/img/house_link_up_logo.png') }}"
                                                     alt="">
                                             </div>
                                         </a>
@@ -163,7 +165,8 @@
                                     <div class="media">
                                         <a href="blog-detail-left-sidebar.html">
                                             <div class="img-overlay">
-                                                <img loading="lazy" src="../assets/images/footer/4.jpg" alt="">
+                                                <img loading="lazy" src="../assets/images/footer/4.jpg"
+                                                    alt="">
                                             </div>
                                         </a>
                                         <div class="media-body">
@@ -430,5 +433,34 @@
 
         // });
 
+    });
+</script>
+
+{{-- lazy loading --}}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyBackgrounds = document.querySelectorAll(".lazy-background");
+
+        if ("IntersectionObserver" in window) {
+            var lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var lazyBackground = entry.target;
+                        lazyBackground.style.backgroundImage = 'url(' + lazyBackground.dataset
+                            .src + ')';
+                        lazyBackgroundObserver.unobserve(lazyBackground);
+                    }
+                });
+            });
+
+            lazyBackgrounds.forEach(function(lazyBackground) {
+                lazyBackgroundObserver.observe(lazyBackground);
+            });
+        } else {
+            // Fallback for browsers that don't support IntersectionObserver
+            lazyBackgrounds.forEach(function(lazyBackground) {
+                lazyBackground.style.backgroundImage = 'url(' + lazyBackground.dataset.src + ')';
+            });
+        }
     });
 </script>

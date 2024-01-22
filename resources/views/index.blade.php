@@ -4,7 +4,8 @@
 
     @livewireStyles
     <!-- home section start -->
-    <section class="home-section layout-1 layout-6 mb-0">
+    <section class="home-section layout-1 layout-6 mb-0 lazy-background"
+        data-src="{{ asset('assets/images/inner-pages/coming-soon.jpg') }}">
         <div class="home-main">
             <div class="container">
                 <div class="row">
@@ -57,7 +58,8 @@
 
 
     <!-- home section start -->
-    <section class="home-section layout-1 layout-5 mb-5 mt-0">
+    <section class="home-section layout-1 layout-5 mb-5 mt-0 lazy-background"
+        data-src="{{ asset('assets/images/parallax/3.jpg') }}">
         <div class="home-main">
             <div class="container">
                 <div class="row">
@@ -797,7 +799,8 @@
     <!-- property section end -->
 
     <!--our new offer section start -->
-    <section class="offer-section banner-section banner-4 slick-between ">
+    <section class="offer-section banner-section banner-4 slick-between lazy-background"
+        data-src="{{ asset('assets/images/banner-3.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -860,7 +863,8 @@
     <!--our new offer section end -->
 
     <!-- banner section start -->
-    <section class="banner-section banner-4 parallax-image">
+    <section class="banner-section banner-4 parallax-image lazy-background"
+        data-src="{{ asset('assets/images/banner-3.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col">
