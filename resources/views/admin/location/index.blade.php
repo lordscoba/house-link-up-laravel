@@ -4,7 +4,7 @@
 @livewireStyles
 <!-- breadcrumb start -->
 <section class="breadcrumb-section p-0">
-    <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+    <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
     <div class="container">
         <div class="breadcrumb-content">
             <div>

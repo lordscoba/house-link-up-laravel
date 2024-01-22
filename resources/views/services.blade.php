@@ -7,7 +7,7 @@
 
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-lg-6 order-lg-1">
                     <div class="service-img">
-                        <img src="../assets/images/inner-pages/2.png" class="img-fluid" alt="">
+                        <img loading="lazy" src="../assets/images/inner-pages/2.png" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -138,14 +138,14 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>Life before Company was very chaotic — we got a lot of mistyped orders. So
                                             with Company, the ability to see the order directly from the customer makes
                                             it so streamlined.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>
@@ -156,14 +156,14 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>The ability to see the order directly from the customer makes
                                             it so streamlined. Life before Company was very chaotic — we got a lot of mistyped orders. So
                                             with Company.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>
@@ -174,12 +174,12 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>It won’t be easy, but buying my own home has been a lifelong dream, and knowing that I will only get out of it what I put into it, I’m ready to get a little sweat on my brow and realize my dream to its fullest.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>
@@ -190,14 +190,14 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>The ability to see the order directly from the customer makes
                                             it so streamlined. Life before Company was very chaotic — we got a lot of mistyped orders. So
                                             with Company.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>

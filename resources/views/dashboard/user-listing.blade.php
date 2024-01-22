@@ -3,7 +3,7 @@
 @section('content')
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -51,13 +51,13 @@
                                                             @forelse (DB::table('pictures')->where('properties_id',
                                                                                         $property->id)->get() as $picture)
                                                                 <a href="javascript:void(0)">
-                                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                                    <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                                         class="bg-img" alt="">
 
                                                                 </a>
                                                             @empty
                                                                 <a href="javascript:void(0)">
-                                                                    <img src="../assets/images/property/10.jpg"
+                                                                    <img loading="lazy" src="../assets/images/property/10.jpg"
                                                                         class="bg-img" alt="">
                                                                 </a>
                                                             @endforelse

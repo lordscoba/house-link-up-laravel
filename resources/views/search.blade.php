@@ -62,17 +62,17 @@
                                         <div class="col-xl-8 col-lg-9 order-md">
                                             <div class="feature-image">
                                                 @forelse (DB::table('pictures')->limit(1)->where('properties_id', $property->id)->get() as $picture)
-                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                    <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                         alt="" class="bg-img">
                                                 @empty
-                                                    <img src="../assets/images/property/3.jpg" alt=""
+                                                    <img loading="lazy" src="../assets/images/property/3.jpg" alt=""
                                                         class="bg-img">
                                                 @endforelse
 
                                                 <h4>{{ $property->property_type }}</h4>
                                                 <span class="box-color"></span>
                                                 <span class="signature">
-                                                    <img src="../assets/images/signature/1.png" alt="">
+                                                    <img loading="lazy" src="../assets/images/signature/1.png" alt="">
                                                 </span>
                                                 <span class="label label-white label-lg color-6">Featured</span>
                                             </div>
@@ -102,13 +102,13 @@
                                                         or owned separately with an agreement covering the relationship
                                                         between units and common areas and concerns.</p>
                                                     <ul>
-                                                        <li><img src="../assets/images/svg/icon/double-bed.svg"
+                                                        <li><img loading="lazy" src="../assets/images/svg/icon/double-bed.svg"
                                                                 class="img-fluid" alt="">Bed : 5
                                                         </li>
-                                                        <li><img src="../assets/images/svg/icon/bathroom.svg"
+                                                        <li><img loading="lazy" src="../assets/images/svg/icon/bathroom.svg"
                                                                 class="img-fluid" alt="">Baths : 3
                                                         </li>
-                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                                        <li><img loading="lazy" src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                                 class="img-fluid ruler-tool" alt="">Sq Ft : 5000
                                                         </li>
                                                     </ul>
@@ -127,11 +127,11 @@
                                         </div>
                                         <div class="col-xl-8 col-lg-9 order-md">
                                             <div class="feature-image">
-                                                <img src="../assets/images/property/3.jpg" alt="" class="bg-img">
+                                                <img loading="lazy" src="../assets/images/property/3.jpg" alt="" class="bg-img">
                                                 <h4>FAMILY HOME</h4>
                                                 <span class="box-color"></span>
                                                 <span class="signature">
-                                                    <img src="../assets/images/signature/1.png" alt="">
+                                                    <img loading="lazy" src="../assets/images/signature/1.png" alt="">
                                                 </span>
                                                 <span class="label label-white label-lg color-6">Featured</span>
                                             </div>
@@ -179,11 +179,11 @@
                                         </div>
                                         <div class="col-xl-8 col-lg-9 order-md">
                                             <div class="feature-image">
-                                                <img src="../assets/images/property/2.jpg" alt="" class="bg-img">
+                                                <img loading="lazy" src="../assets/images/property/2.jpg" alt="" class="bg-img">
                                                 <h4>FAMILY HOME</h4>
                                                 <span class="box-color"></span>
                                                 <span class="signature">
-                                                    <img src="../assets/images/signature/1.png" alt="">
+                                                    <img loading="lazy" src="../assets/images/signature/1.png" alt="">
                                                 </span>
                                                 <span class="label label-white label-lg color-6">Featured</span>
                                             </div>
@@ -218,22 +218,22 @@
                                         <div class="property-slider color-6">
                                             @forelse (DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
                                                 <a href="javascript:void(0)">
-                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                    <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                         class="bg-img" alt="">
                                                 </a>
                                             @empty
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/property/16.jpg" class="bg-img"
+                                                    <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img"
                                                         alt="">
 
                                                 </a>
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/property/21.jpg" class="bg-img"
+                                                    <img loading="lazy" src="../assets/images/property/21.jpg" class="bg-img"
                                                         alt="">
 
                                                 </a>
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/property/23.jpg" class="bg-img"
+                                                    <img loading="lazy" src="../assets/images/property/23.jpg" class="bg-img"
                                                         alt="">
 
                                                 </a>
@@ -291,22 +291,22 @@
                                     <div class="property-image">
                                         <div class="property-slider color-6">
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/23.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/23.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/21.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/21.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/16.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/22.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/22.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
@@ -340,13 +340,13 @@
                                         <p class="font-roboto">This home provides wonderful entertaining spaces with a chef
                                             kitchen opening. Elegant retreat in a quiet Coral Gables setting..</p>
                                         <ul>
-                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
                                                     alt="">Bed
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
                                                     alt="">Baths
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                     class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
@@ -362,22 +362,22 @@
                                     <div class="property-image">
                                         <div class="property-slider color-6">
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/21.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/21.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/22.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/22.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/23.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/23.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/16.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
@@ -412,13 +412,13 @@
                                             provides wonderful entertaining spaces with a chef
                                             kitchen opening…</p>
                                         <ul>
-                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
                                                     alt="">Bed
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
                                                     alt="">Baths
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                     class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
@@ -434,22 +434,22 @@
                                     <div class="property-image">
                                         <div class="property-slider color-6">
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/16.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/21.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/21.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/22.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/22.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/23.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/23.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
@@ -483,13 +483,13 @@
                                         <p class="font-roboto">The most common and most absolute type of estate, the tenant
                                             enjoys the greatest discretion over the disposal of the property.</p>
                                         <ul>
-                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
                                                     alt="">Bed
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
                                                     alt="">Baths
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                     class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
@@ -505,22 +505,22 @@
                                     <div class="property-image">
                                         <div class="property-slider color-6">
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/24.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/24.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/22.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/22.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/16.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/23.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/23.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
@@ -554,13 +554,13 @@
                                         <p class="font-roboto">Real estate market in most countries are not as organize or
                                             efficient as markets for other, more liquid investment instruments.</p>
                                         <ul>
-                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
                                                     alt="">Bed
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
                                                     alt="">Baths
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                     class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">
@@ -576,22 +576,22 @@
                                     <div class="property-image">
                                         <div class="property-slider color-6">
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/25.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/25.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/24.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/24.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/22.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/22.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/property/16.jpg" class="bg-img"
+                                                <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img"
                                                     alt="">
 
                                             </a>
@@ -627,13 +627,13 @@
                                             plans,researches,coordinates,management and manages such enhancement projects.
                                         </p>
                                         <ul>
-                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
                                                     alt="">Bed
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
                                                     alt="">Baths
                                                 : 4</li>
-                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                            <li><img loading="lazy" src="../assets/images/svg/icon/square-ruler-tool.svg"
                                                     class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
                                         </ul>
                                         <div class="property-btn d-flex">

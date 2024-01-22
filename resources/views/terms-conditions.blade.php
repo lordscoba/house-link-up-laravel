@@ -8,7 +8,7 @@
 
   <!-- breadcrumb start -->
   <section class="breadcrumb-section p-0">
-    <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+    <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
     <div class="container">
         <div class="breadcrumb-content">
             <div>
@@ -45,7 +45,7 @@
                             <li class="nav-item"><a class="nav-link" href="terms-conditions.html#disclaimer">Disclaimer</a></li>
                         </ul>
                         <div class="terms-bottom-content">
-                            <img src="../assets/images/others/1.svg" alt="" class="img-fluid">
+                            <img loading="lazy" src="../assets/images/others/1.svg" alt="" class="img-fluid">
                             <a href="" class="btn btn-gradient color-2 btn-pill" download>Download Doc</a>
                         </div>
                     </div>

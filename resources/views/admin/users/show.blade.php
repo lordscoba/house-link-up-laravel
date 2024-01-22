@@ -5,7 +5,7 @@
 
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../../../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -132,7 +132,7 @@
                                             </div>
                                             <div class="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-0">
                                                 <div class="about-img d-xl-block d-none">
-                                                    <img src="../../../assets/images/inner-pages/2.png" class="img-fluid" alt="">
+                                                    <img loading="lazy" src="../../../assets/images/inner-pages/2.png" class="img-fluid" alt="">
                                                 </div>
                                             </div>
                                         </div>

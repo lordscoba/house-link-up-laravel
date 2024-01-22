@@ -4,7 +4,7 @@
     @section('content')
         <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0">
-        <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -44,10 +44,10 @@
                                     <div class="agent-image">
                                         <div>
                                             @if ($agent->image_path != "")
-                                            <img src="{{ URL::asset('images/'.$agent->image_path) }}" class="img-fluid" alt=""> 
+                                            <img loading="lazy" src="{{ URL::asset('images/'.$agent->image_path) }}" class="img-fluid" alt=""> 
                                             @else
-                                            <img src="../assets/images/avatar/5.jpg" class="bg-img" alt="">
-                                            {{-- <img src="../assets/images/about/1.jpg" class="img-fluid update_img" alt="">   --}}
+                                            <img loading="lazy" src="../assets/images/avatar/5.jpg" class="bg-img" alt="">
+                                            {{-- <img loading="lazy" src="../assets/images/about/1.jpg" class="img-fluid update_img" alt="">   --}}
                                             @endif
     
                                             
@@ -56,9 +56,9 @@
                                             <div class="overlay-content">
                                                 <ul>
                                                    
-                                                    <li><a href="{{ $agent->twitter_link }}"><img src="../assets/images/about/icon-2.png" alt=""></a>
+                                                    <li><a href="{{ $agent->twitter_link }}"><img loading="lazy" src="../assets/images/about/icon-2.png" alt=""></a>
                                                     </li>
-                                                    <li><a href="{{ $agent->facebook_link }}"><img src="../assets/images/about/icon-3.png" alt=""></a>
+                                                    <li><a href="{{ $agent->facebook_link }}"><img loading="lazy" src="../assets/images/about/icon-3.png" alt=""></a>
                                                     </li>
                                                 </ul>
                                                 <span>Connect</span>
@@ -91,16 +91,16 @@
                                 <div class="property-box">
                                     <div class="agent-image">
                                         <div>
-                                            <img src="../assets/images/avatar/5.jpg" class="bg-img" alt="">
+                                            <img loading="lazy" src="../assets/images/avatar/5.jpg" class="bg-img" alt="">
                                             <span class="label label-shadow">2 properties</span>
                                             <div class="agent-overlay"></div>
                                             <div class="overlay-content">
                                                 <ul>
-                                                    <li><a href="https://accounts.google.com/"><img src="../assets/images/about/icon-1.png" alt=""></a>
+                                                    <li><a href="https://accounts.google.com/"><img loading="lazy" src="../assets/images/about/icon-1.png" alt=""></a>
                                                     </li>
-                                                    <li><a href="https://twitter.com/"><img src="../assets/images/about/icon-2.png" alt=""></a>
+                                                    <li><a href="https://twitter.com/"><img loading="lazy" src="../assets/images/about/icon-2.png" alt=""></a>
                                                     </li>
-                                                    <li><a href="https://www.facebook.com/"><img src="../assets/images/about/icon-3.png" alt=""></a>
+                                                    <li><a href="https://www.facebook.com/"><img loading="lazy" src="../assets/images/about/icon-3.png" alt=""></a>
                                                     </li>
                                                 </ul>
                                                 <span>Connect</span>
@@ -143,21 +143,21 @@
                                 <h6>Featured</h6>
                                 <div class="feature-slider">
                                     <div>
-                                        <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+                                        <img loading="lazy" src="../assets/images/property/4.jpg" class="bg-img" alt="">
                                         <div class="bottom-feature">
                                             <h5>Neverland</h5>
                                             <h6>$13,000 <small>/ start from</small></h6>
                                         </div>
                                     </div>
                                     <div>
-                                        <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+                                        <img loading="lazy" src="../assets/images/property/16.jpg" class="bg-img" alt="">
                                         <div class="bottom-feature">
                                             <h5>Neverland</h5>
                                             <h6>$13,000 <small>/ start from</small></h6>
                                         </div>
                                     </div>
                                     <div>
-                                        <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
+                                        <img loading="lazy" src="../assets/images/property/14.jpg" class="bg-img" alt="">
                                         <div class="bottom-feature">
                                             <h5>Neverland</h5>
                                             <h6>$13,000 <small>/ start from</small></h6>

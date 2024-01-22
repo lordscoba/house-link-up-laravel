@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xl-3">
                     <div class="footer-details text-center">
-                        <img style="width:210px" src="{{ asset('assets/img/house_link_up_top.png') }}" alt="">
+                        <img loading="lazy" style="width:210px" src="{{ asset('assets/img/house_link_up_top.png') }}" alt="">
                         </a>
                         <p>This service is offered by JASSAT ReaL Estate Firm, a sector of JASSAT
                             Subsidiaries.
@@ -118,7 +118,7 @@
                                     <div class="media">
                                         <a href="blog-detail-left-sidebar.html">
                                             <div class="img-overlay">
-                                                <img src="{{ asset('assets/img/house_link_up_logo.png') }}"
+                                                <img loading="lazy" src="{{ asset('assets/img/house_link_up_logo.png') }}"
                                                     alt="">
                                             </div>
                                         </a>
@@ -134,7 +134,7 @@
                                     <div class="media">
                                         <a href="blog-detail-left-sidebar.html">
                                             <div class="img-overlay">
-                                                <img src="../assets/images/footer/2.jpg" alt="">
+                                                <img loading="lazy" src="../assets/images/footer/2.jpg" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body">
@@ -149,7 +149,7 @@
                                     <div class="media">
                                         <a href="blog-detail-left-sidebar.html">
                                             <div class="img-overlay">
-                                                <img src="../assets/images/footer/3.jpg" alt="">
+                                                <img loading="lazy" src="../assets/images/footer/3.jpg" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body">
@@ -163,7 +163,7 @@
                                     <div class="media">
                                         <a href="blog-detail-left-sidebar.html">
                                             <div class="img-overlay">
-                                                <img src="../assets/images/footer/4.jpg" alt="">
+                                                <img loading="lazy" src="../assets/images/footer/4.jpg" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body">

@@ -2,7 +2,7 @@
 @section('content')
     <!-- breadcrumb start -->
     <section class="breadcrumb-section p-0 effect-cls">
-        <img src="../assets/images/parallax/3.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/parallax/3.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div class="text-dark">
@@ -34,11 +34,11 @@
                             <div class="col-xl-7 col-lg-5">
                                 <div class="about-image">
                                     <div class="img-box side-left">
-                                        <img src="../assets/images/about/6.jpg" class="img-fluid" alt="">
+                                        <img loading="lazy" src="../assets/images/about/6.jpg" class="img-fluid" alt="">
                                         <div class="side-effect"></div>
                                     </div>
                                     <div class="img-box img-abs side-right">
-                                        <img src="../assets/images/about/5.jpg" class="img-fluid" alt="">
+                                        <img loading="lazy" src="../assets/images/about/5.jpg" class="img-fluid" alt="">
                                         <div class="side-effect"></div>
                                     </div>
                                 </div>
@@ -175,18 +175,18 @@
                                     <div class="about-image">
                                         <div>
                                             @if ($user->image_path != '')
-                <img src="{{ URL::asset('images/'.$user->image_path) }}" class="img-fluid update_img" alt=""> 
+                <img loading="lazy" src="{{ URL::asset('images/'.$user->image_path) }}" class="img-fluid update_img" alt=""> 
                 @else
-                <img src="../assets/images/about/1.jpg" class="img-fluid update_img" alt="">
+                <img loading="lazy" src="../assets/images/about/1.jpg" class="img-fluid update_img" alt="">
                 @endif
                                         </div>
                                         <div class="about-overlay"></div>
                                         <div class="overlay-content">
                                             <ul>
                                                
-                                                <li><a href="{{ $user->twitter_link }}"><img src="../assets/images/about/icon-2.png" alt=""></a>
+                                                <li><a href="{{ $user->twitter_link }}"><img loading="lazy" src="../assets/images/about/icon-2.png" alt=""></a>
                                                 </li>
-                                                <li><a href="{{ $user->facebook_link }}"><img src="../assets/images/about/icon-3.png" alt=""></a>
+                                                <li><a href="{{ $user->facebook_link }}"><img loading="lazy" src="../assets/images/about/icon-3.png" alt=""></a>
                                                 </li>
                                             </ul>
                                             <span>Connect</span>
@@ -211,16 +211,16 @@
                                 <div class="col-xl-6">
                                     <div class="about-image">
                                         <div>
-                                            <img src="../assets/images/about/1.jpg" class="img-fluid bg-img" alt="">
+                                            <img loading="lazy" src="../assets/images/about/1.jpg" class="img-fluid bg-img" alt="">
                                         </div>
                                         <div class="about-overlay"></div>
                                         <div class="overlay-content">
                                             <ul>
-                                                <li><a href="https://accounts.google.com/"><img src="../assets/images/about/icon-1.png" alt=""></a>
+                                                <li><a href="https://accounts.google.com/"><img loading="lazy" src="../assets/images/about/icon-1.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://twitter.com/"><img src="../assets/images/about/icon-2.png" alt=""></a>
+                                                <li><a href="https://twitter.com/"><img loading="lazy" src="../assets/images/about/icon-2.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://www.facebook.com/"><img src="../assets/images/about/icon-3.png" alt=""></a>
+                                                <li><a href="https://www.facebook.com/"><img loading="lazy" src="../assets/images/about/icon-3.png" alt=""></a>
                                                 </li>
                                             </ul>
                                             <span>Connect</span>
@@ -244,16 +244,16 @@
                                 <div class="col-xl-6">
                                     <div class="about-image">
                                         <div>
-                                            <img src="../assets/images/about/1.jpg" class="img-fluid bg-img" alt="">
+                                            <img loading="lazy" src="../assets/images/about/1.jpg" class="img-fluid bg-img" alt="">
                                         </div>
                                         <div class="about-overlay"></div>
                                         <div class="overlay-content">
                                             <ul>
-                                                <li><a href="https://accounts.google.com/"><img src="../assets/images/about/icon-1.png" alt=""></a>
+                                                <li><a href="https://accounts.google.com/"><img loading="lazy" src="../assets/images/about/icon-1.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://twitter.com/"><img src="../assets/images/about/icon-2.png" alt=""></a>
+                                                <li><a href="https://twitter.com/"><img loading="lazy" src="../assets/images/about/icon-2.png" alt=""></a>
                                                 </li>
-                                                <li><a href="https://www.facebook.com/"><img src="../assets/images/about/icon-3.png" alt=""></a>
+                                                <li><a href="https://www.facebook.com/"><img loading="lazy" src="../assets/images/about/icon-3.png" alt=""></a>
                                                 </li>
                                             </ul>
                                             <span>Connect</span>
@@ -296,14 +296,14 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>Life before Company was very chaotic — we got a lot of mistyped orders. So
                                             with Company, the ability to see the order directly from the customer makes
                                             it so streamlined.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>
@@ -314,14 +314,14 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>The ability to see the order directly from the customer makes
                                             it so streamlined. Life before Company was very chaotic — we got a lot of mistyped orders. So
                                             with Company.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>
@@ -332,12 +332,12 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>It won’t be easy, but buying my own home has been a lifelong dream, and knowing that I will only get out of it what I put into it, I’m ready to get a little sweat on my brow and realize my dream to its fullest.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>
@@ -348,14 +348,14 @@
                             <div>
                                 <div class="pepole-comment">
                                     <div class="client-msg">
-                                        <span class="quote"><img src="../assets/images/testimonial/quote.png"
+                                        <span class="quote"><img loading="lazy" src="../assets/images/testimonial/quote.png"
                                                 alt=""></span>
                                         <p>The ability to see the order directly from the customer makes
                                             it so streamlined. Life before Company was very chaotic — we got a lot of mistyped orders. So
                                             with Company.</p>
                                     </div>
                                     <div class="media">
-                                        <img src="../assets/images/avatar/1.jpg" alt="">
+                                        <img loading="lazy" src="../assets/images/avatar/1.jpg" alt="">
                                         <div class="media-body">
                                             <h3>Elmer Harvy</h3>
                                             <span>CEO of Desees</span>

@@ -6,7 +6,7 @@
 
 <!-- breadcrumb start -->
 <section class="breadcrumb-section p-0">
-    <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+    <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
     <div class="container">
         <div class="breadcrumb-content">
             <div>
@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 contact-img">
-                <img src="../assets/images/inner-pages/1.png" class="img-fluid" alt="">
+                <img loading="lazy" src="../assets/images/inner-pages/1.png" class="img-fluid" alt="">
             </div>
             <div class="col-lg-6">
                 <div class="log-in">

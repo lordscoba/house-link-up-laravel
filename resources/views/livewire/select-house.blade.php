@@ -12,7 +12,8 @@
                                         <div>
                                             <div class="home-content">
                                                 <div>
-                                                    <img src="{{ asset('assets/img/house_link_up_side.png') }}"
+                                                    <img loading="lazy"
+                                                        src="{{ asset('assets/img/house_link_up_side.png') }}"
                                                         class="img-fluid m-0" alt="">
                                                     <h6>Want to buy or rent Home ?</h6>
                                                     <h1>Realty Properties solve your problems</h1>
@@ -85,15 +86,16 @@
                                                     <select wire:model="search_type" class="form-control font-rubik">
                                                         <option selected value=""><span>Choose</span> <i
                                                                 class="fas fa-angle-down"></i></span></option>
+                                                        <option value="One Room">One Room</option>
                                                         <option value="Apartment">Apartment</option>
                                                         <option value="Self Contain">Self Contain</option>
                                                         <option value="Bedroom Flats">Bedroom Flats</option>
                                                         <option value="Bungalow">Bungalow</option>
                                                         <option value="Company">Company</option>
-                                                        <option value="Cottage">Cottage</option>
+                                                        {{-- <option value="Cottage">Cottage</option> --}}
                                                         <option value="Duplex">Duplex</option>
                                                         <option value="Family house">Family house</option>
-                                                        <option value="Villa">Villa</option>
+                                                        {{-- <option value="Villa">Villa</option> --}}
                                                         <option value="Mall">Mall</option>
                                                         <option value="Office">Office</option>
                                                         <option value="Shops">Shops</option>
@@ -262,7 +264,8 @@
                                         @forelse (DB::table('pictures')->limit(1)->where('properties_id', $property->id)->get()
                                 as $picture)
                                             <a href="javascript:void(0)">
-                                                <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                <img loading="lazy"
+                                                    src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                     class="bg-img" alt="" width="600px">
                                                 <div class="labels-left">
                                                     <span
@@ -272,8 +275,8 @@
 
                                         @empty
                                             <a href="javascript:void(0)">
-                                                <img src="../assets/images/others/1.jpg" class="bg-img"
-                                                    alt="" width="600px">
+                                                <img loading="lazy" src="../assets/images/others/1.jpg"
+                                                    class="bg-img" alt="" width="600px">
                                                 <div class="labels-left">
                                                     <span
                                                         class="label label-shadow">{{ $property->property_status }}</span>

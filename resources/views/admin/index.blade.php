@@ -4,7 +4,7 @@
 @section('content')
        <!-- breadcrumb start -->
        <section class="breadcrumb-section p-0">
-        <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
+        <img loading="lazy" src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
@@ -195,7 +195,7 @@
                                                             <tr>
                                                             <td>
                                                                     <div class="d-flex">
-                                                                        <img src="../assets/images/property/2.jpg" class="img-fluid" alt="">
+                                                                        <img loading="lazy" src="../assets/images/property/2.jpg" class="img-fluid" alt="">
                                                                         <h6>{{ $properties->property_type }}</h6>
                                                                     </div>
                                                                 </td>

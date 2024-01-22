@@ -7,19 +7,20 @@
             @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get() as $picture)
                 <div>
                     <div>
-                        <img src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img" alt="">
+                        <img loading="lazy" src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img"
+                            alt="">
                     </div>
                 </div>
 
             @empty
                 <div>
                     <div>
-                        <img src="../../../assets/images/property/2.jpg" class="bg-img" alt="">
+                        <img loading="lazy" src="../../../assets/images/property/2.jpg" class="bg-img" alt="">
                     </div>
                 </div>
                 <div>
                     <div>
-                        <img src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
+                        <img loading="lazy" src="../../../assets/images/property/4.jpg" class="bg-img" alt="">
                     </div>
                 </div>
             @endforelse
@@ -203,43 +204,45 @@
                                     <div class="single-gallery">
                                         <div class="gallery-for">
                                             @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get()
-                                                    as $picture)
+                                                        as $picture)
                                                 <div>
                                                     <div class="bg-size">
-                                                        <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                        <img loading="lazy"
+                                                            src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                             class="bg-img" alt="">
                                                     </div>
                                                 </div>
                                             @empty
                                                 <div>
                                                     <div class="bg-size">
-                                                        <img src="../../../assets/images/property/4.jpg" class="bg-img"
-                                                            alt="">
+                                                        <img loading="lazy" src="../../../assets/images/property/4.jpg"
+                                                            class="bg-img" alt="">
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <div class="bg-size">
-                                                        <img src="../../../assets/images/property/3.jpg" class="bg-img"
-                                                            alt="">
+                                                        <img loading="lazy" src="../../../assets/images/property/3.jpg"
+                                                            class="bg-img" alt="">
                                                     </div>
                                                 </div>
                                             @endforelse
                                         </div>
                                         <div class="gallery-nav">
                                             @forelse (DB::table('pictures')->where('properties_id', $properties->id)->get()
-                                                    as $picture)
+                                                        as $picture)
                                                 <div>
-                                                    <img src="{{ URL::asset('images/' . $picture->image_path) }}"
+                                                    <img loading="lazy"
+                                                        src="{{ URL::asset('images/' . $picture->image_path) }}"
                                                         class="img-fluid" alt="">
                                                 </div>
                                             @empty
                                                 <div>
-                                                    <img src="../../../assets/images/property/4.jpg" class="img-fluid"
-                                                        alt="">
+                                                    <img loading="lazy" src="../../../assets/images/property/4.jpg"
+                                                        class="img-fluid" alt="">
                                                 </div>
                                                 <div>
-                                                    <img src="../../../assets/images/property/3.jpg" class="img-fluid"
-                                                        alt="">
+                                                    <img loading="lazy" src="../../../assets/images/property/3.jpg"
+                                                        class="img-fluid" alt="">
                                                 </div>
                                             @endforelse
                                         </div>
@@ -258,8 +261,8 @@
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowfullscreen></iframe>
                                             @else
-                                                <img src="../../../assets/images/property/11.jpg" class="bg-img"
-                                                    alt="">
+                                                <img loading="lazy" src="../../../assets/images/property/11.jpg"
+                                                    class="bg-img" alt="">
                                             @endif
                                         </div>
                                         {{-- <div class="icon-video">
@@ -307,7 +310,7 @@
                             {{-- <div class="desc-box">
                                 <div class="page-section" id="floor_plan">
                                     <h4 class="content-title">Floor plan</h4>
-                                    <img src="../../../assets/images/single-property/floor-plan.png" alt=""
+                                    <img loading="lazy" src="../../../assets/images/single-property/floor-plan.png" alt=""
                                         class="img-fluid">
                                 </div>
                             </div> --}}
@@ -331,8 +334,19 @@
                                 <div class="category-property">
                                     <div class="agent-info">
                                         <div class="media">
-                                            <img src="../../../assets/images/testimonial/3.png" class="img-50"
-                                                alt="">
+                                            @forelse(DB::table('users')->where('id',$properties->user_id)->get() as $image)
+                                                @if ($image->image_path == null)
+                                                    <img loading="lazy" src="{{ asset('assets/img/default-user.png') }}"
+                                                        class="img-50" alt="" />
+                                                @else
+                                                    <img loading="lazy"
+                                                        src="{{ URL::asset('images/' . $image->image_path) }}"
+                                                        class="img-50" alt="" />
+                                                @endif
+                                            @empty
+                                                <img loading="lazy" src="{{ asset('assets/img/default-user.png') }}"
+                                                    class="img-50" alt="" />
+                                            @endforelse
                                             <div class="media-body ms-2">
                                                 <h6>{{ $properties->contact_name }}</h6>
                                                 <p>{{ $properties->contact_email }}</p>

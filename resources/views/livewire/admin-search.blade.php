@@ -38,15 +38,16 @@
                     <select wire:model.="search_type" class="form-control font-rubik">
                         <option selected value=""><span>Choose</span> <i class="fas fa-angle-down"></i></span>
                         </option>
+                        <option value="One Room">One Room</option>
                         <option value="Apartment">Apartment</option>
                         <option value="Self Contain">Self Contain</option>
                         <option value="Bedroom Flats">Bedroom Flats</option>
                         <option value="Bungalow">Bungalow</option>
                         <option value="Company">Company</option>
-                        <option value="Cottage">Cottage</option>
+                        {{-- <option value="Cottage">Cottage</option> --}}
                         <option value="Duplex">Duplex</option>
                         <option value="Family house">Family house</option>
-                        <option value="Villa">Villa</option>
+                        {{-- <option value="Villa">Villa</option> --}}
                         <option value="Mall">Mall</option>
                         <option value="Office">Office</option>
                         <option value="Shops">Shops</option>
@@ -113,15 +114,15 @@
                             <div class="property-slider">
                                 @forelse (DB::table('pictures')->where('properties_id', $property->id)->get() as $picture)
                                     <a href="javascript:void(0)">
-                                        <img style="width:400px"
+                                        <img loading="lazy" style="width:400px"
                                             src="{{ URL::asset('images/' . $picture->image_path) }}" class="bg-img"
                                             alt="">
 
                                     </a>
                                 @empty
                                     <a href="javascript:void(0)">
-                                        <img style="width:400px" src="../assets/images/property/4.jpg" class="bg-img"
-                                            alt="">
+                                        <img loading="lazy" style="width:400px" src="../assets/images/property/4.jpg"
+                                            class="bg-img" alt="">
 
                                     </a>
                                 @endforelse

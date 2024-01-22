@@ -40,8 +40,8 @@
     <div class="loader-wrapper">
         <div class="row loader-img">
             <div class="col-12">
-                {{-- <img src="../assets/images/loader/loader-2.gif" class="img-fluid" alt=""> --}}
-                <img src=".{{ asset('assets/images/loader/loader-2.gif') }}" class="img-fluid" alt="">
+                {{-- <img loading="lazy" loading="lazy" src="../assets/images/loader/loader-2.gif" class="img-fluid" alt=""> --}}
+                <img loading="lazy" src=".{{ asset('assets/images/loader/loader-2.gif') }}" class="img-fluid" alt="">
             </div>
         </div>
     </div>
@@ -55,8 +55,8 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="/">
-                                {{-- <img src="../assets/images/logo/2.png" alt="" class="img-fluid"> --}}
-                                <img style="width:150px" src="{{ asset('assets/img/house_link_up_side.png') }}"
+                                {{-- <img loading="lazy" src="../assets/images/logo/2.png" alt="" class="img-fluid"> --}}
+                                <img loading="lazy" style="width:150px" src="{{ asset('assets/img/house_link_up_side.png') }}"
                                     alt="" class="img-fluid"> </a>
                         </div>
                         <nav>

@@ -264,7 +264,7 @@
             </div>
             <div class="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-0">
                 <div class="about-img d-xl-block d-none">
-                    <img src="../assets/images/inner-pages/2.png" class="img-fluid" alt="">
+                    <img loading="lazy" src="../assets/images/inner-pages/2.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
